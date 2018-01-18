@@ -1,0 +1,165 @@
+html,
+body,
+main {
+  margin: 0;
+  padding: 0;
+  background-color: #282828;
+}
+
+.site-section {
+  width:  1100px;
+  height: 649px;
+  margin: 0 auto;  
+  padding: 0;
+  border-top: 1px solid #282828;
+  position: relative;  
+  box-sizing: border-box;
+}
+
+.site-picture {  
+  width: 1100px;
+  height: 649px;	
+  display: block;
+  position: absolute;
+  left:0;
+  top:0; 
+  box-sizing: border-box; 
+}   
+
+.site-picture-salat {  
+  background: 
+    url("../img/texture.png") no-repeat top center,
+    url("../img/video-bg.png") no-repeat top center;
+  background-color: #80898e;  
+}    
+
+.site-picture-best {  
+  background: 
+    url("../img/best-bg.png") no-repeat top center;
+  background-color: #80898e;  
+}    
+
+.logo {
+  position: absolute;
+  display: block;
+  box-sizing: border-box; 
+  top: 12px;
+  left: 77px;
+  width: 92px;
+  height: 69px;
+}
+
+.main-menu  { 
+  margin: 28px 80px 0 398px;
+ /* padding-top: 1px;	*/
+  color: #ffffff;
+	font-family: Ubuntu;
+	font-size: 13px;
+	line-height: 30px;
+	text-transform: uppercase;
+  border: 1px solid red;
+	position: relative;
+}
+
+.menu-container {
+  padding: 0;	
+  margin: 0; 
+  display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: stretch;
+}
+
+.menu-item a { 
+  text-decoration: none;
+  color: #ffffff;
+ 	font-weight: normal;
+}
+
+.menu-item {
+	padding-left: 5px;
+	padding-right: 25px;	
+}
+
+.menu-item:first-child, 
+.menu-item:last-child { 
+	list-style: none;
+}
+
+.menu-container li:nth-last-child(2) { 
+	padding-right: 15px;
+}
+
+.menu-item-order {
+	width: 97px;
+	height: 35px;
+	background-color: #e45028;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+  box-sizing: border-box; 
+}
+
+.burger {
+  position: absolute;
+  display: block;
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+.burger-white {
+  background:
+    url("../img/drops.png") no-repeat,   
+    url("../img/steam.png") no-repeat
+    ; 
+  top: 130px;
+  left: 76px;
+  width: 417px;
+  height: 424px;
+}
+
+.burger-black {
+
+}
+
+.slogan {
+  position: absolute;
+  display: block;
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  left: 558px;
+  top: 228px;
+	width: 406px;
+	height: 213px; 
+}
+
+.slogan-we-do {
+	color: #f9b43b;
+	font-family: Gagalin;
+	font-size: 72px;
+	font-weight: 400;
+	line-height: 85px;
+}
+
+.slogan-natural {
+	color: #ffffff;
+	font-family: Lifehack;
+	font-size: 65px;
+	font-weight: 500;
+	line-height: 85px;
+  letter-spacing: -1.63px;	
+}
+
+.slogan-burger {
+	color: #ffffff;
+	font-family: Lifehack;
+	font-size: 65px;
+	font-weight: 500;
+  line-height: 60px;	
+  letter-spacing: -1.63px;
+}
+
