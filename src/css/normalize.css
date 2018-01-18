@@ -46,18 +46,16 @@ main {
   top: 12px;
   left: 77px;
   width: 92px;
-  height: 69px;
 }
 
 .main-menu  { 
-  margin: 28px 80px 0 200px;
- /* padding-top: 1px;	*/
+  margin: 27px 81px 0 200px;
   color: #ffffff;
 	font-family: Ubuntu;
 	font-size: 13px;
 	line-height: 30px;
 	text-transform: uppercase;
-  border: 1px solid red;
+/*  border: 1px solid red;*/
 	position: relative;
 }
 
@@ -70,17 +68,16 @@ main {
 	align-items: stretch;
 }
 
+.menu-item {
+	padding-left: 8px;
+	padding-right: 29px;	
+}
+
 .menu-item a { 
   text-decoration: none;
   color: #ffffff;
- 	font-weight: normal;
- 	
-}
-
-.menu-item {
-	padding-left: 5px;
-	padding-right: 25px;	
-
+ 	font-weight: normal; 	
+	vertical-align: middle;		
 }
 
 .menu-item:first-child, 
@@ -92,17 +89,79 @@ main {
 	padding-right: 15px;
 }
 
-.menu-item-order {
-	width: 97px;
-	height: 35px;
-	background-color: #e45028;
+.button {
+	background-color: lightgray;
 	border-radius: 5px;
 	text-align: center;
 	vertical-align: middle;
 	padding-left: 5px;
 	padding-right: 5px;
-  box-sizing: border-box; 
+  box-sizing: border-box; 	
 }
+
+.menu-item-button{
+	width: 97px;
+	height: 35px;
+	background-color: #e45028;
+}
+
+.points-positioner {
+ /* position: fixed;	
+  margin: 0 auto;
+  top: 87px;
+  padding-left: 1034px;
+	z-index: 10;*/
+}
+.points {
+  top: 87px;
+}	
+
+.points {
+  display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;	
+  width: 18px;
+}
+
+.points-item  {
+  margin-bottom: 4px;
+}
+
+.points-item input[type="radio"] {
+  display: none;
+}
+
+.points-item input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;  	
+  box-sizing: border-box;
+  vertical-align: middle;   
+  background: #ffffff; 
+  border-radius: 50%; 
+  cursor: pointer;
+}
+
+.points-item input[type="radio"]:checked + label::before {
+  width: 12px;
+  height: 12px;
+  border: 3px solid #000000;
+  box-shadow: 0 0 0 1px #ffffff;
+
+}
+
+.points-item input[type="radio"] + label::before {
+  width: 6px;
+  height: 6px;
+}
+/*
+.points-item input[type="radio"]:checked {
+  margin-bottom: 4px;	
+}
+
+.points-item input[type="radio"] {
+  margin-bottom: 6px; 	
+}*/
 
 .burger {
   position: absolute;
@@ -111,17 +170,38 @@ main {
   margin: 0;
   padding: 0;
 }
-
+/*
 .burger-white {
   background:
     url("../img/drops.png") no-repeat,   
     url("../img/steam.png") no-repeat
     ; 
-  top: 130px;
-  left: 76px;
+  top: 75px;
+  left: 130px;
+  width: 417px;
+  height: 424px;
+}*/
+.burger-white-drops {
+  background:
+    url("../img/drops.png") no-repeat  
+    ; 
+  top: 143px;
+  left: 95px;
   width: 417px;
   height: 424px;
 }
+
+.burger-white {
+  background: 
+    url("../img/steam.png") no-repeat
+    ; 
+  top: 75px;
+  left:  130px;
+  width: 417px;
+  height: 424px;
+}
+
+
 
 .burger-black {
 
@@ -131,12 +211,10 @@ main {
   position: absolute;
   display: block;
   box-sizing: border-box; 
-  margin: 0;
-  padding: 0;
   left: 558px;
-  top: 228px;
+  top: 205px;
 	width: 406px;
-	height: 213px; 
+/*	height: 213px; */
 }
 
 .slogan-we-do {
@@ -144,10 +222,11 @@ main {
 	font-family: Gagalin; /*TODO импорт шрифтов*/
 	font-size: 72px;
 	font-weight: 400;
-	line-height: 85px;
+	/*line-height: 85px;*/
 }
 
 .slogan-natural {
+	padding-top: 10px;
 	color: #ffffff;
 	font-family: Lifehack;
 	font-size: 65px;
@@ -157,11 +236,13 @@ main {
 }
 
 .slogan-burger {
+	margin-top: -10px;
 	color: #ffffff;
 	font-family: Lifehack;
 	font-size: 65px;
 	font-weight: 500;
   line-height: 60px;	
   letter-spacing: -1.63px;
+  vertical-align: top;
 }
 

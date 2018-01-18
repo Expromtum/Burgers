@@ -7,10 +7,10 @@
 </head>
 <body>
 	<main>
-		<section class="site-section site-section-first">	
+		<section class="site-section site-section-first" id="section-first">	
 			<div class="site-picture site-picture-salat"></div>		
 		  <div class="logo">
-		    <img src="src/img/logo.png" width="90" height="90">
+		    <img src="src/img/logo.png">
 		  </div>
 			<nav class="main-menu">
 	      <ul class="menu-container">
@@ -20,10 +20,46 @@
 	          <li class="menu-item"><a href="#menu">Меню</a></li>
 	          <li class="menu-item"><a href="#reviews">Отзывы</a></li>
 	          <li class="menu-item"><a href="#contacts">Контакты</a></li>   
-	          <li class="menu-item menu-item-order"><a href="#order">Заказать</a></li>                              
+	          <li class="menu-item button menu-item-button"><a href="#order">Заказать</a></li>                              
 	      </ul>
 			</nav>
-			<div class="burger burger-white"></div>
+			<div class="points-positioner">
+				<div class="points">
+					<div class="points-item">
+						<input type="radio" name="point" id="point1" onclick="document.location='#section1';" checked/>
+						<label for="point1"></label>
+					</div>
+			  	<div class="points-item">
+			  		<input type="radio" name="point" id="point2" onclick="document.location='#section2';" />
+			  		<label for="point2"></label>
+			  	</div>			
+			  	<div class="points-item">
+			  		<input type="radio" name="point" id="point3" onclick="document.location='#section3';" />
+			  		<label for="point3"></label>
+			  	</div>	
+					<div class="points-item">
+						<input type="radio" name="point" id="point4" onclick="document.location='#section4';" />
+						<label for="point4"></label>
+					</div> 		
+					<div class="points-item">
+						<input type="radio" name="point" id="point5" onclick="document.location='#section5';" />
+						<label for="point5"></label>
+					</div>
+			  	<div class="points-item">
+			  		<input type="radio" name="point" id="point6" onclick="document.location='#section6';" />
+			  		<label for="point6"></label>
+			  	</div>		
+					<div class="points-item">
+						<input type="radio" name="point" id="point7" onclick="document.location='#section7';" />
+						<label for="point7"></label>
+					</div>
+			  	<div class="points-item">
+			  		<input type="radio" name="point" id="point8" onclick="document.location='#section8';" />
+			  		<label for="point8"></label>		  			  	
+				</div>		
+		  </div>
+			<div class="burger burger-white-drops"></div>		
+			<div class="burger burger-white"></div>	
 			<div class="slogan">
 				<div class="slogan-we-do">Мы делаем</div>
 				<div class="slogan-natural">натуральные</div>
@@ -31,11 +67,31 @@
 			</div>	
 		</section>	
 
-		<section class="site-section site-section-best" id="about">	
+		<section class="site-section site-section-best" id="section2">	
 			<div class="site-picture site-picture-best"></div>		
 		</section>
 
-		<section class="site-section site-section-reviews" id="reviews">>	
+		<section class="site-section site-section-dark-burger" id="section3">
+			<div class="site-picture"></div>		
+	  </section>
+
+		<section class="site-section site-section-team" id="section4">	
+			<div class="site-picture"></div>		
+	  </section>
+
+		<section class="site-section site-section-menu" id="section5">	
+			<div class="site-picture"></div>		
+	  </section>
+
+		<section class="site-section site-section-reviews" id="section6">	
+			<div class="site-picture"></div>		
+	  </section>
+
+		<section class="site-section site-section-form" id="section7">	
+			<div class="site-picture"></div>		
+	  </section>	  
+
+	  <section class="site-section site-section-contacts" id="section8">	
 			<div class="site-picture"></div>		
 	  </section>
 	</main>
