@@ -50,7 +50,7 @@ main {
 }
 
 .main-menu  { 
-  margin: 28px 80px 0 398px;
+  margin: 28px 80px 0 200px;
  /* padding-top: 1px;	*/
   color: #ffffff;
 	font-family: Ubuntu;
@@ -74,11 +74,13 @@ main {
   text-decoration: none;
   color: #ffffff;
  	font-weight: normal;
+ 	
 }
 
 .menu-item {
 	padding-left: 5px;
 	padding-right: 25px;	
+
 }
 
 .menu-item:first-child, 
@@ -139,7 +141,7 @@ main {
 
 .slogan-we-do {
 	color: #f9b43b;
-	font-family: Gagalin;
+	font-family: Gagalin; /*TODO импорт шрифтов*/
 	font-size: 72px;
 	font-weight: 400;
 	line-height: 85px;
