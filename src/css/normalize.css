@@ -12,7 +12,7 @@ main {
   margin: 0 auto;  
   padding: 0;
   border-top: 1px solid #282828;
-  position: relative;  
+  position:relative;
   box-sizing: border-box;
 }
 
@@ -23,6 +23,7 @@ main {
   position: absolute;
   left:0;
   top:0; 
+  z-index: 0;
   box-sizing: border-box; 
 }   
 
@@ -42,17 +43,20 @@ main {
 .header-menu-container {
   display: flex;
 	flex-direction: row;
-  height: 90px;
+  height: 69px;
   justify-content: center;
-	position: relative;
-	margin: 12px 81px 0 75px;
+  position: absolute;
+  top: 12px; 
+  right: 81px;
+  bottom: 0;
+  left: 75px; 
 	align-items: center;
 }
 
 .header-menu-item {
   padding: 0;	
   margin: 0; 	
-	height: 60px;	
+	height: 40px;
 }
 
 .header-menu-container .header-menu-item:nth-child(2) {
@@ -61,7 +65,7 @@ main {
 
 .logo {
   box-sizing: border-box; 
-  height: 92px;
+  height: 69px;
 }
 
 .main-menu-font {
@@ -113,12 +117,13 @@ main {
 }
 
 .points-positioner {
- /* position: fixed;	
+  position: fixed;	
   margin: 0 auto;
   top: 87px;
   padding-left: 1034px;
-	z-index: 10;*/
+	z-index: 10;
 }
+
 .points {
   top: 87px;
 }	
@@ -132,7 +137,7 @@ main {
 }
 
 .points-item  {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .points-item input[type="radio"] {
@@ -154,7 +159,6 @@ main {
   height: 12px;
   border: 3px solid #000000;
   box-shadow: 0 0 0 1px #ffffff;
-
 }
 
 .points-item input[type="radio"] + label::before {
@@ -162,58 +166,40 @@ main {
   height: 6px;
 }
 
-.burger {
-  position: absolute;
-  display: block;
+.burger-container {
+  padding: 0;	
+  margin: 0; 
+  display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
   box-sizing: border-box; 
+  position: absolute;
+  height: 424px;
+  top: 110px; 
+  right: 120px;
+  bottom: 0;
+  left: 75px; 
+}
+
+.burger-item {
   margin: 0;
-  padding: 0;
-}
-/*
-.burger-white {
-  background:
-    url("../img/drops.png") no-repeat,   
-    url("../img/steam.png") no-repeat
-    ; 
-  top: 75px;
-  left: 130px;
-  width: 417px;
-  height: 424px;
-}*/
-.burger-white-drops {
-  background:
-    url("../img/drops.png") no-repeat  
-    ; 
-  top: 143px;
-  left: 95px;
-  width: 417px;
-  height: 424px;
-}
+  padding: 0; 
+ }
 
 .burger-white {
   background: 
-    url("../img/steam.png") no-repeat
+    url("../img/burger-white.png") no-repeat
     ; 
-  top: 75px;
-  left:  130px;
   width: 417px;
   height: 424px;
-}
-
-
-
-.burger-black {
-
+	margin-top: -70px;
 }
 
 .slogan {
-  position: absolute;
-  display: block;
   box-sizing: border-box; 
-  left: 558px;
-  top: 205px;
-	width: 406px;
-/*	height: 213px; */
+  height: 240px; 
 }
 
 .slogan-we-do {
@@ -221,7 +207,6 @@ main {
 	font-family: Gagalin; /*TODO импорт шрифтов*/
 	font-size: 72px;
 	font-weight: 400;
-	/*line-height: 85px;*/
 }
 
 .slogan-natural {
