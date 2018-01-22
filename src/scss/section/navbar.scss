@@ -12,12 +12,12 @@
     width: rem(18px);
     position: fixed; /*TODO: При изменении масшаба уезжает*/
 
-    top: 80px;
-    right: 250px;
+    top: 11%;
+    right: 17%;
 }
 
 .navbar__item {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 
     & input[type="radio"] {
         display: none;
