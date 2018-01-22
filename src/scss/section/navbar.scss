@@ -1,0 +1,50 @@
+/*Полоса прокрутки*****************************************/
+.navbar {
+    height: 0px;
+    position: relative;   
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(18px);
+    position: fixed; /*TODO: При изменении масшаба уезжает*/
+
+    top: 80px;
+    right: 250px;
+}
+
+.navbar__item {
+    margin-bottom: 3px;
+
+    & input[type="radio"] {
+        display: none;
+    }  
+
+    & input[type="radio"]+label::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background: #ffffff;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    & input[type="radio"]:checked+label::before {
+        width: 12px;
+        height: 12px;
+        border: 3px solid #000000;
+        box-shadow: 0 0 0 1px #ffffff;
+    }
+
+    & input[type="radio"]+label::before {
+        width: 6px;
+        height: 6px;
+  }
+}
+
+
+
+

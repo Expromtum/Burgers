@@ -1,138 +1,127 @@
-.mainmenu-container {
-  display: flex;
-	flex-direction: row;
-  height: 69px;
-  justify-content: center;
-  position: absolute;
-  top: 12px; 
-  right: 81px;
-  bottom: 0;
-  left: 75px; 
-	align-items: center;
+.frontpage {
+    background: 
+    		url("../img/bg/texture.png") no-repeat,
+        url("../img/bg/video-bg.png") no-repeat;
+ 	  background-position: center center;
+ 	  position: relative;	  
+	  background-size: cover;
 }
 
-.mainmenu-item {
-	height: 40px;
+.menu-font {
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: rem(13px);
+    line-height: rem(30px);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    vertical-align: middle;
 }
 
-.mainmenu-container .mainmenu-item:nth-child(2) {
-	margin-left: auto;
+.header__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0;
+    width: 100%;
+    @extend .menu-font;
+
+    & .header__item:nth-child(2) {
+        margin-left: auto;
+    }
 }
 
-.logo {
-  box-sizing: border-box; 
-  height: 69px;
+.header__nav {
+    margin-right: rem(0px);
 }
 
-.main-menu-font {
-  color: #ffffff;
-	font-family: Ubuntu;
-	font-size: 13px;
-	line-height: 30px;	
-	text-transform: uppercase;	
-  text-decoration: none;
-  color: #ffffff;
-	vertical-align: middle;		
+.header__logo {
+    margin-right: auto;  
+    padding-top: 10px; 
 }
 
-.menu-container {
-  margin: 0; 
-  display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
+.menu__list {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.menu-item {
-	padding-left: 8px;
-	padding-right: 29px;	
+.menu__item {
+    padding-left: rem(8px);
+    padding-right: rem(29px);
+
+    & a:hover {
+        color: $color-button;
+    }
+
+    &:first-child {
+        list-style: none;
+    }
+
+    &:last-child {
+        padding-right: rem(15px);
+    }
 }
 
-.menu-item a:hover {
-	color: $color-button;
+.menu__link, .order__link {
+    @extend .menu-font;
 }
 
-.menu-item:first-child{ 
-	list-style: none;
+.header__btn {
+    width: rem(97px);
+    height: rem(30px);
 }
 
-.menu-item:last-child { 
-	padding-right: 15px;
+.burger__list {
+	  width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1; 
+
+    & .burger__item {
+        flex-basis: 50%;      	
+        margin: 0;
+        padding: 15px;
+				padding-bottom: 20px;
+    }
 }
 
-.button {
-	background-color: $color-button;
-	border-radius: 5px;
-	text-align: center;
-	padding-left: 5px;
-	padding-right: 5px;
-  box-sizing: border-box; 	
-
-	&:hover {
-	 background-color: darken($color-button, 10%);
-	 
-	}  
+.burger__img img{
+	 margin-top: -30px;
 }
 
-.menu-item-button{
-	width: 97px;
-	height: 35px;
+.burger__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  	& .descr-we-do {
+	    color: #f9b43b;
+	    font-family: Gagalin;
+	    font-size: rem(72px);
+	    font-weight: 300;
+      padding-top: 10%;
+	  }
+
+	& .descr-natural {
+	    color: #ffffff;
+	    font-family: Lifehack;
+	    font-weight: 400;
+	    font-size: rem(65px);
+	    line-height: rem(85px);
+	    letter-spacing: -1.63px;
+	}
+
+	& .descr-burger {
+	    color: #ffffff;
+	    font-family: Lifehack;
+	    font-weight: 400;
+	    font-size: rem(65px);
+		  line-height: rem(65px);    
+	}
 }
 
-.burger-container {
-  display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	justify-content: space-around;
-  box-sizing: border-box; 
-  position: absolute;
-  height: 424px;
-  top: 115px; 
-  right: 120px;
-  bottom: 0;
-  left: 75px; 
-}
-
-.burger-item {
-  margin: 0;
-  padding: 0; 
- }
-
-.burger-white {
-  background: url("../img/burger-white.png") no-repeat; 
-  width: 417px;
-  height: 424px;
-	margin-top: -75px;
-}
-
-.slogan {
-  box-sizing: border-box; 
-  height: 240px; 
-}
-
-.slogan-we-do {
-	color: #f9b43b;
-	font-family: Gagalin; /*TODO импорт шрифтов*/
-	font-size: 72px;
-	font-weight: 400;
-}
-
-.slogan-natural {
-	padding-top: 10px;
-	color: #ffffff;
-	font-family: Lifehack;
-	font-size: 65px;
-	line-height: 85px;
-  letter-spacing: -1.63px;	
-}
-
-.slogan-burger {
-	margin-top: -15px;
-	color: #ffffff;
-	font-family: Lifehack;
-	font-size: 65px;
-  line-height: 60px;	
-  letter-spacing: -1.63px;
-  vertical-align: top;
-}

@@ -1,1 +1,49 @@
-/*Общие стили для CSS*/
+
+$section-width: rem(1100px);
+$section-min-width: rem(1100px);
+$section-min-height: rem(650px);
+
+
+body {
+    background-color: $color-bg-side;
+    font-size: rem(16px);
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  width: 100%; 
+  height: 100%;	
+}
+
+main {
+  height: 100%;
+  min-height: $section-min-height;
+}
+
+.site-section {
+  height: 100%;
+  background-color: $color-bg-side;
+  min-width: $section-min-width;
+  min-height: $section-min-height;
+}
+
+.container {
+  width: $section-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+    background-color: $color-button;
+    border-radius: 5px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    &:hover {
+        background-color: darken($color-button, 15%);
+    }
+}
