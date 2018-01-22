@@ -1,0 +1,101 @@
+.reviews {
+ /*   background-color: lightgray;*/
+    position: relative;
+  /*  background-size: cover;*/
+ /*   width: 100%;
+    height: 100%;*/
+}
+
+.reviews__container {
+    width: 100%;
+    height: 100%;
+}
+
+.review__list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    & .review__item {
+        height: 50%;
+        width: 25%;
+        position: relative;
+    }
+
+    & .review__img {
+        filter: grayscale(100%);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        background-position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;  
+    }
+
+    & .review__img, & .review__mask {
+        position: absolute;
+    }
+}
+
+.review__mask  {
+	padding: rem(40px) 0 0 rem(20px);
+    opacity: 0;
+    z-index: 10;
+    align-text: left;
+    vertical-align: middle;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;  
+    transform: scale(0.9);
+    transition: 0.5s;   
+}
+
+/*Затемнение картинки*/
+.review__item:hover .review__mask{
+    display: block;
+    background: rgba(0, 0, 0, 0.7);      
+    opacity: 0.7;
+    transform: scale(1);
+  /*  top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;   */    
+}
+
+.review__name {
+	color: #ffffff;
+	font-family: Gagalin;
+	font-size: rem(14px);
+	font-weight: 400;
+	line-height: rem(28px);	
+}
+
+.review__quote {
+	margin-left: 0;
+	color: #ffffff;
+	font-family: Ubuntu;
+	font-size: rem(14px);
+	font-weight: 300;
+	line-height: rem(24px);	
+}
+
+.review__button {
+	background-color: $color-button-gray;
+	width: rem(120px);
+	height: rem(35px);
+
+    &:hover {
+        background-color: darken($color-button-gray, 15%); /*TODO оптимизировать*/
+    }	
+}
+
+/*control-elements-font*/

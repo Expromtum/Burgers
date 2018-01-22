@@ -11,9 +11,9 @@
     width: 100%;
 		color: $color-best-title;
 		font-family: Gagalin;
-		font-size: rem(72px);
+		font-size: rem(80px);
 		font-weight: 400;
-		margin-top: rem(115px);
+		margin-top: rem(130px);
 }
 
 .best__list {
@@ -22,12 +22,12 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: rem(40px);
 
     & .best__item {
         max-width: 30%; 
-      	margin-left: 0px;
-      	margin-right: 0px;
+      	margin-left: 15px;
+      	margin-right: 15px;
     }
 }
 
@@ -35,7 +35,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     flex-grow: 1;
     justify-content: flex-start;
 
@@ -48,23 +47,23 @@
 .promo__short {
 		color:  $color-best-descr;
 		font-family: Lifehack;
-		font-size: rem(24px);
+		font-size: rem(28px);
 		font-weight: 500;
 		line-height: rem(28.14px);
 		letter-spacing: rem(-0.6px);	
-		padding-top: rem(30px);		
+		padding-top: rem(40px);		
 }
 
 .promo__full {
 		opacity: 0.8;
 		color: $color-best-descr;
 		font-family: Ubuntu;
-		font-size: rem(14px);
+		font-size: rem(16px);
 		font-weight: 300;
-		line-height: rem(24.07px);	
-    padding-left: rem(10px);
-    padding-right: rem(10px);	
-		padding-top: rem(10px);		    
+		line-height: rem(25px);	
+    padding-left: rem(5px);
+    padding-right: rem(5px);	
+		padding-top: rem(25px);		    
 }
 
 
