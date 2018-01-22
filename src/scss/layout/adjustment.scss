@@ -3,8 +3,7 @@ $section-width: rem(1100px);
 $section-min-width: rem(1100px);
 $section-min-height: rem(650px);
 
-
-body {
+body {  
     background-color: $color-bg-side;
     font-size: rem(16px);
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
@@ -15,7 +14,7 @@ body {
   height: 100%;	
 }
 
-main {
+.maincontent {
   height: 100%;
   min-height: $section-min-height;
 }
