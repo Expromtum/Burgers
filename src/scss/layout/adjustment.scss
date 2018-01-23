@@ -1,5 +1,5 @@
 
-$section-width: 100vw;/* rem(1100px);*/
+$section-width: rem(1100px);
 $section-min-width: rem(1100px);
 $section-min-height: rem(650px);
 
@@ -20,7 +20,7 @@ body {
 }
 
 .site-section {
-  height: 100vh;
+  height: 100%;
   background-color: $color-bg-side;
   min-width: $section-min-width;
   min-height: $section-min-height;

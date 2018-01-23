@@ -1,11 +1,11 @@
 .reviews {
     position: relative;
 }
-/*
+
 .reviews__container {
     width: 100%;
     height: 100%;
-}*/
+}
 
 .review__list {
     list-style: none;
@@ -16,7 +16,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
 
     & .review__item {
         height: 50%;
@@ -48,6 +47,7 @@
     vertical-align: middle;
     transform: scale(0.9);
     transition: 0.5s;   
+    pointer-events: none;
 }
 
 /*Затемнение картинки*/
@@ -57,7 +57,6 @@
     opacity: 0.7;
     transform: scale(1);
     z-index: 5;    
-    border: 1px solid red;
 }
 
 .review__name {
@@ -77,6 +76,7 @@
 	background-color: $color-button-gray;
 	width: rem(120px);
 	height: rem(35px);
+	pointer-events: initial;
 
     &:hover {
         background-color: darken($color-button-gray, 15%); /*TODO оптимизировать*/
