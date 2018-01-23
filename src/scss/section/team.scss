@@ -1,0 +1,56 @@
+.team {
+    background: url("../img/bg/team.png") no-repeat top center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-size: cover;
+}
+
+.team__data {
+		position: absolute;
+		top: 0;
+		right: 0;		
+	  margin: 0;
+	  padding: 0;
+		width: 49%;
+		height: 100%;		
+    background-color: #2f3234;
+    opacity: 0.93;
+}
+
+.team__whois {
+		height: 0;
+		overflow: hidden;	
+}
+
+.team__title {
+	  @extend .section-title-font;
+	  margin-top: 20%;
+	  margin-bottom: 0;
+	  color: $color-title-yellow;
+		line-height: rem(64px);
+}
+
+.team__accordeon {
+	  padding-top: rem(30px);
+    margin-left: 18%;			
+    margin-top: 0;		  
+}
+
+.team__item {
+	  padding-top: rem(5px);
+		padding-left: rem(5px);
+}
+
+.team__name {
+		margin-top: rem(0px);
+	  @extend .section-h3-font;	
+}
+
+.team__whois {
+	  @extend .section-text-font;	
+	  padding-left: 30%;	  
+		padding-right: 15%;	  
+}
+
+

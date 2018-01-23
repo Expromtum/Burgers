@@ -8,6 +8,7 @@
 }
 
 .header__list {
+    z-index: 20;	
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,15 +37,12 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
+    list-style: disc outside;
 }
 
 .menu__item {
     padding-left: rem(10px);
     padding-right: rem(30px);
-
-    & a:hover {
-        color: $color-link-hover;
-    }
 
     &:first-child {
         list-style: none;
@@ -56,7 +54,12 @@
 }
 
 .menu__link {
-    @extend .control-elements-font;
+     @extend .control-elements-font;
+
+     &:hover {
+        color: $color-link-hover;
+
+    }   
 }
 
 .header__btn {
@@ -89,7 +92,7 @@
     justify-content: center;
 
   	& .descr-we-do {
-	    color: #f9b43b;
+	    color: $color-title-yellow;
 	    font-family: Gagalin;
 	    font-size: rem(75px);
 	    font-weight: 300;

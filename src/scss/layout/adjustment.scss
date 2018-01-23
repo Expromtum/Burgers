@@ -38,16 +38,49 @@ body {
 }
 
 .control-elements-font {
-    color: #ffffff;
+    vertical-align: middle;    
+    color: #ffffff;    
     font-family: Ubuntu;
     font-size: rem(15px);
     line-height: rem(30px);
     text-transform: uppercase;
     text-decoration: none;
-    color: #ffffff;
-    vertical-align: middle;
 }
 
+.section-title-font {
+		text-align: center;
+    width: 100%;
+		color: #ffffff;
+		font-family: Gagalin;
+		font-size: rem(72px);
+		font-weight: 400;		
+    text-transform: uppercase;			
+}
+
+.section-h3-font {
+		text-align: left;
+    width: 100%;
+		color: #ffffff;
+		font-family: Gagalin;
+		font-size: rem(14px);
+		font-weight: 400;
+	  line-height: rem(28px);			
+    text-transform: uppercase;	  
+}
+
+.section-text-font {
+	  text-align: left;
+	  color: #ffffff;
+		font-family: Ubuntu;
+		font-size: rem(14px);
+		line-height: rem(24px);
+		font-weight: 300;	
+}
+
+h4 .section-text-font {
+	  @extend .section-text-font;
+		font-weight: 700;
+}
 
 .button {
     background-color: $color-button-red;
@@ -63,7 +96,9 @@ body {
     }
 
     & a {
-    	text-decoration: none;
+
     	@extend .control-elements-font;   
+    	text-decoration: none;
+
     }
 }
