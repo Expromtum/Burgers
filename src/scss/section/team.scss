@@ -20,60 +20,96 @@
 
 .team__title {
     @extend .section-title-font;
-    margin-top: 20%;
+    margin-top: 30%;
+    margin-left: 18%;
     margin-bottom: 0;
+    text-align: left;
     color: $color-title-yellow;
     line-height: rem(64px);
+    /*   border: 1px solid red;*/
 }
 
-.team__accordeon {
-    padding-top: rem(30px);
+.member__list {
     margin-left: 18%;
-    margin-top: 0;
+    /* margin-top: rem(10px);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid red;   */
 }
 
-.team__member {
-    padding-top: rem(5px);
-    padding-left: rem(5px);
+.member__item {
+    margin: 0;
     position: relative;
+    padding-left: rem(20px);
+
+    & .member__name {
+        @extend .section-h3-font;
+    }
+
+    & .member-about {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+    }
 }
 
-.team__name {
-    margin-top: rem(0px);
-    @extend .section-h3-font;
-}
-
-.team__whois::before {
+/*Фото сапиенса*/
+.member__def::before {
     content: "";
-    display: block;	
+    display: block;
     background: url("../img/content/homosapiens.png") no-repeat center center;
     border-radius: 50%;
-    vertical-align: middle; 
+    vertical-align: middle;
     background-size: cover;
     position: absolute;
-    top: rem(45px);
+    top: 0;
     left: rem(15px);
-    height: 0;
-    overflow: hidden;       
-}
-
-.team__whois {
-    @extend .section-text-font;
-    padding-left: 30%;
-    padding-right: 15%;
-    height: 0;
-    overflow: hidden;    
-}
-
-.team__member:hover .team__whois {
-    overflow: visible;  
-    height: 100%;  
-}
-
-.team__member:hover .team__whois::before {
-    overflow: visible;    
     height: rem(100px);
     width: rem(100px);
 }
 
+.member__def {
+    @extend .section-text-font;
+    padding-left: 30%;
+    padding-right: 15%;
+}
 
+.member__item:hover .member-about {
+    overflow: visible;
+    height: 100%;
+}
+
+.member__item:hover .member__name {
+    color: $color-title-yellow;
+}
+
+
+/*класс модификатор, который будет навешиваться как дополнительный
+класс на элемент аккордеона и тем самым менять в нем отображение на то, которое
+соответствует активному элементу*/
+
+.member__item--active .member-about {
+    overflow: visible;
+    height: 100%;
+}
+
+.member__item--active .member__name {
+    color: $color-title-yellow;
+}
+
+.member__arrow {
+    position: absolute;
+    top: 25px;
+    left: 0;        
+}
+
+.member__item--active .member__arrow {
+    transform: scale(-1);
+    transition: 0.2s;
+}
+
+.member__item:hover .member__arrow {
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
