@@ -24,6 +24,7 @@ body {
   background-color: $color-bg-side;
   min-width: $section-min-width;
   min-height: $section-min-height;
+  overflow: hidden;
 }
 
 .container {
@@ -48,7 +49,6 @@ body {
 }
 
 .section-title-font {
-		text-align: center;
     width: 100%;
 		color: #ffffff;
 		font-family: Gagalin;
@@ -58,6 +58,16 @@ body {
 }
 
 .section-h3-font {
+		text-align: center;
+		color: #ffffff;
+		font-family: Gagalin;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 63.75px;	
+    text-transform: uppercase;	 
+}
+
+.section-h4-font {
 		text-align: left;
     width: 100%;
 		color: #ffffff;
@@ -65,7 +75,7 @@ body {
 		font-size: rem(14px);
 		font-weight: 400;
 	  line-height: rem(28px);			
-    text-transform: uppercase;	  
+    text-transform: uppercase;	 
 }
 
 .section-text-font {
@@ -77,9 +87,9 @@ body {
 		font-weight: 300;	
 }
 
-h4 .section-text-font {
+.section-h5-font {
 	  @extend .section-text-font;
-		font-weight: 700;
+		font-weight: 700;    
 }
 
 .button {
@@ -106,4 +116,9 @@ h4 .section-text-font {
 .mask {
 	  background-color: #2f3234;
     opacity: 0.93;
+}
+
+.mask2 {
+    background-color: #000000;      
+    opacity: 0.7;   
 }

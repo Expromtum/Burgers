@@ -1,0 +1,109 @@
+.menu {
+    background: url("../img/bg/menu.png") no-repeat top center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-size: cover;
+}
+
+.menu__container {
+    width: 100%;
+    height: 100%;
+}
+
+.menu__title {
+    @extend .section-title-font;
+    text-align: left;
+    position: absolute;
+    top: rem(180px);
+    left: rem(100px);
+}
+
+.menu__list {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__item {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0;
+
+    & .menu__name {
+        @extend .mask2;
+        @extend .section-h3-font;
+        width: rem(80px);
+        writing-mode: vertical-lr;
+        margin: 0;
+        padding: 0;
+        /*  position: relative;   */
+        & h3 {
+            transform: rotate(180deg);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    & .menu__descr {
+        @extend .section-text-font;
+        /*   @extend .mask; */
+        width: 0;
+        overflow: hidden;
+        margin: 0;
+    }
+}
+
+/*TODO: добавить маску затемнения*/
+.menu__name--meat {
+    background-image: url("../img/bg/img-for-meat.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;   
+}
+
+.menu__name--veg {
+    background-image: url("../img/bg/img-for-veg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;   
+}
+
+.menu__name--diet {
+    background-image:  url("../img/bg/img-for-diet.png") ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;   
+}
+
+
+/*
+.menu__img, .menu__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;      
+}*/
+
+.menu__item:hover .menu__descr {
+    width: rem(480px);
+    overflow: visible;
+    padding: rem(30px);
+}
+
+
+/*
+.menu__item--active .menu__descr {
+    width: rem(480px);
+    overflow: visible;
+}*/

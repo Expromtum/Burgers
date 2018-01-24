@@ -44,7 +44,7 @@
     padding-left: rem(20px);
 
     & .member__name {
-        @extend .section-h3-font;
+        @extend .section-h4-font;
     }
 
     & .member-about {
@@ -69,10 +69,17 @@
     width: rem(100px);
 }
 
-.member__def {
+.member__def  {
     @extend .section-text-font;
     padding-left: 30%;
     padding-right: 15%;
+
+    h5 {
+        @extend .section-h5-font;
+    }
+    p {
+        @extend .section-text-font;
+    }
 }
 
 .member__item:hover .member-about {
