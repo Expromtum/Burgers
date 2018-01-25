@@ -13,7 +13,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px 0;
+    padding-top: 3px;
+    margin: 0;
+    padding-left: 7%;
+    padding-right: 7.5%;
     width: 100%;
     @extend .control-elements-font;
 
@@ -37,19 +40,19 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
-    list-style: disc outside;
 }
 
 .main-menu__item {
     padding-left: rem(10px);
-    padding-right: rem(30px);
+    padding-right: rem(27px);
+    list-style: disc outside;
 
     &:first-child {
         list-style: none;
     }
 
     &:last-child {
-        padding-right: rem(15px);
+        padding-right: rem(18px);
     }
 }
 
@@ -57,47 +60,50 @@
      @extend .control-elements-font;
 
      &:hover {
-        color: $color-link-hover;
-
+        color: $color-red;
     }   
 }
 
-.header__btn {
-    width: rem(110px);
-    height: rem(35px);
+.button .header__btn {
+
 }
 
 .burger__list {
+ 
 	  width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-grow: 1; 
+ /*   border: 1px solid red;*/
 
-    & .burger__item {
+    & .burger__item { 
+    	  padding: 0;        margin: 0;
         flex-basis: 50%;      	
-        margin: 0;
-        padding: 40px;
-				padding-bottom: 20px;
+
+     /*   padding: 40px;
+				padding-bottom: 20px;   */ /*	  border: 1px solid red;*/
     }
 }
 
 .burger__img img{
-	 margin-top: -30px;
+   height: rem(424px);
+ /*  border: 1px solid red;	*/
 }
 
 .burger__descr {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;	  
 
-  	& .descr-we-do {
+  	& .section-title {
 	    color: $color-title-yellow;
-	    font-family: Gagalin;
+	    padding-left: 10px;
+	  /*  font-family: Gagalin;
 	    font-size: rem(75px);
 	    font-weight: 300;
       padding-top: 10%;
-      letter-spacing: 1.7px;
+      letter-spacing: 1.7px;*/
 	  }
 
 	& .descr-natural {
@@ -107,6 +113,7 @@
 	    font-size: rem(65px);
 	    line-height: rem(75px);
 	    letter-spacing: -1.63px;
+	    padding-left: 10px;	    
 	}
 
 	& .descr-burger {
@@ -115,6 +122,7 @@
 	    font-weight: 400;
 	    font-size: rem(65px);
 		  line-height: rem(65px);    
+			padding-left: 10px;  
 	}
 }
 

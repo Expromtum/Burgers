@@ -1,10 +1,10 @@
+
 .reviews {
-    position: relative;
+    position: relative;   
 }
 
 .reviews__container {
     width: 100%;
-    height: 100%;
 }
 
 .review__list {
@@ -24,7 +24,8 @@
     }
 }
 
-.review__img, .review__mask {
+.review__img, 
+.review__mask {
     position: absolute;
     top: 0;
     right: 0;
@@ -35,7 +36,7 @@
 .review__img {
     filter: grayscale(100%);
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: 50% 50%;
     background-size: cover;
     background-position: fixed;
 }
@@ -78,6 +79,6 @@
 	pointer-events: initial;
 
     &:hover {
-        background-color: darken($color-button-gray, 15%); /*TODO оптимизировать*/
+        background-color: darken($color-button-gray, 15%); 
     }	
 }
