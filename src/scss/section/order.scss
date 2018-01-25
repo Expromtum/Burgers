@@ -1,0 +1,10 @@
+.order {
+    background: url("../img/bg/order-bg.png") no-repeat;
+    background-position: center center;
+    position: relative;
+    background-size: cover;
+
+    & .section-title {
+    	color: $color-title-yellow;
+    }
+}
