@@ -1,0 +1,29 @@
+.reviews {
+  /*  background: 
+    		url("../img/bg/texture.png") no-repeat,
+        url("../img/bg/video-bg.png") no-repeat;
+ 	  background-position: center center;
+ 	  position: relative;	  
+	  background-size: cover;*/ }
+
+.review__list {
+  list-style: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid red; }
+  .review__list .review__item {
+    margin: 0;
+    /*  padding: 15px;
+				padding-bottom: 20px;*/ }
