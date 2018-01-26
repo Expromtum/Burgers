@@ -2,13 +2,18 @@ $section-width: rem(1100px);
 $section-min-width: rem(1100px);
 $section-min-height: rem(650px);
 
-body {
-    background-color: $color-bg-side;
-    font-size: rem(16px);
-    line-height: 1.42;
-    position: relative;
-    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-    color: $color-bg-side;
+body, html {
+  height: 100%;
+  padding: 0;
+  font-size: rem(16px);
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;  
+  background-color: $color-bg-side;
+/*  line-height: 1.42;*/
+  position: relative;
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
 }
 
 .wrapper {
@@ -209,6 +214,18 @@ footer {
   }
 }
 
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 .mask {
     background-color: #2f3234;

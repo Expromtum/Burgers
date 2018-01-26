@@ -35,6 +35,9 @@
   font-weight: normal;
   font-style: normal; }
 
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in
@@ -48,16 +51,24 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
 
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: 'Ubuntu', Arial, Helvetica, sans-serif; }
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
 
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -147,13 +158,30 @@ b,
 strong {
   font-weight: bolder; }
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block; }
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
 
 /**
  * Add the correct font size in all browsers.
@@ -178,6 +206,8 @@ sub {
 sup {
   top: -0.5em; }
 
+/* Embedded content
+   ========================================================================== */
 /**
  * Add the correct display in IE 9-.
  */
@@ -204,6 +234,8 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
+/* Forms
+   ========================================================================== */
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
@@ -398,26 +430,18 @@ template {
 [hidden] {
   display: none; }
 
-.visuallyhidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+body, html {
+  height: 100%;
   padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
-
-body {
-  background-color: #282828;
   font-size: 1rem;
-  line-height: 1.42;
-  position: relative;
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-  color: #282828; }
+  background-color: #282828;
+  /*  line-height: 1.42;*/
+  position: relative; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .wrapper {
   position: relative;
@@ -592,6 +616,19 @@ footer {
   margin-right: 20px; }
   .form__block:last-child {
     margin-right: 0; }
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
 
 .mask, .team__area, .menu__item .menu__descr {
   background-color: #2f3234;
