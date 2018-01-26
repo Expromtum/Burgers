@@ -137,24 +137,78 @@ footer {
 }
 
 .button {
-    background-color: $color-red;
-    border-radius: 5px;
+    border-radius: rem(5px);
     text-align: center;
     padding: 0px rem(15px);
     vertical-align: middle;
-    display: table-cell;
-
-    &:hover {
-        background-color: darken($color-red, 15%);
-        /*TODO оптимизировать*/
-    }
+    display: inline-block;
+    transition: 0.3s;
+    pointer-events: initial;
 
     & a {
-
         @extend .control-elements-font;
         text-decoration: none;
     }
+
+    &__color--red {
+        background-color: $color-red;       
+
+        &:hover {
+            background-color: darken($color-red, 15%);
+        }       
+    }
+
+    &__color--gray {
+        background-color:  $color-gray;
+      
+        &:hover {
+            background-color: lighten($color-gray, 15%);
+        }          
+    }
+
+    &__color--transparent {
+         background-color: transparent;       
+    }
 }
+
+.form__block {
+    display: inline-block;
+}
+
+.form__block-title,
+.checkbox {
+    @extend .section-text-font;    
+}
+
+.form__input,
+.form__textarea {
+    border-radius: rem(5px);
+    border-color: transparent;
+    outline: 0;
+    padding: rem(5px);
+    width: 100%;
+
+    &:focus {
+        border-color: $color-yellow;
+    }
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: rem(20px);
+ /* border: 1px solid red;*/
+  width: 50%;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 
 .mask {
     background-color: #2f3234;
