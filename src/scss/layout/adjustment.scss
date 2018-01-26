@@ -180,9 +180,23 @@ footer {
     display: inline-block;
 }
 
+
+/*Выравниваем по центру кнопку и текст*/
+input[type="checkbox"] ,
+input[type="radio"]  {
+    vertical-align: middle;
+    margin-right: rem(10px);
+}
+
+.form__block-title  span {
+    vertical-align: middle;
+}
+
+
 .form__block-title,
 .checkbox {
     @extend .section-text-font;    
+    padding-bottom: rem(3px);
 }
 
 .form__input,
@@ -197,6 +211,10 @@ footer {
         border-color: $color-yellow;
     }
 }
+/*
+.form__textarea {
+        padding-bottom: rem(10px);
+}*/
 
 .form__row {
   display: flex;
