@@ -1191,8 +1191,7 @@ footer {
 .order input[type="checkbox"],
 .order input[type="radio"] {
   vertical-align: middle;
-  margin-right: 0.625rem;
-  padding-bottom: 0; }
+  margin-right: 0.625rem; }
 
 .order__form-block-title span,
 .order__checkbox {
