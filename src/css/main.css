@@ -929,6 +929,10 @@ footer {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 10% 2% 0% 9%; }
+  @media screen and (max-width: 768px) {
+    .team__area {
+      width: 100%;
+      padding-left: 0; } }
 
 .team__content {
   height: 100%; }
@@ -937,6 +941,10 @@ footer {
   color: #f9b43b;
   line-height: 4rem;
   margin-bottom: 2.5rem; }
+  @media screen and (max-width: 768px) {
+    .team .section-title {
+      text-align: center;
+      margin-top: 6.25rem; } }
 
 .member__list {
   display: -webkit-box;
@@ -949,8 +957,16 @@ footer {
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly; }
+  @media screen and (max-width: 768px) {
+    .member__list {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   .member__list .member__item {
     margin-bottom: 1.25rem; }
+    @media screen and (max-width: 768px) {
+      .member__list .member__item {
+        text-align: center; } }
 
 .member-content {
   height: 0;
@@ -967,9 +983,24 @@ footer {
     margin-top: 0.625rem;
     margin-right: 1.25rem;
     margin-left: 0.625rem; }
+    @media screen and (max-width: 768px) {
+      .member-content .member__img {
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0; } }
   .member-content .member__def {
     display: inline-block;
     width: 13.125rem; }
+    @media screen and (max-width: 768px) {
+      .member-content .member__def {
+        display: block;
+        width: 20rem; } }
+    @media screen and (max-width: 768px) {
+      .member-content .member__def h5 {
+        text-align: center; } }
+    @media screen and (max-width: 768px) {
+      .member-content .member__def p {
+        text-align: center; } }
 
 .member__name {
   text-decoration: none; }
