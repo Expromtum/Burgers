@@ -1,14 +1,13 @@
 .frontpage {
-    background: 
-    		url("../img/bg/texture.png") no-repeat,
-        url("../img/bg/video-bg.png") no-repeat;
+    background: url("../img/bg/texture.png") no-repeat,
+    url("../img/bg/video-bg.png") no-repeat;
     background-position: center center;
- 	  position: relative;	  
-	  background-size: cover;
+    position: relative;
+    background-size: cover;
 }
 
 .header__list {
-    z-index: 20;	
+    z-index: 20;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,8 +29,8 @@
 }
 
 .header__logo {
-    margin-right: auto;  
-    padding-top: 10px; 
+    margin-right: auto;
+    padding-top: 10px;
 }
 
 .main-menu__list {
@@ -57,68 +56,67 @@
 }
 
 .main-menu__link {
-     @extend .control-elements-font;
+    @extend .control-elements-font;
 
-     &:hover {
+    &:hover {
         color: $color-red;
-    }   
-}
-
-.burger__list {
- 
-	  width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-grow: 1; 
- /*   border: 1px solid red;*/
-
-    & .burger__item { 
-    	  padding: 0;        margin: 0;
-        flex-basis: 50%;      	
-
-     /*   padding: 40px;
-				padding-bottom: 20px;   */ /*	  border: 1px solid red;*/
     }
 }
 
-.burger__img img{
-   height: rem(424px);
- /*  border: 1px solid red;	*/
+.burger__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    /*   border: 1px solid red;*/
+    & .burger__item {
+        padding: 0;
+        margin: 0;
+        flex-basis: 50%;
+
+        /*   padding: 40px;
+				padding-bottom: 20px;   */
+        /*	  border: 1px solid red;*/
+    }
+}
+
+.burger__img img {
+    height: rem(424px);
+    /*  border: 1px solid red;	*/
 }
 
 .burger__descr {
     display: flex;
     flex-direction: column;
-    justify-content: center;	  
+    justify-content: center;
 
-  	& .section-title {
-	    color: $color-yellow;
-	    padding-left: 10px;
-	  /*  font-family: Gagalin;
+    & .section-title {
+        color: $color-yellow;
+        padding-left: 10px;
+        /*  font-family: Gagalin;
 	    font-size: rem(75px);
 	    font-weight: 300;
       padding-top: 10%;
       letter-spacing: 1.7px;*/
-	  }
+    }
 
-	& .descr-natural {
-	    color: #ffffff;
-	    font-family: Lifehack;
-	    font-weight: 400;
-	    font-size: rem(65px);
-	    line-height: rem(75px);
-	    letter-spacing: -1.63px;
-	    padding-left: 10px;	    
-	}
+    & .descr-natural {
+        color: #ffffff;
+        font-family: Lifehack;
+        font-weight: 400;
+        font-size: rem(65px);
+        line-height: rem(75px);
+        letter-spacing: -1.63px;
+        padding-left: 10px;
+    }
 
-	& .descr-burger {
-	    color: #ffffff;
-	    font-family: Lifehack;
-	    font-weight: 400;
-	    font-size: rem(65px);
-	    line-height: rem(65px);    
-	    padding-left: 10px;  
-	}
+    & .descr-burger {
+        color: #ffffff;
+        font-family: Lifehack;
+        font-weight: 400;
+        font-size: rem(65px);
+        line-height: rem(65px);
+        padding-left: 10px;
+    }
 }
-

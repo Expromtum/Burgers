@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
-    background-size: cover;
+    background-size: cover;   
 }
 
 .team__area {
@@ -13,29 +13,29 @@
     width: 49%;
     height: 100%;
     @extend .mask;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+    padding: 10% 2% 0% 9%; 
+}
+
+.team__content {
+   height: 100%;
 }
 
 .team .section-title {
-    /*TODO: заменить на модификатор*/
-    /*@extend .section-title-font;*/
-    margin-top: 30%;
-    margin-left: 18%;
-    margin-bottom: 5%;
-    text-align: left;
     color: $color-yellow;
     line-height: rem(64px);
+    margin-bottom: rem(40px);
 }
 
 .member__list {
-    margin-left: 18%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 50%;
 
     & .member__item {
-        margin: 0;
-        padding-left: rem(20px);
+        margin-bottom: rem(20px);
     }
 }
 
@@ -52,20 +52,22 @@
         repeat: no-repeat;
         background-position: center;
         border-radius: 50%;
-        margin-top: rem(15px);
+        margin-top: rem(10px);
         margin-right: rem(20px);
+        margin-left: rem(10px);
     }
 
     & .member__def {
         display: inline-block;
-        width: rem(210px);
+        width: rem(210px); 
+
         @extend .section-text-font;        
 
         h5 {
-            @extend .section-h5-font;
+            @extend .section-h5-font; 
         }
 
-        p {
+        p {       
             @extend .section-text-font;
         }
     }
@@ -80,10 +82,12 @@
         display: inline-block;
         background: url("../icons/arrow.svg") no-repeat center;
         margin-right: rem(10px);
+
         height: rem(7px);
         width: rem(9px);   
     }
 }
+
 /*класс модификатор, который будет навешиваться как дополнительный
 класс на элемент аккордеона и тем самым менять в нем отображение на то, которое
 соответствует активному элементу*/

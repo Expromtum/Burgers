@@ -2,10 +2,14 @@ $section-width: rem(1100px);
 $section-min-width: rem(1100px);
 $section-min-height: rem(650px);
 
+html {
+  font-size: 16px;
+}
+
 body, html {
   height: 100%;
   padding: 0;
-  font-size: rem(16px);
+
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;  
   background-color: $color-bg-side;
 /*  line-height: 1.42;*/
@@ -176,61 +180,6 @@ footer {
     }
 }
 
-.form__block {
-    display: inline-block;
-}
-
-
-/*Выравниваем по центру кнопку и текст*/
-input[type="checkbox"] ,
-input[type="radio"]  {
-    vertical-align: middle;
-    margin-right: rem(10px);
-}
-
-.form__block-title  span {
-    vertical-align: middle;
-}
-
-
-.form__block-title,
-.checkbox {
-    @extend .section-text-font;    
-    padding-bottom: rem(3px);
-}
-
-.form__input,
-.form__textarea {
-    border-radius: rem(5px);
-    border-color: transparent;
-    outline: 0;
-    padding: rem(5px);
-    width: 100%;
-
-    &:focus {
-        border-color: $color-yellow;
-    }
-}
-/*
-.form__textarea {
-        padding-bottom: rem(10px);
-}*/
-
-.form__row {
-  display: flex;
-  margin-bottom: rem(20px);
- /* border: 1px solid red;*/
-  width: 50%;
-}
-
-.form__block {
-  flex: 1;
-  margin-right: 20px;
-  
-  &:last-child {
-    margin-right: 0;
-  }
-}
 
 .visuallyhidden {
   position: absolute;
