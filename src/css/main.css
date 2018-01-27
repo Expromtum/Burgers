@@ -430,28 +430,23 @@ template {
 [hidden] {
   display: none; }
 
-/*@import "layout/media";*/
 html {
-  font-size: 16px;
-  /* @include desctop {
-        font-size: 16px;
-    }
-
-    @include laptop {
-        font-size: 15px;
-    }*/
-  /*   @include tablets {
-        font-size: 14px;
-    }
-
-    @include phones {
-        font-size: 13px;
-    }*/ }
+  font-size: 16px; }
+  @media screen and (max-width: 900px) {
+    html {
+      font-size: 14px; } }
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 13px; } }
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 12px; } }
 
 body,
 html {
   height: 100%;
   padding: 0;
+  min-width: 280px;
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   background-color: #282828;
   /*  line-height: 1.42;*/
@@ -658,6 +653,9 @@ footer {
 
 .header__nav {
   margin-right: 0rem; }
+  @media screen and (max-width: 768px) {
+    .header__nav {
+      display: none; } }
 
 .header__logo {
   margin-right: auto;
@@ -683,6 +681,11 @@ footer {
   padding-left: 0.625rem;
   padding-right: 1.6875rem;
   list-style: disc outside; }
+  @media screen and (max-width: 900px) {
+    .main-menu__item {
+      list-style: none;
+      padding-left: 0.3125rem;
+      padding-right: 0.3125rem; } }
   .main-menu__item:first-child {
     list-style: none; }
   .main-menu__item:last-child {
@@ -703,19 +706,40 @@ footer {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
+  @media screen and (max-width: 768px) {
+    .burger__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .burger__list .burger__item {
-    width: 50%; }
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    @media screen and (max-width: 768px) {
+      .burger__list .burger__item {
+        width: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; } }
 
 .burger__img img {
   height: 26.5rem;
   margin-top: -15px; }
 
 .burger__descr {
+  margin-top: -5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,11 +750,25 @@ footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: -5rem; }
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  @media screen and (max-width: 768px) {
+    .burger__descr {
+      margin-top: 0rem;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   .burger__descr .section-title {
     color: #f9b43b;
     padding-left: 0.625rem;
     margin: 0; }
+    @media screen and (max-width: 900px) {
+      .burger__descr .section-title {
+        padding-left: 10px; } }
+    @media screen and (max-width: 768px) {
+      .burger__descr .section-title {
+        text-align: center; } }
   .burger__descr .descr-natural {
     color: #ffffff;
     font-family: Lifehack;
@@ -738,14 +776,20 @@ footer {
     font-size: 4.0625rem;
     line-height: 4.6875rem;
     letter-spacing: -1.63px;
-    padding-left: 10px; }
+    padding-left: 0.625rem; }
+    @media screen and (max-width: 900px) {
+      .burger__descr .descr-natural {
+        padding-left: 10px; } }
   .burger__descr .descr-burger {
     color: #ffffff;
     font-family: Lifehack;
     font-weight: 400;
     font-size: 4.0625rem;
     line-height: 4.0625rem;
-    padding-left: 10px; }
+    padding-left: 0.625rem; }
+    @media screen and (max-width: 900px) {
+      .burger__descr .descr-burger {
+        padding-left: 10px; } }
 
 .best {
   background: url("../img/bg/best-bg.png") no-repeat top center;
@@ -777,8 +821,17 @@ footer {
   justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  @media screen and (max-width: 480px) {
+    .best__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .best__list .best__item {
     max-width: 30%; }
+    @media screen and (max-width: 480px) {
+      .best__list .best__item {
+        max-width: 100%; } }
 
 .promo__list {
   display: -webkit-box;
@@ -788,21 +841,44 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  flex-grow: 1; }
+  @media screen and (max-width: 480px) {
+    .promo__list {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; } }
   .promo__list .promo__item {
-    text-align: center; }
+    text-align: center;
+    margin: 0.625rem; }
+    @media screen and (max-width: 480px) {
+      .promo__list .promo__item {
+        text-align: left; } }
 
 .promo__img {
-  height: 89px;
-  width: 97px; }
+  height: 5.5625rem;
+  width: 6.0625rem; }
+  @media screen and (max-width: 480px) {
+    .promo__img {
+      width: 25%; } }
+
+@media screen and (max-width: 480px) {
+  .promo__info {
+    width: 60%; } }
 
 .promo__title {
   color: #2f3234;
@@ -811,17 +887,23 @@ footer {
   font-weight: 500;
   line-height: 1.75875rem;
   letter-spacing: -0.0375rem;
-  padding-top: 2.5rem; }
+  padding: 2.5rem 0.9375rem 0.9375rem 0.9375rem; }
+  @media screen and (max-width: 480px) {
+    .promo__title {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding: 0; } }
 
 .promo__descr {
-  /* opacity: 0.8;*/
   color: #2f3234;
   font-family: Ubuntu;
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.5625rem;
   padding: 5px;
-  padding-top: 10px; }
+  padding-top: 0.625rem; }
 
 .team {
   background: url("../img/bg/team.png") no-repeat top center;

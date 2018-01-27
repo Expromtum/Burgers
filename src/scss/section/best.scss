@@ -22,26 +22,56 @@
     justify-content: center;
     flex-wrap: wrap;
 
+    @include phones {
+        flex-direction: column;
+    }
+
     & .best__item {
         max-width: 30%;
+
+        @include phones {
+            max-width: 100%;
+        }
     }
 }
 
 .promo__list {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
-    justify-content: flex-start;
+
+    @include phones {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
     & .promo__item {
         text-align: center;
+        margin: rem(10px);
+
+        @include phones {
+            text-align: left;
+        }
     }
 }
 
 .promo__img {
-    height: 89px;
-    width: 97px;
+    height: rem(89px);
+    width: rem(97px);
+
+    @include phones {
+        width: 25%;
+    }
+}
+
+
+.promo__info {
+    @include phones {
+        width: 60%;
+    }
 }
 
 .promo__title {
@@ -51,16 +81,20 @@
     font-weight: 500;
     line-height: rem(28.14px);
     letter-spacing: rem(-0.6px);
-    padding-top: rem(40px);
+    padding: rem(40px) rem(15px) rem(15px) rem(15px);
+
+    @include phones {
+        flex-direction: row;
+        padding: 0;
+    }
 }
 
 .promo__descr {
-    /* opacity: 0.8;*/
     color: $color-best-descr;
     font-family: Ubuntu;
     font-size: rem(14px);
     font-weight: 300;
     line-height: rem(25px);
     padding: (5px);
-    padding-top: 10px;
+    padding-top: rem(10px);
 }

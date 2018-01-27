@@ -25,6 +25,10 @@
 
 .header__nav {
     margin-right: rem(0px);
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .header__logo {
@@ -44,6 +48,12 @@
     padding-left: rem(10px);
     padding-right: rem(27px);
     list-style: disc outside;
+
+    @include laptop {
+        list-style: none;
+        padding-left: rem(5px);
+        padding-right: rem(5px);
+    }
 
     &:first-child {
         list-style: none;
@@ -67,11 +77,22 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    flex-wrap: wrap;
     flex-grow: 1;
+
+    @include tablets {
+        flex-direction: column;
+    }
 
     & .burger__item {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include tablets {
+            width: 100%;
+            align-items: center;
+        }
     }
 }
 
@@ -81,15 +102,30 @@
 }
 
 .burger__descr {
+    margin-top: rem(-80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: rem(-80px);
+    align-items: flex-start;
+
+    @include tablets {
+        margin-top: rem(0px);
+        align-items: center;
+    }
 
     & .section-title {
+
         color: $color-yellow;
         padding-left: rem(10px);
         margin: 0;
+
+        @include laptop {
+            padding-left: 10px;
+        }
+
+        @include tablets {
+            text-align: center;
+        }
     }
 
     & .descr-natural {
@@ -99,7 +135,11 @@
         font-size: rem(65px);
         line-height: rem(75px);
         letter-spacing: -1.63px;
-        padding-left: 10px;
+        padding-left: rem(10px);
+ 
+        @include laptop {
+            padding-left: 10px;
+        }
     }
 
     & .descr-burger {
@@ -108,6 +148,10 @@
         font-weight: 400;
         font-size: rem(65px);
         line-height: rem(65px);
-        padding-left: 10px;
+        padding-left: rem(10px);
+
+        @include laptop {
+            padding-left: 10px;
+        }
     }
 }
