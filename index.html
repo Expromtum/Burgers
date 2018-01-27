@@ -3,7 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="src/css/normalize.css" rel="stylesheet">
+
+    <!-- X-UA-Compatible управляет режимом отображением страниц в браузерах IE8-->
+    <!--IE=edge всегда использует последний доступный стандартный режим отображения независимо от <!DOCTYPE>.-->
+    <!--chrome=1 позволит пользователям IE, у которых установлен плагин Google Chrome Frame, использовать рендерер WebKit и JS-движок V8-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--width=device-width область просмотра контента, равная ширине экрана мобильного устройства-->
+    <!--initial-scale начальный масштаб (в данном случае без масштабирования)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+
     <link href="src/css/main.css" rel="stylesheet">
     <title>Бургер-shop</title>
 </head>
@@ -307,7 +316,7 @@
                                         <input type="radio" class="order__checkbox" name="order_money"><span>Потребуется сдача</span>
                                     </label>
                                     <label class="order__form-block order__form-block-title">
-                                        <input type="radio" class="order__checkbox" name="order_card"><span>Оплата по карте</span>
+                                        <input type="radio" class="order__checkbox" name="order_money"><span>Оплата по карте</span>
                                     </label>
                                 </div>
                                 <div class="order__form-row">

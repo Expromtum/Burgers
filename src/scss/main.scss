@@ -1,18 +1,19 @@
 //config
-@import "config/variables.scss";
-@import "config/mixins.scss";
+@import "config/variables";
+@import "config/mixins";
 
 //layout
-@import "layout/font.scss";
-@import "layout/normalize.scss";
-@import "layout/adjustment.scss";
+@import "layout/font";
+@import "layout/normalize";
+/*@import "layout/media";*/
+@import "layout/adjustment";
 
 //sections
-@import "section/frontpage.scss";
-@import "section/best.scss";
-@import "section/team.scss";
-@import "section/menu.scss";
-@import "section/reviews.scss";
-@import "section/order.scss";
-@import "section/contacts.scss";
-@import "section/navbar.scss";
+@import "section/frontpage";
+@import "section/best";
+@import "section/team";
+@import "section/menu";
+@import "section/reviews";
+@import "section/order";
+@import "section/contacts";
+@import "section/navbar";
