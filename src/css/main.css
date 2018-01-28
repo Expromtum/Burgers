@@ -677,6 +677,9 @@ footer {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline; }
+  @media screen and (max-width: 900px) {
+    .main-menu__list {
+      display: none; } }
 
 .main-menu__item {
   padding-left: 0.625rem;
@@ -694,6 +697,15 @@ footer {
 
 .main-menu__link:hover {
   color: #e45028; }
+
+.header__mobile-menu {
+  display: none; }
+  @media screen and (max-width: 900px) {
+    .header__mobile-menu {
+      display: block;
+      width: 1.5rem;
+      height: 1.375rem;
+      margin-left: 30px; } }
 
 .burger__list {
   width: 100%;

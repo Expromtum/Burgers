@@ -20,7 +20,7 @@
 
     & .header__item:nth-child(2) {
         margin-left: auto;
-    }
+    } 
 }
 
 .header__nav {
@@ -42,6 +42,10 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
+
+    @include laptop {
+        display: none;
+    }        
 }
 
 .main-menu__item {
@@ -70,6 +74,17 @@
     &:hover {
         color: $color-red;
     }
+}
+
+.header__mobile-menu {
+    display: none;
+
+    @include laptop {
+        display: block;
+        width: rem(24px);
+        height: rem(22px);
+        margin-left: (30px);       
+    }    
 }
 
 .burger__list {
