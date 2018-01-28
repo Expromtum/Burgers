@@ -11,6 +11,10 @@
         color: $color-title-gray;
         margin-top: rem(-25px);
         margin-bottom: rem(25px);
+ 
+        @include phones {
+            font-size: rem($mobile-section-title-font);
+        }         
     }
 }
 

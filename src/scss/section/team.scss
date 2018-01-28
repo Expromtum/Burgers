@@ -4,6 +4,12 @@
     background-position: center center;
     position: relative;
     background-size: cover;
+
+    & .section-title {
+        @include phones {
+            font-size: rem($mobile-section-title-font);
+        }         
+    }
 }
 
 .team__area {
