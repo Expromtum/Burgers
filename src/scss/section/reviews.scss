@@ -21,6 +21,11 @@
         height: 50%;
         width: 25%;
         position: relative;
+
+        @include tablets {
+           height: 25%;            
+           width: 50%;
+        }       
     }
 }
 
@@ -42,43 +47,70 @@
 }
 
 .review__mask  {
-	padding: rem(40px) 0 0 rem(20px);
+ 	padding: rem(40px) rem(20px);
     opacity: 0;
-    align-text: left;
-    vertical-align: middle;
     transform: scale(0.9);
     transition: 0.3s;   
-    pointer-events: none;
+    pointer-events: none;   
+
+    @include tablets {
+       text-align: center;
+       padding: rem(10px) rem(10px);   
+    }     
 }
 
 /*Затемнение картинки*/
 .review__item:hover .review__mask{
 	@extend .mask2;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transform: scale(1);
     z-index: 5;    
 }
 
 .review__name {
 	@extend .section-h4-font;	
+
+    @include tablets {
+       text-align: center;
+       margin: 0;
+       padding: 0;         
+    }      
+
+    @include phones {
+       font-size: 200%;   
+       margin-bottom: rem(40px);        
+    }              
 }
 
 .review__quote {
-	margin-left: 0;
+    margin-bottom: rem(10px);
+
 	color: #ffffff;
 	font-family: Ubuntu;
 	font-size: rem(14px);
 	font-weight: 300;
-	line-height: rem(24px);	
-}
-/*
-.review__button {
-	background-color: $color-button-gray;
-	width: rem(120px);
-	height: rem(35px);
-	pointer-events: initial;
+	line-height: rem(24px);	    
 
-    &:hover {
-        background-color: darken($color-button-gray, 15%); 
-    }	
-}*/
+    @include phones {
+        display: none;    
+    }        
+}
+
+.review__read-review {
+    display: none;
+    
+    @include phones {  
+        display: block;    
+    }       
+}
+
+.review__read-more {
+    display: block;  
+    
+    @include phones {
+        display: none;    
+    }       
+}
