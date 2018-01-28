@@ -24,11 +24,11 @@
 }
 
 .contacts__adres{
-	@extend .section-text-font;
+	@extend %section-text-font;
 }
 
 .contacts__phone {
-	@extend .section-text-font;
+	@extend %section-text-font;
 	color: $color-red;
 	font-weight: 700;
 

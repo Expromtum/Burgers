@@ -41,7 +41,7 @@
 
     & .menu__name {
         @extend .mask2;
-        @extend .section-h3-font;
+        @extend %section-h3-font;
         width: rem(80px);
         writing-mode: vertical-rl;
         margin: 0;
@@ -57,7 +57,7 @@
     }
 
     & .menu__descr {
-        @extend .section-text-font;
+        @extend %section-text-font;
         @extend .mask;
         width: 0;
         overflow: hidden;
@@ -66,24 +66,19 @@
 }
 
 
+
 /*TODO: добавить маску затемнения*/
 
 .menu__name {
     position: relative;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-}
 
-.menu__name--meat {
-    background-image: url("../img/bg/img-for-meat.png");
-}
-
-.menu__name--veg {
-    background-image: url("../img/bg/img-for-veg.png");
-}
-
-.menu__name--diet {
-    background-image: url("../img/bg/img-for-diet.png");
+    @each $name in 'meat' 'veg' 'diet' {
+        &--#{$name} {
+            background-image: url("../img/bg/img-for-#{$name}.png");
+        }
+    }
 }
 
 .menu__name h3::after {
@@ -95,8 +90,6 @@
     @extend .mask2;
     border: 1px solid white;
 }
-
-
 
 /*
 .menu__img, .menu__mask {
@@ -112,6 +105,7 @@
     overflow: visible;
     padding: rem(30px);
 }
+
 
 
 

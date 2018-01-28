@@ -16,7 +16,7 @@
     padding-left: 6%;
     padding-right: 6.5%;
     width: 100%;
-    @extend .control-elements-font;
+    @extend %control-elements-font;
 
     & .header__item:nth-child(2) {
         margin-left: auto;
@@ -65,7 +65,7 @@
 }
 
 .main-menu__link {
-    @extend .control-elements-font;
+    @extend %control-elements-font;
 
     &:hover {
         color: $color-red;
@@ -114,7 +114,6 @@
     }
 
     & .section-title {
-
         color: $color-yellow;
         padding-left: rem(10px);
         margin: 0;

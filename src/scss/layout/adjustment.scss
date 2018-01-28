@@ -104,16 +104,6 @@ footer {
     width: 100%;
 }
 
-.control-elements-font {
-    vertical-align: middle;
-    color: #ffffff;
-    font-family: Ubuntu;
-    font-size: rem(13px);
-    line-height: rem(30px);
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
 .section-title {
     width: 100%;
     color: #ffffff;
@@ -123,7 +113,17 @@ footer {
     text-transform: uppercase;
 }
 
-.section-h3-font {
+%control-elements-font {
+    vertical-align: middle;
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: rem(13px);
+    line-height: rem(30px);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+%section-h3-font {
     text-align: center;
     color: #ffffff;
     font-family: Gagalin;
@@ -133,7 +133,7 @@ footer {
     text-transform: uppercase;
 }
 
-.section-h4-font {
+%section-h4-font {
     text-align: left;
     width: 100%;
     color: #ffffff;
@@ -144,7 +144,7 @@ footer {
     text-transform: uppercase;
 }
 
-.section-text-font {
+%section-text-font {
     text-align: left;
     color: #ffffff;
     font-family: Ubuntu;
@@ -153,8 +153,8 @@ footer {
     font-weight: 300;
 }
 
-.section-h5-font {
-    @extend .section-text-font;
+%section-h5-font {
+    @extend %section-text-font;
     font-weight: 700;
 }
 
@@ -168,7 +168,7 @@ footer {
     pointer-events: initial;
 
     & a {
-        @extend .control-elements-font;
+        @extend %control-elements-font;
         text-decoration: none;
     }
 

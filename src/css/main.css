@@ -533,15 +533,6 @@ footer {
   position: relative;
   width: 100%; }
 
-.control-elements-font, .button a, .header__list, .main-menu__link {
-  vertical-align: middle;
-  color: #ffffff;
-  font-family: Ubuntu;
-  font-size: 0.8125rem;
-  line-height: 1.875rem;
-  text-transform: uppercase;
-  text-decoration: none; }
-
 .section-title {
   width: 100%;
   color: #ffffff;
@@ -550,7 +541,16 @@ footer {
   font-weight: 400;
   text-transform: uppercase; }
 
-.section-h3-font, .menu__item .menu__name {
+.button a, .header__list, .main-menu__link {
+  vertical-align: middle;
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 0.8125rem;
+  line-height: 1.875rem;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.menu__item .menu__name {
   text-align: center;
   color: #ffffff;
   font-family: Gagalin;
@@ -559,7 +559,7 @@ footer {
   line-height: 63.75px;
   text-transform: uppercase; }
 
-.section-h4-font, .member__name, .review__name {
+.member__name, .review__name {
   text-align: left;
   width: 100%;
   color: #ffffff;
@@ -569,7 +569,7 @@ footer {
   line-height: 1.75rem;
   text-transform: uppercase; }
 
-.section-text-font, .section-h5-font, .member-content .member__def h5, .member-content .member__def, .member-content .member__def p, .menu__item .menu__descr, .order__form-block-title, .contacts__adres, .contacts__phone {
+.member-content .member__def h5, .promo__descr, .member-content .member__def, .member-content .member__def p, .menu__item .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
@@ -577,7 +577,7 @@ footer {
   line-height: 1.5rem;
   font-weight: 300; }
 
-.section-h5-font, .member-content .member__def h5 {
+.member-content .member__def h5 {
   font-weight: 700; }
 
 .button {
@@ -899,12 +899,9 @@ footer {
 
 .promo__descr {
   color: #2f3234;
-  font-family: Ubuntu;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.5625rem;
   padding: 5px;
-  padding-top: 0.625rem; }
+  padding-top: 0.625rem;
+  text-align: center; }
 
 .team {
   background: url("../img/bg/team.png") no-repeat top center;
@@ -1113,15 +1110,12 @@ footer {
   position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat; }
-
-.menu__name--meat {
-  background-image: url("../img/bg/img-for-meat.png"); }
-
-.menu__name--veg {
-  background-image: url("../img/bg/img-for-veg.png"); }
-
-.menu__name--diet {
-  background-image: url("../img/bg/img-for-diet.png"); }
+  .menu__name--meat {
+    background-image: url("../img/bg/img-for-meat.png"); }
+  .menu__name--veg {
+    background-image: url("../img/bg/img-for-veg.png"); }
+  .menu__name--diet {
+    background-image: url("../img/bg/img-for-diet.png"); }
 
 .menu__name h3::after {
   position: absolute;
@@ -1246,12 +1240,10 @@ footer {
     margin-bottom: 2.5rem; } }
 
 .review__quote {
-  margin-bottom: 0.625rem;
-  color: #ffffff;
-  font-family: Ubuntu;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.5rem; }
+  margin-bottom: 0.625rem; }
+  @media screen and (max-width: 768px) {
+    .review__quote {
+      text-align: center; } }
   @media screen and (max-width: 480px) {
     .review__quote {
       display: none; } }
@@ -1314,7 +1306,6 @@ footer {
     -ms-flex-align: center;
     align-items: center; }
     .order__form-fields .order__form-col .order__form-row {
-      /*   border: 1px solid green;*/
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1342,7 +1333,7 @@ footer {
 
 .order__form-block-title span,
 .order__checkbox {
-  /*Стилизация оранжевым цветом*/
+  /*TODO Стилизация оранжевым цветом*/
   vertical-align: middle; }
 
 .order__form-block-title {

@@ -90,11 +90,9 @@
 }
 
 .promo__descr {
+    @extend %section-text-font;
     color: $color-best-descr;
-    font-family: Ubuntu;
-    font-size: rem(14px);
-    font-weight: 300;
-    line-height: rem(25px);
     padding: (5px);
     padding-top: rem(10px);
+    text-align: center;
 }

@@ -33,7 +33,6 @@
         align-items: center;
 
         & .order__form-row {
-         /*   border: 1px solid green;*/
 	        display: flex;  
             width: 100%;
             padding-left: rem(10px);
@@ -65,12 +64,12 @@
 }
 
 .order__form-block-title  span,
-.order__checkbox { /*Стилизация оранжевым цветом*/
+.order__checkbox { /*TODO Стилизация оранжевым цветом*/
     vertical-align: middle;
 }
 
 .order__form-block-title {
-    @extend .section-text-font;    
+    @extend %section-text-font;    
     padding-bottom: rem(3px);
 }
 

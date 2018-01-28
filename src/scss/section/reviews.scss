@@ -1,4 +1,3 @@
-
 .reviews {
     position: relative;   
 }
@@ -71,7 +70,7 @@
 }
 
 .review__name {
-	@extend .section-h4-font;	
+	@extend %section-h4-font;	
 
     @include tablets {
        text-align: center;
@@ -87,12 +86,11 @@
 
 .review__quote {
     margin-bottom: rem(10px);
+    @extend %section-text-font;
 
-	color: #ffffff;
-	font-family: Ubuntu;
-	font-size: rem(14px);
-	font-weight: 300;
-	line-height: rem(24px);	    
+    @include tablets {
+        text-align: center;   
+    }     
 
     @include phones {
         display: none;    

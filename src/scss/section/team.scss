@@ -84,7 +84,7 @@
     & .member__def {
         display: inline-block;
         width: rem(210px);
-        @extend .section-text-font;
+        @extend %section-text-font;
 
         @include tablets {
             display: block;
@@ -92,7 +92,7 @@
         }
 
         h5 {
-            @extend .section-h5-font;
+            @extend %section-h5-font;
 
             @include tablets {
                 text-align: center;
@@ -100,7 +100,7 @@
         }
 
         p {
-            @extend .section-text-font;
+            @extend %section-text-font;
 
             @include tablets {
                 text-align: center;
@@ -110,7 +110,7 @@
 }
 
 .member__name {
-    @extend .section-h4-font;
+    @extend %section-h4-font;
     text-decoration: none;
 
     &::before {
