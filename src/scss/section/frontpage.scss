@@ -20,7 +20,7 @@
 
     & .header__item:nth-child(2) {
         margin-left: auto;
-    } 
+    }
 }
 
 .header__nav {
@@ -45,7 +45,7 @@
 
     @include laptop {
         display: none;
-    }        
+    }
 }
 
 .main-menu__item {
@@ -83,8 +83,8 @@
         display: block;
         width: rem(24px);
         height: rem(22px);
-        margin-left: (30px);       
-    }    
+        margin-left: (30px);
+    }
 }
 
 .burger__list {
@@ -100,14 +100,20 @@
 
     & .burger__item {
         width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
 
         @include tablets {
             width: 100%;
-            align-items: center;
         }
+    }
+}
+
+.burger__img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include tablets {
+        align-items: center;
     }
 }
 
@@ -124,8 +130,8 @@
     align-items: flex-start;
 
     @include tablets {
-        margin-top: rem(0px);
         align-items: center;
+        margin-top: rem(0px);
     }
 
     & .section-title {
@@ -150,7 +156,7 @@
         line-height: rem(75px);
         letter-spacing: -1.63px;
         padding-left: rem(10px);
- 
+
         @include laptop {
             padding-left: 10px;
         }
