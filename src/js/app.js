@@ -2,12 +2,12 @@ requirejs.config({
     //By default load any module IDs from js/lib
     baseUrl: 'src/js',
     shim: {
-        'bootstrap': {
+     /*   'bootstrap': {
             'deps': [
                 'popper',
                 'jquery'
             ]
-        },
+        },*/
         'waypoint': {
             'deps': [
                 'jquery'
@@ -26,7 +26,7 @@ requirejs.config({
          */
         'jquery': 'jquery.min',
         'popper': 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min',
-        'bootstrap': 'bootstrap.min',
+     /*   'bootstrap': 'bootstrap.min',*/
         'waypoint': 'jquery.waypoints.min',
         /*'swiper': 'swiper.min',*/
 
@@ -39,7 +39,7 @@ requirejs.config({
     }
 });
 
-require(['jquery', 'bootstrap' /*, 'animate', 'initGallary'*/ ], function($) {
+require(['jquery'/*, 'bootstrap' *//*, 'animate', 'initGallary'*/ ], function($) {
     initMenuAccordeon();
     initTeamAccordeon();    
 });
