@@ -100,17 +100,9 @@
     bottom: 0;      
 }*/
 
-.menu__item:hover .menu__descr {
+/*.menu__item:hover .menu__descr,*/
+.menu__item--active  .menu__descr{
     width: rem(480px);
     overflow: visible;
     padding: rem(30px);
 }
-
-
-
-
-/*
-.menu__item--active .menu__descr {
-    width: rem(480px);
-    overflow: visible;
-}*/

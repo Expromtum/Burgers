@@ -38,10 +38,10 @@
                         </div>
                         <div class="header__mobile-menu">
                             <a href="#" class='header__mobile-menu-link'>
-                                <svg class="header__mobile-menu-img" >
+                                <svg class="header__mobile-menu-img">
                                     <use xlink:href="src/icons/mobile-menu.svg#mobile-menu"></use>
                                 </svg>
-                            </a>                            
+                            </a>
                         </div>
                     </header>
                     <div class="burger__list">
@@ -111,8 +111,8 @@
                             <h2 class="section-title">Команда</h2>
                             <ul class="member__list">
                                 <!-- блок-аккордеон -->
-                                <li class="member__item">
-                                    <a href="#" class="member__name">Дэниел Редклифф</a>
+                                <li class="member__item"  >
+                                    <div class="member__name">Дэниел Редклифф</div>
                                     <div class="member-content">
                                         <div class="member__img" style="background-image: url('src/img/content/homosapiens.png')"></div>
                                         <div class="member__def">
@@ -122,7 +122,7 @@
                                     </div>
                                 </li>
                                 <li class="member__item">
-                                    <a href="#" class="member__name">Ричард Джеймс</a>
+                                    <div class="member__name">Ричард Джеймс</div>
                                     <div class="member-content">
                                         <div class="member__img" style="background-image: url('src/img/content/homosapiens.png')"></div>
                                         <div class="member__def">
@@ -132,7 +132,7 @@
                                     </div>
                                 </li>
                                 <li class="member__item">
-                                    <a href="#" class="member__name">Джейк Финн</a>
+                                    <div class="member__name">Джейк Финн</div>
                                     <div class="member-content">
                                         <div class="member__img" style="background-image: url('src/img/content/homosapiens.png')"></div>
                                         <div class="member__def">
@@ -142,7 +142,7 @@
                                     </div>
                                 </li>
                                 <li class="member__item">
-                                    <a href="#" class="member__name">Николай Иванов</a>
+                                    <div class="member__name">Николай Иванов</div>
                                     <div class="member-content">
                                         <div class="member__img" style="background-image: url('src/img/content/homosapiens.png')"></div>
                                         <div class="member__def">
@@ -161,7 +161,7 @@
                     <h2 class="section-title">МЕНЮ</h2>
                     <dl class="menu__list">
                         <!-- блок-аккордеон -->
-                        <li class="menu__item menu__item--active">
+                        <li class="menu__item">
                             <div class="menu__name menu__name--meat">
                                 <h3 class="">Для мясоедов</h3>
                                 <!--  <div class="menu__img" style="background-image: url(src/img/bg/img-for-meat.png);"></div>
@@ -352,7 +352,7 @@
                                         <textarea name="order_comment" class="form__textarea" rows="5"></textarea>
                                     </label>
                                 </div>
-                                <div class="order__form-row order__chb1">
+                                <div class="order__form-row order__chb2">
                                     <label class="order__form-block order__form-block-title">
                                         <input type="radio" class="form__checkbox" name="order_money"><span>Потребуется сдача</span>
                                     </label>
@@ -360,7 +360,7 @@
                                         <input type="radio" class="form__checkbox" name="order_money"><span>Оплата по карте</span>
                                     </label>
                                 </div>
-                                <div class="order__form-row order__chb2">
+                                <div class="order__form-row order__chb1">
                                     <label class="order__form-block order__form-block-title">
                                         <input type="checkbox" class="form__checkbox" name="order_not_phone"><span>Не перезванивать</span>
                                     </label>
@@ -507,6 +507,15 @@
             </g>
         </svg>
     </div>
+   <!-- <script type="text/javascript" src="src/js/jquery-3.3.1.min.js"></script> -->
+    <script data-main="src/js/app" src="src/js/require.js" defer></script>
+    
+    <!--
+    <script type="text/javascript">
+    if (window.jQuery) alert("jQuery подключен");
+    else alert("jQuery не подключен");
+    </script>
+    -->
 </body>
 
 </html>

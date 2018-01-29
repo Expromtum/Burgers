@@ -134,8 +134,7 @@
 класс на элемент аккордеона и тем самым менять в нем отображение на то, которое
 соответствует активному элементу*/
 
-.member__item--active,
-.member__item:hover {
+.member__item--active {
 
     & .member-content {
         overflow: visible;
@@ -151,3 +150,4 @@
         transition: 0.2s;
     }
 }
+

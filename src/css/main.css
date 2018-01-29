@@ -1035,17 +1035,14 @@ footer {
 /*класс модификатор, который будет навешиваться как дополнительный
 класс на элемент аккордеона и тем самым менять в нем отображение на то, которое
 соответствует активному элементу*/
-.member__item--active .member-content,
-.member__item:hover .member-content {
+.member__item--active .member-content {
   overflow: visible;
   height: 100%; }
 
-.member__item--active .member__name,
-.member__item:hover .member__name {
+.member__item--active .member__name {
   color: #f9b43b; }
 
-.member__item--active .member__name::before,
-.member__item:hover .member__name::before {
+.member__item--active .member__name::before {
   -webkit-transform: scale(-1);
   -ms-transform: scale(-1);
   transform: scale(-1);
@@ -1155,16 +1152,12 @@ footer {
     left: 0;
     bottom: 0;      
 }*/
-.menu__item:hover .menu__descr {
+/*.menu__item:hover .menu__descr,*/
+.menu__item--active .menu__descr {
   width: 30rem;
   overflow: visible;
   padding: 1.875rem; }
 
-/*
-.menu__item--active .menu__descr {
-    width: rem(480px);
-    overflow: visible;
-}*/
 .reviews {
   position: relative; }
 
