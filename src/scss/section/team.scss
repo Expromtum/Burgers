@@ -119,6 +119,11 @@
     @extend %section-h4-font;
     text-decoration: none;
 
+  
+    @include tablets {
+        text-align: center;
+    }  
+
     &::before {
         content: "";
         display: inline-block;

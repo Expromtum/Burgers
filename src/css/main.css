@@ -1024,6 +1024,9 @@ footer {
 
 .member__name {
   text-decoration: none; }
+  @media screen and (max-width: 768px) {
+    .member__name {
+      text-align: center; } }
   .member__name::before {
     content: "";
     display: inline-block;
