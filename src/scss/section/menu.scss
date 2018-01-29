@@ -15,6 +15,13 @@
     position: absolute;
     top: rem(180px);
     left: rem(100px);
+
+    @include tablets {
+       top: rem(80px);      
+       left: rem(50px);
+    }   
+
+
 }
 
 .menu__list {
@@ -38,6 +45,8 @@
     justify-content: flex-start;
     align-items: stretch;
     margin: 0;
+    padding: 0;    
+  //  border: 1px solid red;
 
     & .menu__name {
         @extend .mask2;
@@ -46,7 +55,11 @@
         writing-mode: vertical-rl;
         margin: 0;
         padding: 0;
-        vertical-align: bottom;
+        vertical-align: bottom; 
+
+        @include phones {
+            width: rem(70px);
+        }   
 
         & h3 {
             transform: rotate(180deg);
@@ -60,15 +73,13 @@
         @extend %section-text-font;
         @extend .mask;
         width: 0;
-        overflow: hidden;
+        overflow: hidden;   
         margin: 0;
+        padding: 0;
     }
 }
 
-
-
 /*TODO: добавить маску затемнения*/
-
 .menu__name {
     position: relative;
     background-size: 100% 100%;
@@ -88,7 +99,7 @@
     left: 0;
     bottom: 0;
     @extend .mask2;
-    border: 1px solid white;
+    //  border: 1px solid white;
 }
 
 /*
@@ -105,4 +116,9 @@
     width: rem(480px);
     overflow: visible;
     padding: rem(30px);
+    //  border: 1px solid blue;
+
+    @include phones {
+        width: rem(200px);
+    }    
 }

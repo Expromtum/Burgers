@@ -1065,6 +1065,10 @@ footer {
   position: absolute;
   top: 11.25rem;
   left: 6.25rem; }
+  @media screen and (max-width: 768px) {
+    .menu .section-title {
+      top: 5rem;
+      left: 3.125rem; } }
 
 .menu__list {
   height: 100%;
@@ -1103,7 +1107,8 @@ footer {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
   .menu__item .menu__name {
     width: 5rem;
     -webkit-writing-mode: vertical-rl;
@@ -1112,6 +1117,9 @@ footer {
     margin: 0;
     padding: 0;
     vertical-align: bottom; }
+    @media screen and (max-width: 480px) {
+      .menu__item .menu__name {
+        width: 4.375rem; } }
     .menu__item .menu__name h3 {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -1122,7 +1130,8 @@ footer {
   .menu__item .menu__descr {
     width: 0;
     overflow: hidden;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
 
 /*TODO: добавить маску затемнения*/
 .menu__name {
@@ -1141,8 +1150,7 @@ footer {
   top: 0;
   right: 0;
   left: 0;
-  bottom: 0;
-  border: 1px solid white; }
+  bottom: 0; }
 
 /*
 .menu__img, .menu__mask {
@@ -1157,6 +1165,9 @@ footer {
   width: 30rem;
   overflow: visible;
   padding: 1.875rem; }
+  @media screen and (max-width: 480px) {
+    .menu__item--active .menu__descr {
+      width: 12.5rem; } }
 
 .reviews {
   position: relative; }
