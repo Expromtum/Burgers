@@ -111,6 +111,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
 
     @include tablets {
         align-items: center;
@@ -119,7 +120,7 @@
 
 .burger__img img {
     height: rem(424px);
-    margin-top: -15px;
+    margin-top: rem(-150px); 
 }
 
 .burger__descr {

@@ -9,12 +9,12 @@
         text-align: center;
         width: 100%;
         color: $color-title-gray;
-        margin-top: rem(-25px);
-        margin-bottom: rem(25px);
- 
+        margin-top: rem(0px);
+        margin-bottom: rem(0px);
+
         @include phones {
             font-size: rem($mobile-section-title-font);
-        }         
+        }
     }
 }
 
@@ -45,7 +45,8 @@
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
-
+    margin-top: rem(30px);
+    
     @include phones {
         flex-direction: row;
         justify-content: center;
@@ -54,7 +55,6 @@
 
     & .promo__item {
         text-align: center;
-        margin: rem(10px);
 
         @include phones {
             text-align: left;

@@ -19,6 +19,7 @@
 
  Hello(obj);
 
+ 
  function Hello(human) {
      console.log("Привет, меня зовут " + human.name + " " +
          human.lastName + " и мне " + human.age + " лет!");

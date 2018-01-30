@@ -13,15 +13,13 @@
 .menu .section-title {
     text-align: left;
     position: absolute;
-    top: rem(180px);
-    left: rem(100px);
+    top: rem(100px);
+    left: rem(110px);
 
     @include tablets {
        top: rem(80px);      
        left: rem(50px);
     }   
-
-
 }
 
 .menu__list {
