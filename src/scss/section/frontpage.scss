@@ -121,6 +121,11 @@
 .burger__img img {
     height: rem(424px);
     margin-top: rem(-150px); 
+
+     @include tablets {
+
+        margin-top: rem(0px);
+    }   
 }
 
 .burger__descr {

@@ -757,6 +757,9 @@ footer {
 .burger__img img {
   height: 26.5rem;
   margin-top: -9.375rem; }
+  @media screen and (max-width: 768px) {
+    .burger__img img {
+      margin-top: 0rem; } }
 
 .burger__descr {
   margin-top: -5rem;
