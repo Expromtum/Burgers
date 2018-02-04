@@ -1,0 +1,30 @@
+.orientation {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 50;
+	
+     @include tablets  {
+	    width: rem(79px);
+	    height: rem(65px);
+        background-color: red;	    
+    }  
+
+    @include tablets_portrait {
+	    width: rem(65px);
+	    height: rem(79px);
+	    background-color: pink;
+    }  
+
+     @include phones  {
+   	    width: rem(65px);
+	    height: rem(48px); 	
+        background-color: green;	    
+    }  
+
+    @include phones_portrait  {
+	    width: rem(48px);
+	    height: rem(65px);
+	    background-color: gray;
+    }    
+}

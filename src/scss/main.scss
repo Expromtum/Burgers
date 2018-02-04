@@ -4,13 +4,18 @@
 @import "config/media";
 
 //layout
+@import "layout/orientation";
 @import "layout/font";
 @import "layout/normalize";
 @import "layout/adjustment";
+@import "layout/slider";
+@import "layout/burger-composition";
+@import "layout/kkal";
 
 //sections
 @import "section/frontpage";
 @import "section/best";
+@import "section/dark-burger";
 @import "section/team";
 @import "section/menu";
 @import "section/reviews";

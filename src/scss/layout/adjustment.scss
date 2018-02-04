@@ -104,54 +104,60 @@ footer {
     width: 100%;
 }
 
-.section-title {
-    width: 100%;
-    color: #ffffff;
+%section-title-font {
+    color: $color-white;
     font-family: Gagalin;
     font-size: rem(72px);
     font-weight: 400;
-    text-transform: uppercase;
+}
+
+.section-title {
+    @extend %section-title-font;
+    width: 100%;
+    margin: 0;
+  /*  text-transform: uppercase;*/
 }
 
 %control-elements-font {
     vertical-align: middle;
-    color: #ffffff;
+    color: $color-white;
     font-family: Ubuntu;
     font-size: rem(13px);
     line-height: rem(30px);
-    text-transform: uppercase;
+  /*  text-transform: uppercase;*/
     text-decoration: none;
 }
 
 %section-h3-font {
     text-align: center;
-    color: #ffffff;
+    color: $color-white;
     font-family: Gagalin;
-    font-size: 40px;
+    font-size: rem(40px);
     font-weight: 400;
-    line-height: 63.75px;
-    text-transform: uppercase;
+    line-height: rem(63.75px);
+  /*  text-transform: uppercase;*/
 }
 
 %section-h4-font {
-    text-align: left;
+/*    text-align: left;*/
     width: 100%;
-    color: #ffffff;
+    color: $color-white;
     font-family: Gagalin;
     font-size: rem(14px);
     font-weight: 400;
     line-height: rem(28px);
-    text-transform: uppercase;
+  /*  text-transform: uppercase;*/
 }
 
 %section-text-font {
     text-align: left;
-    color: #ffffff;
+    color: $color-white;
     font-family: Ubuntu;
     font-size: rem(14px);
     line-height: rem(24px);
     font-weight: 300;
 }
+
 
 %section-h5-font {
     @extend %section-text-font;
@@ -216,3 +222,4 @@ footer {
     background-color: #000000;
     opacity: 0.7;
 }
+

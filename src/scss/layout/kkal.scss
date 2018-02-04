@@ -1,0 +1,32 @@
+.kkal {
+    width: rem(60px);
+    height: rem(90px);
+}
+
+%kkal-font {
+    @extend %section-h4-font;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.kkal-container{
+    position: relative;
+    width: 100%;
+
+    .kkal-img {
+        width: rem(60px);
+    }
+
+    .kkal-number {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        @extend %kkal-font;
+        font-size: rem(20px);
+    }
+}
+
+.kkal-descr {
+    @extend %kkal-font;
+    line-height: 1.4;
+}
