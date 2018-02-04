@@ -1,3 +1,4 @@
+//Отображение на странице настроек ориентации
 .orientation {
     position: fixed; 
     top: 0;
@@ -9,29 +10,28 @@
 	    height: rem(90px);
         background-color: blue;	    
     }  
-
 	
      @include tablets_landscape  {
-	    width: rem(79px);
-	    height: rem(65px);
+	    width: rem(80px);
+	    height: rem(60px);
         background-color: red;	    
     }  
 
     @include tablets_portrait {
-	    width: rem(65px);
-	    height: rem(79px);
+	    width: rem(60px);
+	    height: rem(80px);
 	    background-color: pink;
     }  
 
      @include phones_landscape  {
-   	    width: rem(65px);
-	    height: rem(48px); 	
+   	    width: rem(70px);
+	    height: rem(50px); 	
         background-color: green;	    
     }  
 
     @include phones_portrait  {
-	    width: rem(48px);
-	    height: rem(65px);
+	    width: rem(50px);
+	    height: rem(70px);
 	    background-color: gray;
     }    
 }

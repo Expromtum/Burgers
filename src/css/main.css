@@ -11,23 +11,23 @@
       background-color: blue; } }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .orientation {
-      width: 4.9375rem;
-      height: 4.0625rem;
+      width: 5rem;
+      height: 3.75rem;
       background-color: red; } }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .orientation {
-      width: 4.0625rem;
-      height: 4.9375rem;
+      width: 3.75rem;
+      height: 5rem;
       background-color: pink; } }
   @media screen and (max-width: 480px) and (orientation: landscape) {
     .orientation {
-      width: 4.0625rem;
-      height: 3rem;
+      width: 4.375rem;
+      height: 3.125rem;
       background-color: green; } }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .orientation {
-      width: 3rem;
-      height: 4.0625rem;
+      width: 3.125rem;
+      height: 4.375rem;
       background-color: gray; } }
 
 @font-face {
@@ -878,13 +878,15 @@ footer {
       align-items: center; } }
 
 .burger__img img {
-  min-width: 50vmin;
+  min-width: 12.5rem;
   max-width: 60vmin;
   width: 100%;
   margin-top: -9.375rem; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .burger__img img {
-      margin-top: 0rem; } }
+      margin-top: 0rem;
+      margin-bottom: 1.25rem;
+      max-width: 70vmin; } }
 
 .burger__descr-font, .burger__descr .descr-natural, .burger__descr .descr-burger {
   color: #ffffff;
@@ -1074,7 +1076,8 @@ footer {
       .dark-burger .section-title {
         width: 80%;
         text-align: center;
-        margin-top: 1.25rem; } }
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem; } }
 
 .dark-burger__content {
   height: 80%; }
@@ -1126,7 +1129,7 @@ footer {
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .dark-burger__imgs {
       width: 100%;
-      height: 80vmin;
+      height: 70vmin;
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end; } }
@@ -1153,7 +1156,7 @@ footer {
         left: 90%; } }
 
 .dark-burger__img {
-  min-width: 55vmin;
+  min-width: 12.5rem;
   max-width: 70vmin;
   width: 100%; }
   @media screen and (max-width: 768px) and (orientation: portrait) {

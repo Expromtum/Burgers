@@ -119,14 +119,16 @@
 }
 
 .burger__img img {
-    min-width: 50vmin;
+    min-width: rem(200px); 
     max-width: 60vmin;
     width: 100%;
     margin-top: rem(-150px);    
 
     @include tablets_portrait {
         margin-top: rem(0px);
-    }   
+        margin-bottom: rem(20px);
+        max-width: 70vmin;     
+    }      
 }
 
 .burger__descr-font {

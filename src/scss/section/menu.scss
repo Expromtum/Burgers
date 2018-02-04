@@ -53,7 +53,7 @@
         writing-mode: vertical-rl;
         margin: 0;
         padding: 0;
-        vertical-align: bottom; 
+        vertical-align: bottom;  //TODO: Меню отображается некорректно
 
         @include phones_portrait {
             width: rem(70px);
