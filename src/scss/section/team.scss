@@ -8,7 +8,7 @@
     & .section-title {
         @include phones {
             font-size: rem($mobile-section-title-font);
-        }         
+        }
     }
 }
 
@@ -25,8 +25,17 @@
     padding: 10% 2% 0% 9%;
 
     @include tablets {
+        padding-left: 2%;
+    }
+
+    @include tablets_portrait {
         width: 100%;
         padding-left: 0;
+    }
+
+    @include phones {
+       width: 100%;
+       padding: 4% 2% 0% 2%;
     }
 }
 
@@ -37,27 +46,45 @@
 .team .section-title {
     color: $color-yellow;
     line-height: rem(64px);
-    margin-bottom: rem(40px);
+    margin-bottom: 5vh;
 
-    @include tablets {
+    @include tablets_portrait {
         text-align: center;
-        margin-top: rem(100px);
+        margin-top: 10vh;
+    }
+
+    @include phones {
+        text-align: center;
+        margin-top: 5vh;
+    }
+
+    @include phones_landscape {
+        margin-top: 0;
     }
 }
+
 
 .member__list {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 
-    @include tablets {
+    @include tablets_portrait {
+        align-items: center;
+    }
+
+    @include phones {
         align-items: center;
     }
 
     & .member__item {
         margin-bottom: rem(20px);
 
-        @include tablets {
+        @include tablets_portrait {
+            text-align: center;
+        }
+
+        @include phones {
             text-align: center;
         }
     }
@@ -80,37 +107,61 @@
         margin-right: rem(20px);
         margin-left: rem(10px);
 
-        @include tablets {
+        @include tablets_portrait {
             text-align: center;
             margin-right: 0;
             margin-left: 0;
+        }
+
+        @include phones {
+          height: rem(85px);
+          width: rem(85px);          
+           /* text-align: center;
+            margin-right: 0;
+            margin-left: 0;*/
         }
     }
 
     & .member__def {
         display: inline-block;
-        width: rem(210px);
+        width: 50%;
         @extend %section-text-font;
 
-        @include tablets {
+        @include tablets_portrait {
             display: block;
-            width: rem(320px);
+            width: 100%;
+            padding: 0 10% 0 10%;
         }
+
+      /*  @include phones {
+            display: block;
+            width: 100%;
+            padding: 0 10% 0 10%;
+        }*/
+
 
         h5 {
             @extend %section-h5-font;
 
-            @include tablets {
+            @include tablets_portrait {
                 text-align: center;
             }
+
+       /*     @include phones {
+                text-align: center;
+            }   */       
         }
 
         p {
             @extend %section-text-font;
 
-            @include tablets {
+            @include tablets_portrait {
                 text-align: center;
             }
+
+         /*    @include phones {
+                text-align: center;
+            }     */      
         }
     }
 }
@@ -119,10 +170,9 @@
     @extend %section-h4-font;
     text-decoration: none;
 
-  
-    @include tablets {
+    @include tablets_portrait {
         text-align: center;
-    }  
+    }
 
     &::before {
         content: "";
@@ -134,6 +184,7 @@
         width: rem(9px);
     }
 }
+
 
 /*класс модификатор, который будет навешиваться как дополнительный
 класс на элемент аккордеона и тем самым менять в нем отображение на то, которое
@@ -155,4 +206,3 @@
         transition: 0.2s;
     }
 }
-

@@ -10,14 +10,29 @@
   }
 }
 
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+//-----------------------------------------------
+@mixin tablets_landscape {
+  @media screen and (max-width: $tablets) and (orientation: landscape) {
+    @content;
+  }
+}
+
 @mixin tablets_portrait {
   @media screen and (max-width: $tablets) and (orientation: portrait) {
     @content;
   }
 }
 
-@mixin phones {
-  @media screen and (max-width: $phones) {
+//-----------------------------------------------
+
+@mixin phones_landscape {
+  @media screen and (max-width: $phones) and (orientation: landscape) {
     @content;
   }
 } 

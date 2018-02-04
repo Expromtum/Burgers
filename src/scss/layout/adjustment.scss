@@ -109,13 +109,24 @@ footer {
     font-family: Gagalin;
     font-size: rem(72px);
     font-weight: 400;
+
+    @include laptop {
+       font-size: rem(65px);
+    }   
+
+    @include tablets_landscape {
+        font-size: rem(55px);
+    }          
+
+    @include tablets_portrait {
+        font-size: rem(50px);
+    }          
 }
 
 .section-title {
     @extend %section-title-font;
     width: 100%;
     margin: 0;
-  /*  text-transform: uppercase;*/
 }
 
 %control-elements-font {

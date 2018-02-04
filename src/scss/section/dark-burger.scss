@@ -47,13 +47,9 @@
 
     @include tablets_portrait {
         width: 100%;
-        height: rem(400px);
+        height: 80vmin;
         justify-content: flex-end;
     }
-
-    @include phones_portrait {
-        height: rem(380px);
-    }    
 
     & .burger-composition {
         position: absolute;
@@ -86,15 +82,15 @@
 }
 
 .dark-burger__img {
+    min-width: 55vmin;
+    max-width: 70vmin;
     width: 100%;
 
     @include tablets_portrait {
-        height: rem(329px);
         width: auto;
     }
 
      @include phones_portrait {
-        height: rem(263px);
         width: auto;
     }   
 }
@@ -120,7 +116,12 @@
 
     @include tablets_portrait {
         text-align: center;
-        margin-top: rem(20px);
+        margin-top: rem(20px);      
+    }
+
+    @include phones_portrait {
+        margin-top: 0;
+        margin-bottom: 0;       
     }
 }
 
@@ -134,6 +135,7 @@
 
     @include tablets_portrait {
         justify-content: center;
+         margin-bottom: rem(15px);   
     }
 
     & .dark-burger__price-number {

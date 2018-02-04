@@ -78,11 +78,11 @@
 
 .header__mobile-menu {
     display: none;
+    width: 24px;
+    height: 22px; 
 
     @include laptop {
         display: block;
-        width: rem(24px);
-        height: rem(22px);
         margin-left: (30px);
     }
 }
@@ -94,14 +94,14 @@
     align-items: stretch;
     flex-grow: 1;
 
-    @include tablets {
+    @include tablets_portrait {
         flex-direction: column;
     }
 
     & .burger__item {
         width: 50%;
 
-        @include tablets {
+        @include tablets_portrait {
             width: 100%;
         }
     }
@@ -113,29 +113,46 @@
     align-items: flex-end;
     justify-content: center;
 
-    @include tablets {
+    @include tablets_portrait {
         align-items: center;
     }
 }
 
 .burger__img img {
-    height: rem(424px);
-    margin-top: rem(-150px); 
+    min-width: 50vmin;
+    max-width: 60vmin;
+    width: 100%;
+    margin-top: rem(-150px);    
 
-     @include tablets {
-
+    @include tablets_portrait {
         margin-top: rem(0px);
     }   
 }
 
+.burger__descr-font {
+    color: $color-white;
+    font-family: Lifehack;   
+    font-weight: 400;
+    font-size: rem(70px);   
+
+    @include laptop {
+        font-size: rem(55px);
+    }       
+
+    @include tablets_landscape {
+        font-size: rem(50px);
+    }             
+}
+
 .burger__descr {
     margin-top: rem(-80px);
+    margin-bottom: rem(20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 
-    @include tablets {
+    @include tablets_portrait {
         align-items: center;
         margin-top: rem(0px);
     }
@@ -149,35 +166,24 @@
             padding-left: 10px;
         }
 
-        @include tablets {
+        @include tablets_portrait {
             text-align: center;
         }
     }
 
     & .descr-natural {
-        color: $color-white;
-        font-family: Lifehack;
-        font-weight: 400;
-        font-size: rem(65px);
+        @extend .burger__descr-font;    
         line-height: rem(75px);
         letter-spacing: -1.63px;
         padding-left: rem(10px);
-
-        @include laptop {
-            padding-left: 10px;
-        }
     }
 
     & .descr-burger {
-        color: $color-white;
-        font-family: Lifehack;
-        font-weight: 400;
-        font-size: rem(65px);
+        @extend .burger__descr-font;  
         line-height: rem(65px);
-        padding-left: rem(10px);
 
-        @include laptop {
-            padding-left: 10px;
-        }
+         @include tablets_landscape {
+            line-height: rem(45px);
+        }           
     }
 }

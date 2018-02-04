@@ -11,8 +11,13 @@
         margin-top: rem(-10px);
         margin-bottom: rem(25px);
 
-        @include phones {
-            font-size: rem($mobile-section-title-font);
+        @include laptop {
+            margin-top: rem(10px);        
+            margin-bottom: 0;               
+        }
+
+        @include phones_portrait {
+            font-size: rem($mobile-section-title-font);             
             padding-left: rem(30px);
             padding-right: rem(30px);
         }
@@ -30,7 +35,7 @@
     justify-content: center;
     align-items: flex-start;
 
-    @include tablets {
+    @include tablets_portrait {
         flex-direction: column;
         align-items: center;
     }
@@ -42,12 +47,12 @@
         justify-content: space-between;
         align-items: center;
 
-        @include tablets {
+        @include tablets_portrait {
             width: 60%;
         }
 
-        @include phones {
-            width: 100%;
+        @include phones_portrait {
+            width: 95%;
         }
 
         & .order__form-row {
@@ -114,7 +119,7 @@
 
 
 
-    @include phones { 
+    @include phones_portrait { 
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -128,7 +133,7 @@
 
 .order__chb1 {
 
-    @include phones { 
+    @include phones_portrait { 
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -141,7 +146,7 @@
 
 .order__buttons {
 
-    @include phones {
+    @include phones_portrait {
         display: flex;
         flex-direction: row;
         align-items: center;

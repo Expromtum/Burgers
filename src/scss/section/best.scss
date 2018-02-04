@@ -12,7 +12,7 @@
         margin-top: rem(0px);
         margin-bottom: rem(0px);
 
-        @include phones {
+        @include phones_portrait {
             font-size: rem($mobile-section-title-font);
         }
     }
@@ -26,14 +26,14 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    @include phones {
+    @include phones_portrait {
         flex-direction: column;
     }
 
     & .best__item {
         max-width: 30%;
 
-        @include phones {
+        @include phones_portrait {
             max-width: 100%;
         }
     }
@@ -46,18 +46,19 @@
     align-items: center;
     flex-grow: 1;
     margin-top: rem(30px);
-    
-    @include phones {
+  
+    @include phones_portrait {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
     }
 
     & .promo__item {
-        text-align: center;
+        text-align: center;   
 
-        @include phones {
+        @include phones_portrait {
             text-align: left;
+            margin-right: rem(20px);
         }
     }
 }
@@ -66,15 +67,14 @@
     height: rem(89px);
     width: rem(97px);
 
-    @include phones {
-        width: 25%;
+    @include phones_portrait {
+        width: 25%;  
     }
 }
 
-
 .promo__info {
-    @include phones {
-        width: 60%;
+    @include phones_portrait {
+        width: 60%;    
     }
 }
 
@@ -84,10 +84,10 @@
     font-size: rem(24px);
     font-weight: 500;
     line-height: rem(28.14px);
-    letter-spacing: rem(-0.6px);
+    letter-spacing: rem(-0.6px);   
     padding: rem(40px) rem(15px) rem(15px) rem(15px);
 
-    @include phones {
+    @include phones_portrait {
         flex-direction: row;
         padding: 0;
     }
@@ -99,4 +99,10 @@
     padding: (5px);
     padding-top: rem(10px);
     text-align: center;
+
+    @include phones_portrait {
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;      
+    }   
 }

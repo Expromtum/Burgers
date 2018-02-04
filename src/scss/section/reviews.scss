@@ -21,7 +21,7 @@
         width: 25%;
         position: relative;
 
-        @include tablets {
+        @include tablets_portrait {
            height: 25%;            
            width: 50%;
         }       
@@ -52,7 +52,7 @@
     transition: 0.3s;   
     pointer-events: none;   
 
-    @include tablets {
+    @include tablets_portrait {
        text-align: center;
        padding: rem(10px) rem(10px);   
     }     
@@ -68,7 +68,7 @@
     transform: scale(1);
     z-index: 5;    
 
-    @include tablets {
+    @include tablets_portrait {
         align-items: center;
     }  
 }
@@ -76,13 +76,13 @@
 .review__name {
 	@extend %section-h4-font;	
 
-    @include tablets {
+    @include tablets_portrait {
        text-align: center;
        margin: 0;
        padding: 0;         
     }      
 
-    @include phones {
+    @include phones_portrait {
        font-size: 200%;   
        margin-bottom: rem(40px);        
     }              
@@ -92,19 +92,15 @@
     margin-bottom: rem(10px);
     @extend %section-text-font;
 
-    @include tablets {
-        text-align: center;   
-    }     
-
-    @include phones {
+    @include laptop {
         display: none;    
-    }        
+    }             
 }
 
 .review__read-review {
     display: none;
     
-    @include phones {  
+    @include laptop {  
         display: block;    
     }       
 }
@@ -112,7 +108,7 @@
 .review__read-more {
     display: block;  
     
-    @include phones {
+    @include laptop {
         display: none;    
     }       
 }

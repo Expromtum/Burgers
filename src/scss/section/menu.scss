@@ -16,7 +16,7 @@
     top: rem(100px);
     left: rem(110px);
 
-    @include tablets {
+    @include tablets_portrait {
        top: rem(80px);      
        left: rem(50px);
     }   
@@ -55,7 +55,7 @@
         padding: 0;
         vertical-align: bottom; 
 
-        @include phones {
+        @include phones_portrait {
             width: rem(70px);
         }   
 
@@ -116,7 +116,7 @@
     padding: rem(30px);
     //  border: 1px solid blue;
 
-    @include phones {
+    @include phones_portrait {
         width: rem(200px);
     }    
 }
