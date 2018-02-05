@@ -662,7 +662,7 @@ footer {
   background-color: #2f3234;
   opacity: 0.93; }
 
-.mask2, .menu__title, .menu__name h3::after, .review__item:hover .review__mask {
+.mask2, .review__item:hover .review__mask {
   background-color: #000000;
   opacity: 0.7; }
 
@@ -1464,7 +1464,6 @@ footer {
   margin: 0;
   padding: 0; }
 
-/*TODO: добавить маску затемнения*/
 .menu__title {
   width: 5rem;
   margin: 0;
@@ -1475,11 +1474,44 @@ footer {
   background-repeat: no-repeat;
   cursor: pointer; }
   .menu__title--meat {
-    background-image: url("../img/bg/img-for-meat.png"); }
+    background-image: url("../img/bg/img-for-meat.png");
+    z-index: 1; }
+  .menu__title--meat::after {
+    background-color: #000000;
+    opacity: 0.5;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2; }
   .menu__title--veg {
-    background-image: url("../img/bg/img-for-veg.png"); }
+    background-image: url("../img/bg/img-for-veg.png");
+    z-index: 1; }
+  .menu__title--veg::after {
+    background-color: #000000;
+    opacity: 0.5;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2; }
   .menu__title--diet {
-    background-image: url("../img/bg/img-for-diet.png"); }
+    background-image: url("../img/bg/img-for-diet.png");
+    z-index: 1; }
+  .menu__title--diet::after {
+    background-color: #000000;
+    opacity: 0.5;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2; }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .menu__title {
       width: 4.375rem; } }
@@ -1495,7 +1527,8 @@ footer {
     transform: rotate(-90deg) translateY(-50%);
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
-    transform-origin: 0 0; }
+    transform-origin: 0 0;
+    z-index: 3; }
 
 .menu__descr {
   width: 0;
@@ -1503,22 +1536,6 @@ footer {
   margin: 0;
   padding: 0; }
 
-.menu__name h3::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0; }
-
-/*
-.menu__img, .menu__mask {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;      
-}*/
-/*.menu__item:hover .menu__descr,*/
 .menu__item--active .menu__descr {
   width: 30rem;
   overflow: visible;
