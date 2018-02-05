@@ -32,37 +32,37 @@
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
+  src: url("/src/fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
+  src: url("/src/fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
+  src: url("/src/fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
+  src: url("/src/fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("/src/fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gagalin';
-  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("/src/fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -686,7 +686,7 @@ footer {
     max-width: 4%; }
 
 .scroll__img, .slider__scroll .scroll__img--toleft, .slider__scroll .scroll__img--toright {
-  background: url("../icons/arrow-scroll.png") no-repeat center;
+  background: url("/src/icons/arrow-scroll.png") no-repeat center;
   width: 1.8125rem;
   height: 0.875rem; }
 
@@ -748,7 +748,7 @@ footer {
   line-height: 1.4; }
 
 .frontpage {
-  background: url("../img/bg/texture.png") no-repeat, url("../img/bg/video-bg.png") no-repeat;
+  background: url("/src/img/bg/texture.png") no-repeat, url("/src/img/bg/video-bg.png") no-repeat;
   background-position: center center;
   position: relative;
   background-size: cover; }
@@ -943,7 +943,7 @@ footer {
         line-height: 2.8125rem; } }
 
 .best {
-  background: url("../img/bg/best-bg.png") no-repeat top center;
+  background: url("/src/img/bg/best-bg.png") no-repeat top center;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -1228,7 +1228,7 @@ footer {
     margin-left: 1.5625rem; }
 
 .team {
-  background: url("../img/bg/team.png") no-repeat top center;
+  background: url("/src/img/bg/team.png") no-repeat top center;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -1359,7 +1359,7 @@ footer {
   .member__name::before {
     content: "";
     display: inline-block;
-    background: url("../icons/arrow.svg") no-repeat center;
+    background: url("/src/icons/arrow.svg") no-repeat center;
     margin-right: 0.625rem;
     height: 0.4375rem;
     width: 0.5625rem; }
@@ -1383,7 +1383,7 @@ footer {
   transition: 0.2s; }
 
 .menu {
-  background: url("../img/bg/menu.png") no-repeat top center;
+  background: url("/src/img/bg/menu.png") no-repeat top center;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -1452,7 +1452,7 @@ footer {
   background-repeat: no-repeat;
   cursor: pointer; }
   .menu__title--meat {
-    background-image: url("../img/bg/img-for-meat.png");
+    background-image: url("/src/img/bg/img-for-meat.png");
     z-index: 1; }
   .menu__title--meat::after {
     background-color: #000000;
@@ -1465,7 +1465,7 @@ footer {
     position: absolute;
     z-index: 2; }
   .menu__title--veg {
-    background-image: url("../img/bg/img-for-veg.png");
+    background-image: url("/src/img/bg/img-for-veg.png");
     z-index: 1; }
   .menu__title--veg::after {
     background-color: #000000;
@@ -1478,7 +1478,7 @@ footer {
     position: absolute;
     z-index: 2; }
   .menu__title--diet {
-    background-image: url("../img/bg/img-for-diet.png");
+    background-image: url("/src/img/bg/img-for-diet.png");
     z-index: 1; }
   .menu__title--diet::after {
     background-color: #000000;
@@ -1642,7 +1642,7 @@ footer {
       display: none; } }
 
 .order {
-  background: url("../img/bg/order-bg.png") no-repeat;
+  background: url("/src/img/bg/order-bg.png") no-repeat;
   background-position: center center;
   position: relative;
   background-size: cover; }
@@ -1819,7 +1819,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: url("../img/bg/contacts.png") no-repeat;
+  background: url("/src/img/bg/contacts.png") no-repeat;
   background-position: center center;
   background-size: cover;
   display: -webkit-box;
@@ -1858,7 +1858,7 @@ footer {
   .contacts__phone::before {
     content: "";
     display: inline-block;
-    background: url("../icons/phone.svg") no-repeat center;
+    background: url("/src/icons/phone.svg") no-repeat center;
     height: 0.75rem;
     width: 0.6875rem;
     margin-right: 0.3125rem; }
