@@ -2,22 +2,30 @@ var map;
 
 function initMap() {
 
-	var locations = {lat: 55.687085, lng: 37.562749};
+	var mainLocation = { lat: 55.687085, lng: 37.562749 };
+
+    var locations = [
+        mainLocation,
+        { lat: 55.688, lng: 37.564 },
+        { lat: 55.689, lng: 37.563 },
+        { lat: 55.686, lng: 37.561 }
+    ];
 
     map = new google.maps.Map(document.getElementById('map'), {
-        center: locations,
+        center: mainLocation,
         zoom: 17
     });
 
-	//var markerImage = '../icons/map-marker.png';
+    var markerImage = 'src/icons/map-marker.png';
 
-	var markerImage = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-	
-	var marker = new google.maps.Marker({
-		position: locations,
-		map: map,
-		icon: markerImage
-	});
+    var markers = locations.map(function(location, i) {
+        return new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: markerImage
+        });
+    });
 
+    var markerCluster = new MarkerClusterer(map, markers,
+       {imagePath: 'src/icons/marker-clusterer/m'});
 }
-
