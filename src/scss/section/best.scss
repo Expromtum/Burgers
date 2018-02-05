@@ -11,10 +11,6 @@
         color: $color-title-gray;
         margin-top: rem(0px);
         margin-bottom: rem(0px);
-
-        @include phones_portrait {
-            font-size: rem($mobile-section-title-font);
-        }
     }
 }
 

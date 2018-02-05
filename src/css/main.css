@@ -954,9 +954,6 @@ footer {
     color: #2f3234;
     margin-top: 0rem;
     margin-bottom: 0rem; }
-    @media screen and (max-width: 480px) and (orientation: portrait) {
-      .best .section-title {
-        font-size: 3.125rem; } }
 
 .best__list {
   width: 100%;
@@ -1236,9 +1233,6 @@ footer {
   background-position: center center;
   position: relative;
   background-size: cover; }
-  @media screen and (max-width: 480px) {
-    .team .section-title {
-      font-size: 3.125rem; } }
 
 .team__area {
   position: absolute;
@@ -1341,37 +1335,21 @@ footer {
     @media screen and (max-width: 480px) {
       .member-content .member__img {
         height: 5.3125rem;
-        width: 5.3125rem;
-        /* text-align: center;
-            margin-right: 0;
-            margin-left: 0;*/ } }
+        width: 5.3125rem; } }
   .member-content .member__def {
     display: inline-block;
-    width: 50%;
-    /*  @include phones {
-            display: block;
-            width: 100%;
-            padding: 0 10% 0 10%;
-        }*/ }
+    width: 50%; }
     @media screen and (max-width: 768px) and (orientation: portrait) {
       .member-content .member__def {
         display: block;
         width: 100%;
         padding: 0 10% 0 10%; } }
-    .member-content .member__def h5 {
-      /*     @include phones {
-                text-align: center;
-            }   */ }
-      @media screen and (max-width: 768px) and (orientation: portrait) {
-        .member-content .member__def h5 {
-          text-align: center; } }
-    .member-content .member__def p {
-      /*    @include phones {
-                text-align: center;
-            }     */ }
-      @media screen and (max-width: 768px) and (orientation: portrait) {
-        .member-content .member__def p {
-          text-align: center; } }
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+      .member-content .member__def h5 {
+        text-align: center; } }
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+      .member-content .member__def p {
+        text-align: center; } }
 
 .member__name {
   text-decoration: none; }
@@ -1680,7 +1658,6 @@ footer {
         margin-bottom: 0; } }
     @media screen and (max-width: 480px) and (orientation: portrait) {
       .order .section-title {
-        font-size: 3.125rem;
         padding-left: 1.875rem;
         padding-right: 1.875rem; } }
   .order .form {

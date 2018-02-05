@@ -67,7 +67,7 @@
 
         //Затемнение фона    
         &--#{$name}::after {
-            background-color: #000000;
+            background-color: $color-black-mask;
             opacity: 0.5;
             content: "";
             top: 0;

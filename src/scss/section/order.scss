@@ -16,8 +16,7 @@
             margin-bottom: 0;               
         }
 
-        @include phones_portrait {
-            font-size: rem($mobile-section-title-font);             
+        @include phones_portrait {       
             padding-left: rem(30px);
             padding-right: rem(30px);
         }
