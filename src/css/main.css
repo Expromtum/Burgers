@@ -592,7 +592,7 @@ footer {
   /*  text-transform: uppercase;*/
   text-decoration: none; }
 
-.menu__item .menu__name {
+.menu__title {
   text-align: center;
   color: #ffffff;
   font-family: Gagalin;
@@ -611,7 +611,7 @@ footer {
   line-height: 1.75rem;
   /*  text-transform: uppercase;*/ }
 
-.member-content .member__def h5, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__item .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone {
+.member-content .member__def h5, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
@@ -658,11 +658,11 @@ footer {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
-.mask, .team__area, .menu__item .menu__descr {
+.mask, .team__area, .menu__descr {
   background-color: #2f3234;
   opacity: 0.93; }
 
-.mask2, .menu__item .menu__name, .menu__name h3::after, .review__item:hover .review__mask {
+.mask2, .menu__title, .menu__name h3::after, .review__item:hover .review__mask {
   background-color: #000000;
   opacity: 0.7; }
 
@@ -1463,41 +1463,42 @@ footer {
   align-items: stretch;
   margin: 0;
   padding: 0; }
-  .menu__item .menu__name {
-    width: 5rem;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    margin: 0;
-    padding: 0;
-    vertical-align: bottom; }
-    @media screen and (max-width: 480px) and (orientation: portrait) {
-      .menu__item .menu__name {
-        width: 4.375rem; } }
-    .menu__item .menu__name h3 {
-      -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
-      margin: 0;
-      padding: 0;
-      width: 100%; }
-  .menu__item .menu__descr {
-    width: 0;
-    overflow: hidden;
-    margin: 0;
-    padding: 0; }
 
 /*TODO: добавить маску затемнения*/
-.menu__name {
+.menu__title {
+  width: 5rem;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
   position: relative;
   background-size: 100% 100%;
-  background-repeat: no-repeat; }
-  .menu__name--meat {
+  background-repeat: no-repeat;
+  cursor: pointer; }
+  .menu__title--meat {
     background-image: url("../img/bg/img-for-meat.png"); }
-  .menu__name--veg {
+  .menu__title--veg {
     background-image: url("../img/bg/img-for-veg.png"); }
-  .menu__name--diet {
+  .menu__title--diet {
     background-image: url("../img/bg/img-for-diet.png"); }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .menu__title {
+      width: 4.375rem; } }
+  .menu__title .menu__rotation {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+
+.menu__descr {
+  width: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
 
 .menu__name h3::after {
   position: absolute;

@@ -45,49 +45,48 @@
     margin: 0;
     padding: 0;    
   //  border: 1px solid red;
-
-    & .menu__name {
-        @extend .mask2;
-        @extend %section-h3-font;
-        width: rem(80px);
-        writing-mode: vertical-rl;
-        margin: 0;
-        padding: 0;
-        vertical-align: bottom;  //TODO: Меню отображается некорректно
-
-        @include phones_portrait {
-            width: rem(70px);
-        }   
-
-        & h3 {
-            transform: rotate(180deg);
-            margin: 0;
-            padding: 0;
-            width: 100%;
-        }
-    }
-
-    & .menu__descr {
-        @extend %section-text-font;
-        @extend .mask;
-        width: 0;
-        overflow: hidden;   
-        margin: 0;
-        padding: 0;
-    }
 }
 
 /*TODO: добавить маску затемнения*/
-.menu__name {
+.menu__title {
+    @extend .mask2;
+    @extend %section-h3-font;
+    width: rem(80px);
+    writing-mode: vertical-rl;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;  //TODO: Меню отображается некорректно
     position: relative;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    cursor: pointer;
 
     @each $name in 'meat' 'veg' 'diet' {
         &--#{$name} {
             background-image: url("../img/bg/img-for-#{$name}.png");
         }
     }
+
+    @include phones_portrait {
+        width: rem(70px);
+    }   
+
+    & .menu__rotation {
+        transform: rotate(180deg);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }        
+}
+
+
+.menu__descr {
+    @extend %section-text-font;
+    @extend .mask;
+    width: 0;
+    overflow: hidden;   
+    margin: 0;
+    padding: 0;
 }
 
 .menu__name h3::after {
