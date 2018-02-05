@@ -1467,9 +1467,6 @@ footer {
 /*TODO: добавить маску затемнения*/
 .menu__title {
   width: 5rem;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
   margin: 0;
   padding: 0;
   vertical-align: bottom;
@@ -1487,12 +1484,18 @@ footer {
     .menu__title {
       width: 4.375rem; } }
   .menu__title .menu__rotation {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    margin: 0;
-    padding: 0;
-    width: 100%; }
+    padding-left: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    white-space: nowrap;
+    -webkit-transform: rotate(-90deg) translateY(-50%);
+    -ms-transform: rotate(-90deg) translateY(-50%);
+    transform: rotate(-90deg) translateY(-50%);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0; }
 
 .menu__descr {
   width: 0;

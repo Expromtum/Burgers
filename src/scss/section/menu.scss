@@ -52,7 +52,6 @@
     @extend .mask2;
     @extend %section-h3-font;
     width: rem(80px);
-    writing-mode: vertical-rl;
     margin: 0;
     padding: 0;
     vertical-align: bottom;  //TODO: Меню отображается некорректно
@@ -72,10 +71,14 @@
     }   
 
     & .menu__rotation {
-        transform: rotate(180deg);
-        margin: 0;
-        padding: 0;
-        width: 100%;
+      padding-left: 40px;
+      display: inline-block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      white-space: nowrap; 
+      transform: rotate(-90deg) translateY(-50%);
+      transform-origin: 0 0;
     }        
 }
 
