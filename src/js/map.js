@@ -13,7 +13,11 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: mainLocation,
-        zoom: 17
+        zoom: 17,
+        zoomControl: true,
+   		zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER },
+   		streetViewControl: true,
+        streetViewControlOptions: { position: google.maps.ControlPosition.LEFT_TOP },
     });
 
     var markerImage = 'src/icons/map-marker.png';
