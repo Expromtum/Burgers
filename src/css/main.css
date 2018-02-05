@@ -1581,14 +1581,7 @@ footer {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  pointer-events: none; }
-  @media screen and (max-width: 768px) and (orientation: portrait) {
-    .review__mask {
-      text-align: center;
-      padding: 0.625rem 0.625rem; } }
-
-/*Затемнение картинки*/
-.review__item:hover .review__mask {
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1601,7 +1594,14 @@ footer {
   align-items: flex-start;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center; }
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .review__mask {
+      text-align: center;
+      padding: 0.625rem 0.625rem; } }
+
+/*Затемнение картинки*/
+.review__item:hover .review__mask {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
