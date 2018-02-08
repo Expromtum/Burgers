@@ -43,6 +43,7 @@ require(['jquery' /*, 'bootstrap' */ /*, 'animate', 'initGallary'*/ ], function(
     initMenuAccordeon();
     initTeamAccordeon();
     initBurgerPopup();
+    initReviewOverlay();
 });
 
 require(['popper'], function(p) {
@@ -86,8 +87,7 @@ function initTeamAccordeon() {
 }
 
 function initBurgerPopup() {
-
-    var BurgerPopupButton = document.getElementById('burger-popup');
+    var BurgerPopupButton =  document.getElementById('burger-popup');
     var ActiveClass = "burger-popup--active";
 
     BurgerPopupButton.addEventListener('click', function(event) {
@@ -99,4 +99,25 @@ function initBurgerPopup() {
             $(this).addClass(ActiveClass);
         }
     });
+}
+
+function initReviewOverlay() {
+    var openButton = $('.button__open-review');
+
+    openButton.click(function(e) {
+        e.preventDefault();
+
+    var overlay =    openOverlay(460,
+            'КОНСТАНТИН СПИЛБЕРГ', 
+            'Мысли все о них и о них, о них и о них.' + 
+            'Нельзя устоять, невозможно забыть... '+
+            'Никогда не думал, что булочки могут быть такими мягкими, '+
+            'котлетка такой сочной, а сыр таким расплавленным. '+
+            'Мысли все о них и о них, о них и о них. Нельзя устоять, '+
+            'невозможно забыть... '+
+            'Никогда не думал, что булочки могут быть такими мягкими, '+
+            'котлетка такой сочной, а сыр таким расплавленным.', document.body);
+
+//document.body.appendChild(overlay);
+    });    
 }

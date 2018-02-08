@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-bg-overlay;
+  opacity: 0.92;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay__container {
+  position: relative;
+}
+
+.overlay__content {
+  width: 400px;
+  background: $color-white;
+  border-radius: rem(5px);
+  padding: rem(20px);  
+  margin: 0;
+
+
+  & .overlay__title {
+    @extend %section-h4-font;
+    color: $color-text-black;   
+  }
+
+  & .overlay__message {
+    @extend %section-text-font;
+    color: $color-text-black;   
+    padding-top: rem(20px);
+  }  
+}
+
+.overlay__close {
+  background-image: url("/src/icons/close.svg");
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+ }
