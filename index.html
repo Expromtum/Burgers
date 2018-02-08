@@ -7,7 +7,7 @@
     <!-- X-UA-Compatible управляет режимом отображением страниц в браузерах IE8-->
     <!--IE=edge всегда использует последний доступный стандартный режим отображения независимо от <!DOCTYPE>.-->
     <!--chrome=1 позволит пользователям IE, у которых установлен плагин Google Chrome Frame, использовать рендерер WebKit и JS-движок V8-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--width=device-width область просмотра контента, равная ширине экрана мобильного устройства-->
     <!--initial-scale начальный масштаб (в данном случае без масштабирования)-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,9 +38,9 @@
                         <div class="header__btn">
                             <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
                         </div>
-                        <div class="header__mobile-menu">
-                            <a href="#" class='header__mobile-menu-link'>
-                                <svg class="header__mobile-menu-img" viewBox="0 0 24 22">
+                        <div class="mobile-menu">
+                            <a href="#" class='mobile-menu-link'>
+                                <svg class="mobile-menu-img" viewBox="0 0 24 22">
                                     <use xlink:href="src/icons/mobile-menu.svg#mobile-menu"></use>
                                 </svg>
                             </a>
@@ -66,7 +66,7 @@
                             </svg>
                             <div class="promo__item promo__info">
                                 <div class="promo__title">
-                                    <p>100% свежее мясо</p>
+                                    <h3>100% свежее мясо</h3>
                                 </div>
                                 <div class="promo__descr">
                                     <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
@@ -79,7 +79,7 @@
                             </svg>
                             <div class="promo__item promo__info">
                                 <div class="promo__title">
-                                    <p>Ручная сборка</p>
+                                    <h3>Ручная сборка</h3>
                                 </div>
                                 <div class="promo__descr">
                                     <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
@@ -92,7 +92,7 @@
                             </svg>
                             <div class="promo__item promo__info">
                                 <div class="promo__title">
-                                    <p>Натуральные ингредиенты</p>
+                                    <h3>Натуральные ингредиенты</h3>
                                 </div>
                                 <div class="promo__descr">
                                     <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
@@ -112,19 +112,65 @@
                             <div class="slide dark-burger__item">
                                 <div class="dark-burger__imgs">
                                     <div class="burger-composition">
-                                        <div class="burger-composition__container">
-                                            <img class="burger-composition__img" src="src/icons/burger.png" alt="burger"></img>  
+                                        <div class="burger-composition__block" id="burger-popup">
+                                            <img class="burger-composition__img" src="src/icons/burger.png" alt="burger"> 
                                             <div class="burger-composition__descr">СОСТАВ</div> 
+                                            <div class="burger-composition__popup">
+                                                <ul class="burger-composition__list">
+                                                    <li class="burger-composition__item">
+                                                        <svg class="burger-component__img">
+                                                           <use class="burger-component__img-beef" xlink:href="src/icons/sprite.svg#beef"></use>
+                                                        </svg>           
+                                                        <div class="burger-component__title">Говядина</div> 
+                                                        <div class="burger-component__massa">300 г</div>  
+                                                    </li>
+                                                    <li class="burger-composition__item">
+                                                        <svg class="burger-component__img">
+                                                           <use class="burger-component__img-buns" xlink:href="src/icons/sprite.svg#buns"></use>
+                                                        </svg>    
+                                                        <span class="burger-component__title">Булочки</span>  
+                                                        <span class="burger-component__massa">100 г</span>    
+                                                    </li>                                                    
+                                                    <li class="burger-composition__item">
+                                                        <svg class="burger-component__img">
+                                                           <use class="burger-component__img-salad" xlink:href="src/icons/sprite.svg#salad"></use>
+                                                        </svg>                                                           
+                                                        <span class="burger-component__title">Зелень</span>   
+                                                        <span class="burger-component__massa">70 г</span>  
+                                                    </li>                                                    
+                                                    <li class="burger-composition__item">
+                                                        <svg class="burger-component__img">
+                                                           <use class="burger-component__img-sauce" xlink:href="src/icons/sprite.svg#sauce"></use>
+                                                        </svg>       
+                                                        <span class="burger-component__title">Соус</span>  
+                                                        <span class="burger-component__massa">150 г</span>  
+                                                    </li>                                                   
+                                                    <li class="burger-composition__item">
+                                                        <svg class="burger-component__img">
+                                                           <use class="burger-component__img-cucumber" xlink:href="src/icons/sprite.svg#cucumber"></use>
+                                                        </svg>       
+                                                         <span class="burger-component__title">Овощи</span>  
+                                                         <span class="burger-component__massa">200 г</span>  
+                                                    </li>                                                       
+                                                    <li class="burger-composition__item">    
+                                                        <svg class="burger-component__img">
+                                                           <use class="burger-component__img-cheese" xlink:href="src/icons/sprite.svg#cheese"></use>
+                                                        </svg>       
+                                                         <span class="burger-component__title">Сыр</span> 
+                                                         <span class="burger-component__massa">80 г</span>   
+                                                    </li>                                                                   
+                                                </ul>
+                                            </div>
                                        </div>
                                     </div> 
                                     <div class="kkal">
                                         <div class="kkal-container">
-                                            <img class="kkal-img" src="src/icons/kkal.png" alt="kkal"></img>
+                                            <img class="kkal-img" src="src/icons/kkal.png" alt="kkal">
                                             <div class="kkal-number">1200</div>
                                         </div>
                                         <div class="kkal-descr">ккал</div>
                                     </div>
-                                    <img class="dark-burger__img" src="src/img/content/burger-dark.png " alt="burger ">
+                                    <img class="dark-burger__img" src="src/img/content/burger-dark.png " alt="burger">
                                 </div>
                                 <div class="dark-burger__descr">
                                     <h2 class="section-title">DARK BEEF BURGER</h2>
@@ -202,7 +248,7 @@
             <section class="site-section menu" id="menu">
                 <div class="container menu__container">
                     <h2 class="section-title">МЕНЮ</h2>
-                    <dl class="menu__list">
+                    <ul class="menu__list">
                         <!-- блок-аккордеон -->
                         <li class="menu__item">
                             <div class="menu__title menu__title--meat">
@@ -228,7 +274,7 @@
                                 <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
                             </div>
                         </li>
-                    </dl>
+                    </ul>
                 </div>
             </section>
             <section class="site-section reviews" id="reviews">
@@ -349,35 +395,35 @@
                             <div class="order__form-col">
                                 <div class="order__form-row">
                                     <label class="order__form-block">
-                                        <div class="order__form-block-title">Имя</div>
+                                        <span class="order__form-block-title">Имя</span>
                                         <input name="order_name" type="text" class="form__input">
                                     </label>
                                     <label class="order__form-block ">
-                                        <div class="order__form-block-title ">Телефон</div>
+                                        <span class="order__form-block-title ">Телефон</span>
                                         <input name="order_phone" type="text" class="form__input">
                                     </label>
                                 </div>
                                 <div class="order__form-row">
                                     <label class="order__form-block">
-                                        <div class="order__form-block-title">Улица</div>
+                                        <span class="order__form-block-title">Улица</span>
                                         <input name="order_street " type="text" class="form__input ">
                                     </label>
                                 </div>
                                 <div class="order__form-row ">
                                     <label class="order__form-block ">
-                                        <div class="order__form-block-title ">Дом</div>
-                                        <input name="order_house " type="text " class="form__input">
+                                        <span class="order__form-block-title ">Дом</span>
+                                        <input name="order_house" type="text" class="form__input">
                                     </label>
                                     <label class="order__form-block">
-                                        <div class="order__form-block-title">Корпус</div>
+                                        <span class="order__form-block-title">Корпус</span>
                                         <input name="order_house_block" type="text" class="form__input">
                                     </label>
                                     <label class="order__form-block">
-                                        <div class="order__form-block-title">Квартира</div>
+                                        <span class="order__form-block-title">Квартира</span>
                                         <input name="order_flat" type="number" class="form__input">
                                     </label>
                                     <label class="order__form-block">
-                                        <div class="order__form-block-title">Этаж</div>
+                                        <span class="order__form-block-title">Этаж</span>
                                         <input name="order_floor" type="number" class="form__input">
                                     </label>
                                 </div>
@@ -385,7 +431,7 @@
                             <div class="order__form-col">
                                 <div class="order__form-row">
                                     <label class="order__form-block">
-                                        <div class="order__form-block-title">Комментарий</div>
+                                        <span class="order__form-block-title">Комментарий</span>
                                         <textarea name="order_comment" class="form__textarea" rows="5"></textarea>
                                     </label>
                                 </div>

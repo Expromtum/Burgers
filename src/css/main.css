@@ -601,7 +601,7 @@ footer {
   line-height: 3.98438rem;
   /*  text-transform: uppercase;*/ }
 
-.burger-composition__container .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .member__name, .review__name {
+.burger-composition__block .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .member__name, .review__name {
   /*    text-align: left;*/
   width: 100%;
   color: #ffffff;
@@ -611,7 +611,7 @@ footer {
   line-height: 1.75rem;
   /*  text-transform: uppercase;*/ }
 
-.member-content .member__def h5, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone {
+.member-content .member__def h5, .burger-composition__list .burger-composition__item, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
@@ -715,16 +715,81 @@ footer {
   height: 5.625rem;
   cursor: pointer; }
 
-.burger-composition__container {
+.burger-composition__block {
   width: 100%;
-  height: 100%; }
-  .burger-composition__container .burger-composition__img {
+  height: 100%;
+  position: relative;
+  border: 1px solid transparent; }
+  .burger-composition__block .burger-composition__img {
     width: 50%;
     margin: 0.625rem auto 0.3125rem auto;
     display: block; }
-  .burger-composition__container .burger-composition__descr {
+  .burger-composition__block .burger-composition__descr {
     text-align: center; }
+  .burger-composition__block .burger-composition__popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    border-radius: 3%;
+    width: 16.875rem; }
 
+.burger-popup--active .burger-composition__popup {
+  display: block; }
+
+.burger-composition__list {
+  padding: 1.25rem; }
+  .burger-composition__list .burger-composition__row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .burger-composition__list .burger-composition__item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #2f3234;
+    font-weight: 500; }
+    .burger-composition__list .burger-composition__item .burger-component__massa {
+      margin-left: auto; }
+  .burger-composition__list .burger-composition__item * {
+    margin: 0.3125rem 0.3125rem 0.3125rem 0.625rem; }
+
+.burger-component__img {
+  width: 44px;
+  height: 39px; }
+  .burger-component__img-beef, .burger-component__img-sauce {
+    fill: #e45028; }
+  .burger-component__img-buns, .burger-component__img-cheese {
+    fill: #f9b43b; }
+  .burger-component__img-cucumber, .burger-component__img-salad {
+    fill: #8ac03e; }
+
+/*
+
+*/
 .kkal {
   width: 3.75rem;
   height: 5.625rem; }
@@ -746,6 +811,10 @@ footer {
 
 .kkal-descr {
   line-height: 1.4; }
+
+.mobile-menu {
+  width: 1.5rem;
+  height: 1.375rem; }
 
 .frontpage {
   background: url("/src/img/bg/texture.png") no-repeat, url("/src/img/bg/video-bg.png") no-repeat;
@@ -821,12 +890,10 @@ footer {
 .main-menu__link:hover {
   color: #e45028; }
 
-.header__mobile-menu {
-  display: none;
-  width: 24px;
-  height: 22px; }
+.mobile-menu {
+  display: none; }
   @media screen and (max-width: 900px) {
-    .header__mobile-menu {
+    .mobile-menu {
       display: block;
       margin-left: 30px; } }
 

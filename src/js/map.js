@@ -1,5 +1,7 @@
 var map;
 
+//TODO: наложить стили на карту
+
 function initMap() {
 
 	var mainLocation = { lat: 55.687085, lng: 37.562749 };

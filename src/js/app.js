@@ -2,12 +2,12 @@ requirejs.config({
     //By default load any module IDs from js/lib
     baseUrl: 'src/js',
     shim: {
-     /*   'bootstrap': {
-            'deps': [
-                'popper',
-                'jquery'
-            ]
-        },*/
+        /*   'bootstrap': {
+               'deps': [
+                   'popper',
+                   'jquery'
+               ]
+           },*/
         'waypoint': {
             'deps': [
                 'jquery'
@@ -26,7 +26,7 @@ requirejs.config({
          */
         'jquery': 'jquery.min',
         'popper': 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min',
-     /*   'bootstrap': 'bootstrap.min',*/
+        /*   'bootstrap': 'bootstrap.min',*/
         'waypoint': 'jquery.waypoints.min',
         /*'swiper': 'swiper.min',*/
 
@@ -39,9 +39,10 @@ requirejs.config({
     }
 });
 
-require(['jquery'/*, 'bootstrap' *//*, 'animate', 'initGallary'*/ ], function($) {
+require(['jquery' /*, 'bootstrap' */ /*, 'animate', 'initGallary'*/ ], function($) {
     initMenuAccordeon();
-    initTeamAccordeon();    
+    initTeamAccordeon();
+    initBurgerPopup();
 });
 
 require(['popper'], function(p) {
@@ -51,35 +52,51 @@ require(['popper'], function(p) {
 function initMenuAccordeon() {
 
     var MyClickElement = $('.menu__item');
-    var MyClass = "menu__item--active";
+    var ActiveClass = "menu__item--active";
     var MyList = $('.menu__item');
 
     MyClickElement.click(function(e) {
         e.preventDefault();
 
-        if ($(this).hasClass(MyClass)) {
-            MyList.removeClass(MyClass);
+        if ($(this).hasClass(ActiveClass)) {
+            MyList.removeClass(ActiveClass);
         } else {
-            MyList.removeClass(MyClass);
-            $(this).addClass(MyClass);
+            MyList.removeClass(ActiveClass);
+            $(this).addClass(ActiveClass);
         }
     });
 }
 
 function initTeamAccordeon() {
     var MyClickElement = $('.member__item');
-    var MyClass = "member__item--active";
+    var ActiveClass = "member__item--active";
     var MyList = $('.member__item');
 
     MyClickElement.click(function(e) {
         e.preventDefault();
 
-        if ($(this).hasClass(MyClass)) {
-            MyList.removeClass(MyClass);
+        if ($(this).hasClass(ActiveClass)) {
+            MyList.removeClass(ActiveClass);
         } else {
-            MyList.removeClass(MyClass);
-            $(this).addClass(MyClass);
+            MyList.removeClass(ActiveClass);
+            $(this).addClass(ActiveClass);
         }
     });
     /*var MyActiveItem = $(this).parents('.member__item');*/
+}
+
+function initBurgerPopup() {
+
+    var BurgerPopupButton = document.getElementById('burger-popup');
+    var ActiveClass = "burger-popup--active";
+
+    BurgerPopupButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        if ($(this).hasClass(ActiveClass)) {
+            $(this).removeClass(ActiveClass);
+        } else {
+            $(this).addClass(ActiveClass);
+        }
+    });
 }

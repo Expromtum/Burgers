@@ -8,7 +8,7 @@
     & .section-title {
         text-align: center;
         width: 100%;
-        color: $color-title-gray;
+        color: $color-text-black;
         margin-top: rem(0px);
         margin-bottom: rem(0px);
     }
@@ -75,7 +75,7 @@
 }
 
 .promo__title {
-    color: $color-best-descr;
+    color: $color-text-black;
     font-family: Lifehack;
     font-size: rem(24px);
     font-weight: 500;
@@ -91,7 +91,7 @@
 
 .promo__descr {
     @extend %section-text-font;
-    color: $color-best-descr;
+    color: $color-text-black;
     padding: (5px);
     padding-top: rem(10px);
     text-align: center;

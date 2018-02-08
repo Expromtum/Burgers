@@ -7,20 +7,92 @@
     cursor: pointer;
 }
 
-.burger-composition__container {
-	width: 100%;
-	height: 100%;
+.burger-composition__block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid transparent;
 
-	& .burger-composition__img {
-		width: 50%;
-		margin: rem(10px) auto rem(5px) auto;
-		display: block;
-	}
+    & .burger-composition__img {
+        width: 50%;
+        margin: rem(10px) auto rem(5px) auto;
+        display: block;
+    }
 
-	& .burger-composition__descr {
-	    @extend %section-h4-font;
-	    text-align: center;	
-	
-	}
+    & .burger-composition__descr {
+        @extend %section-h4-font;
+        text-align: center;
+    }
+
+    & .burger-composition__popup {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: $color-white;
+        border-radius: 3%;
+        width: rem(270px);
+    }
 }
 
+.burger-popup--active .burger-composition__popup {
+    display: block;
+}
+
+.burger-composition__list {
+
+   padding: rem(20px);
+
+    & .burger-composition__row {
+    	width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+     & .burger-composition__item {
+    	width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        @extend %section-text-font;
+        color: $color-text-black;
+        font-weight: 500;
+
+        & .burger-component__massa {
+        	margin-left: auto;
+        }
+    }   
+
+     & .burger-composition__item * {
+    	margin: rem(5px) rem(5px) rem(5px) rem(10px);
+    }  
+
+}
+
+.burger-component__img {
+    width: 44px;
+    height: 39px;
+
+    &-beef, &-sauce {
+        fill: $color-red;
+    }
+
+    &-buns, &-cheese {
+        fill: $color-yellow;
+    }    
+
+    &-cucumber, &-salad {
+        fill: $color-green;
+    }  
+}
+
+
+
+
+
+/*
+
+*/
