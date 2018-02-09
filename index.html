@@ -21,7 +21,7 @@
         <main class="maincontent">
             <section class="site-section frontpage" id="frontpage">
                 <div class="container frontpage__container">
-                    <header class="header__list">
+                    <header class="header">              
                         <div class="header__logo">
                             <a class="logo__img" href="#"><img src="src/img/bg/logo.png" alt="logo"></a>
                         </div>
@@ -39,11 +39,20 @@
                             <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
                         </div>
                         <div class="mobile-menu">
-                            <a href="#" class='mobile-menu-link'>
-                                <svg class="mobile-menu-img" viewBox="0 0 24 22">
-                                    <use xlink:href="src/icons/mobile-menu.svg#mobile-menu"></use>
-                                </svg>
-                            </a>
+                            <div class="mobile-menu__open">
+                                <a href="#" class='mobile-menu__link'>
+                                    <svg class="mobile-menu__img" viewBox="0 0 24 22">
+                                        <use xlink:href="src/icons/mobile-menu.svg#mobile-menu" fill="#ffffff"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="mobile-menu__close">
+                                <a href="#" class='mobile-menu__link'>
+                                    <svg class="mobile-menu__img" viewBox="0 0 25 25">
+                                        <use xlink:href="src/icons/close.svg#close" fill="#ffffff"></use>
+                                    </svg>
+                                </a>
+                            </div>                       
                         </div>
                     </header>
                     <div class="burger__list">
@@ -187,7 +196,7 @@
                                 </div>
                             </div>
 
-                            
+
                         </div>
                         <div class="slider__scroll">
                             <svg class="scroll__img--toright "></svg>
@@ -549,21 +558,27 @@
             </g>
         </svg>
     </div>
+
     <script data-main="src/js/app" src="src/js/require.js" defer></script>
-    
-    <script src="src/js/overlay.js" async defer></script>   
+
+    <script type="template" id="template-msg-overlay">
+        <div class="template-msg__overlay">
+            <div class="template-msg__container">
+                <div class="template-msg__content">
+                    <div class="template-msg___title"></div>
+                    <div class="template-msg__message"></div>
+                </div>
+                <div class="template-msg__close"></div>
+            </div>
+        </div>  
+    </script>
+
+    <script src="src/js/message-overlay.js" async defer></script>    
     <script src="src/js/map.js" async defer></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmJCTTL7_ny4EX4bZBmOmypC3RjZa1Wk&callback=initMap "
     async defer></script>   
-
-    <!--
-    <script type="text/javascript ">
-    if (window.jQuery) alert("jQuery подключен ");
-    else alert("jQuery не подключен ");
-    </script>
-    -->
 </body>
 
 </html>

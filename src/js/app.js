@@ -44,6 +44,7 @@ require(['jquery' /*, 'bootstrap' */ /*, 'animate', 'initGallary'*/ ], function(
     initTeamAccordeon();
     initBurgerPopup();
     initReviewOverlay();
+    initMobileMenuOverlay();
 });
 
 require(['popper'], function(p) {
@@ -107,7 +108,7 @@ function initReviewOverlay() {
     openButton.click(function(e) {
         e.preventDefault();
 
-    var overlay =    openOverlay(460,
+        var overlay = openMsgOverlay(460,
             'КОНСТАНТИН СПИЛБЕРГ', 
             'Мысли все о них и о них, о них и о них.' + 
             'Нельзя устоять, невозможно забыть... '+
@@ -116,8 +117,30 @@ function initReviewOverlay() {
             'Мысли все о них и о них, о них и о них. Нельзя устоять, '+
             'невозможно забыть... '+
             'Никогда не думал, что булочки могут быть такими мягкими, '+
-            'котлетка такой сочной, а сыр таким расплавленным.', document.body);
+            'котлетка такой сочной, а сыр таким расплавленным.');
 
 //document.body.appendChild(overlay);
     });    
+}
+
+function initMobileMenuOverlay() {
+    var header = $('.header');
+    var openButton = $('.mobile-menu__open');
+    var closeButton = $('.mobile-menu__close');
+    var menuButton = $('.main-menu__item');   
+    var ActiveClass = "phone-menu-overlay";
+
+    openButton.click(function(e) {
+        e.preventDefault();  
+        header.addClass(ActiveClass);
+    }); 
+
+    closeButton.click(function(e) {
+        e.preventDefault();  
+        header.removeClass(ActiveClass);
+    }); 
+
+    menuButton.click(function(e) {
+        header.removeClass(ActiveClass);
+    }); 
 }

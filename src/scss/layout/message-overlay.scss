@@ -1,4 +1,4 @@
-.overlay {
+.template-msg__overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,35 +12,37 @@
   z-index: 10000;
 }
 
-.overlay__container {
+.template-msg__container {
   position: relative;
 }
 
-.overlay__content {
-  width: 400px;
+.template-msg__content {
+  width: rem(400px);
+  max-width: 80vmin;
   background: $color-white;
   border-radius: rem(5px);
   padding: rem(20px);  
   margin: 0;
 
-
-  & .overlay__title {
+  & .template-msg___title {
     @extend %section-h4-font;
     color: $color-text-black;   
   }
 
-  & .overlay__message {
+  & .template-msg__message {
     @extend %section-text-font;
     color: $color-text-black;   
     padding-top: rem(20px);
   }  
 }
 
-.overlay__close {
+.template-msg__close {
   background-image: url("/src/icons/close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
-  right: 15px;
-  top: 10px;
-  width: 15px;
-  height: 15px;
+  right: rem(15px);
+  top: rem(10px);
+  width: rem(20px);
+  height: rem(20px);
  }

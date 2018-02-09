@@ -6,7 +6,7 @@
     background-size: cover;
 }
 
-.header__list {
+.header {
     z-index: 20;
     display: flex;
     flex-direction: row;
@@ -16,11 +16,27 @@
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
-    @extend %control-elements-font;
 
     & .header__item:nth-child(2) {
         margin-left: auto;
     }
+
+    &.phone-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $color-bg-overlay;
+        align-items: flex-start;
+        padding-top: 5%;
+        padding-bottom: 5%;    
+    }
+}
+
+.header__logo {
+    margin-right: auto;
+    padding-top: 10px;
 }
 
 .header__nav {
@@ -29,11 +45,6 @@
     @include tablets {
         display: none;
     }
-}
-
-.header__logo {
-    margin-right: auto;
-    padding-top: 10px;
 }
 
 .main-menu__list {
@@ -53,14 +64,14 @@
     &::before {
         content: "";
         display: inline-block;
-        vertical-align: middle;       
+        vertical-align: middle;
         cursor: pointer;
         width: rem(5px);
-        height: rem(5px);   
-        border-radius: 50%;    
-        background: $color-white;   
-        margin-right: rem(16px); 
-        margin-left: rem(16px);       
+        height: rem(5px);
+        border-radius: 50%;
+        background: $color-white;
+        margin-right: rem(16px);
+        margin-left: rem(16px);
     }
 
     @include laptop {
@@ -68,7 +79,7 @@
         padding-right: rem(5px);
     }
 
-    &:first-child::before {
+    &:first-child::before {       
         display: none;
     }
 
@@ -92,6 +103,68 @@
         display: block;
         margin-left: (30px);
     }
+
+    & .mobile-menu__open {
+        display: block;    
+    }    
+
+    & .mobile-menu__close {
+       display: none;    
+    }    
+}
+
+.phone-menu-overlay {
+
+    .mobile-menu {
+        display: block;
+    }
+
+     .header__logo {
+        margin-right: 0;
+    }   
+
+    & .header__btn {
+        display: none;
+    }
+
+    & .header__nav {
+        display: block;
+        height: 100%;
+    }
+
+     & .main-menu__list {
+        display: flex;     
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        height: 100%;      
+    }   
+
+    & .main-menu__item {
+        margin: rem(5px) 0 rem(5px) 0;        
+    }   
+
+     & .main-menu__item::before {
+        display: block;
+        margin: rem(15px) auto rem(20px) auto;
+    }    
+
+    & .main-menu__item:first-child::before {
+        display: none;
+    }       
+    
+    & .main-menu__link {
+        font-size: rem(24px); 
+        line-height: rem(40px);  
+    }
+
+     & .mobile-menu__open {
+        display: none;
+    }
+
+    & .mobile-menu__close {
+        display: block;
+    }    
 }
 
 .burger__list {
@@ -126,31 +199,31 @@
 }
 
 .burger__img img {
-    min-width: rem(200px); 
+    min-width: rem(200px);
     max-width: 60vmin;
     width: 100%;
-    margin-top: rem(-150px);    
+    margin-top: rem(-150px);
 
     @include tablets_portrait {
         margin-top: rem(0px);
         margin-bottom: rem(20px);
-        max-width: 70vmin;     
-    }      
+        max-width: 70vmin;
+    }
 }
 
 .burger__descr-font {
     color: $color-white;
-    font-family: Lifehack;   
+    font-family: Lifehack;
     font-weight: 400;
-    font-size: rem(70px);   
+    font-size: rem(70px);
 
     @include laptop {
         font-size: rem(55px);
-    }       
+    }
 
     @include tablets_landscape {
         font-size: rem(50px);
-    }             
+    }
 }
 
 .burger__descr {
@@ -181,18 +254,18 @@
     }
 
     & .descr-natural {
-        @extend .burger__descr-font;    
+        @extend .burger__descr-font;
         line-height: rem(75px);
         letter-spacing: -1.63px;
         padding-left: rem(10px);
     }
 
     & .descr-burger {
-        @extend .burger__descr-font;  
+        @extend .burger__descr-font;
         line-height: rem(65px);
 
-         @include tablets_landscape {
+        @include tablets_landscape {
             line-height: rem(45px);
-        }           
+        }
     }
 }
