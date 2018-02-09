@@ -502,6 +502,8 @@ html {
 .site-section {
   height: 100%;
   background-color: #282828;
+  max-width: 1300px;
+  margin: 0 auto;
   /*   min-width: $section-min-width;
     min-height: $section-min-height;*/ }
   .site-section_centered {

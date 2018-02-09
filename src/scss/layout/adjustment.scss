@@ -46,6 +46,8 @@ html {
 .site-section {
     height: 100%;
     background-color: $color-bg-side;
+    max-width: rem(1300px);
+    margin: 0 auto;
  /*   min-width: $section-min-width;
     min-height: $section-min-height;*/
 
