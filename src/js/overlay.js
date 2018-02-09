@@ -21,7 +21,8 @@ function openOverlay(width, title, content, ownerElement) {
     const closeElement = document.createElement("a");
     closeElement.classList.add("overlay__close");
     closeElement.href = "#";
-    closeElement.addEventListener("click", function() {
+    closeElement.addEventListener("click", function(e) {
+        e.preventDefault();
         ownerElement.removeChild(overlayElement);
     });
 

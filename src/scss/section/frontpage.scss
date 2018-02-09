@@ -13,8 +13,8 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding-left: 6%;
-    padding-right: 6.5%;
+    padding-left: 5%;
+    padding-right: 5%;
     width: 100%;
     @extend %control-elements-font;
 
@@ -49,18 +49,27 @@
 }
 
 .main-menu__item {
-    padding-left: rem(10px);
-    padding-right: rem(27px);
-    list-style: disc outside;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;       
+        cursor: pointer;
+        width: rem(5px);
+        height: rem(5px);   
+        border-radius: 50%;    
+        background: $color-white;   
+        margin-right: rem(16px); 
+        margin-left: rem(16px);       
+    }
 
     @include laptop {
-        list-style: none;
         padding-left: rem(5px);
         padding-right: rem(5px);
     }
 
-    &:first-child {
-        list-style: none;
+    &:first-child::before {
+        display: none;
     }
 
     &:last-child {
