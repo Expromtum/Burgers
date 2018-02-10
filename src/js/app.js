@@ -45,6 +45,7 @@ require(['jquery' /*, 'bootstrap' */ /*, 'animate', 'initGallary'*/ ], function(
     initBurgerPopup();
     initReviewOverlay();
     initMobileMenuOverlay();
+    initBurgerSlider();
 });
 
 require(['popper'], function(p) {
@@ -52,95 +53,176 @@ require(['popper'], function(p) {
 });
 
 function initMenuAccordeon() {
+    var item = $('.menu__item');
+    var activeClass = "menu__item--active";
+    var itemList = $('.menu__item');
 
-    var MyClickElement = $('.menu__item');
-    var ActiveClass = "menu__item--active";
-    var MyList = $('.menu__item');
-
-    MyClickElement.click(function(e) {
+    item.click(function(e) {
         e.preventDefault();
 
-        if ($(this).hasClass(ActiveClass)) {
-            MyList.removeClass(ActiveClass);
+        if ($(this).hasClass(activeClass)) {
+            itemList.removeClass(activeClass);
         } else {
-            MyList.removeClass(ActiveClass);
-            $(this).addClass(ActiveClass);
+            itemList.removeClass(activeClass);
+            $(this).addClass(activeClass);
         }
     });
 }
 
 function initTeamAccordeon() {
-    var MyClickElement = $('.member__item');
-    var ActiveClass = "member__item--active";
-    var MyList = $('.member__item');
+    var item = $('.member__item');
+    var activeClass = "member__item--active";
+    var itemList = $('.member__item');
 
-    MyClickElement.click(function(e) {
+   item.click(function(e) {
         e.preventDefault();
 
-        if ($(this).hasClass(ActiveClass)) {
-            MyList.removeClass(ActiveClass);
+        if ($(this).hasClass(activeClass)) {
+            itemList.removeClass(activeClass);
         } else {
-            MyList.removeClass(ActiveClass);
-            $(this).addClass(ActiveClass);
+            itemList.removeClass(activeClass);
+            $(this).addClass(activeClass);
         }
     });
-    /*var MyActiveItem = $(this).parents('.member__item');*/
+    /*var activeClass = $(this).parents('.member__item');*/
 }
 
 function initBurgerPopup() {
-    var BurgerPopupButton =  document.getElementById('burger-popup');
-    var ActiveClass = "burger-popup--active";
+    var buttonPopup = document.getElementById('burger-popup');
+    var activeClass = "burger-popup--active";
 
-    BurgerPopupButton.addEventListener('click', function(event) {
+    buttonPopup.addEventListener('click', function(event) {
         event.preventDefault();
 
-        if ($(this).hasClass(ActiveClass)) {
-            $(this).removeClass(ActiveClass);
+        if ($(this).hasClass(activeClass)) {
+            $(this).removeClass(activeClass);
         } else {
-            $(this).addClass(ActiveClass);
+            $(this).addClass(activeClass);
         }
     });
 }
 
 function initReviewOverlay() {
-    var openButton = $('.button__open-review');
+    var buttonOpen = $('.button__open-review');
 
-    openButton.click(function(e) {
+    buttonOpen.click(function(e) {
         e.preventDefault();
 
         var overlay = openMsgOverlay(460,
-            'КОНСТАНТИН СПИЛБЕРГ', 
-            'Мысли все о них и о них, о них и о них.' + 
-            'Нельзя устоять, невозможно забыть... '+
-            'Никогда не думал, что булочки могут быть такими мягкими, '+
-            'котлетка такой сочной, а сыр таким расплавленным. '+
-            'Мысли все о них и о них, о них и о них. Нельзя устоять, '+
-            'невозможно забыть... '+
-            'Никогда не думал, что булочки могут быть такими мягкими, '+
+            'КОНСТАНТИН СПИЛБЕРГ',
+            'Мысли все о них и о них, о них и о них.' +
+            'Нельзя устоять, невозможно забыть... ' +
+            'Никогда не думал, что булочки могут быть такими мягкими, ' +
+            'котлетка такой сочной, а сыр таким расплавленным. ' +
+            'Мысли все о них и о них, о них и о них. Нельзя устоять, ' +
+            'невозможно забыть... ' +
+            'Никогда не думал, что булочки могут быть такими мягкими, ' +
             'котлетка такой сочной, а сыр таким расплавленным.');
 
-//document.body.appendChild(overlay);
-    });    
+        //document.body.appendChild(overlay);
+    });
 }
 
 function initMobileMenuOverlay() {
     var header = $('.header');
-    var openButton = $('.mobile-menu__open');
-    var closeButton = $('.mobile-menu__close');
-    var menuButton = $('.main-menu__item');   
-    var ActiveClass = "phone-menu-overlay";
+    var buttonOpen = $('.mobile-menu__open');
+    var buttonClose = $('.mobile-menu__close');
+    var buttonMenu = $('.main-menu__item');
+    var activeClass = "phone-menu-overlay";
 
-    openButton.click(function(e) {
-        e.preventDefault();  
-        header.addClass(ActiveClass);
-    }); 
+    buttonOpen.click(function(e) {
+        e.preventDefault();
+        header.addClass(activeClass);
+    });
 
-    closeButton.click(function(e) {
-        e.preventDefault();  
-        header.removeClass(ActiveClass);
-    }); 
+    buttonClose.click(function(e) {
+        e.preventDefault();
+        header.removeClass(activeClass);
+    });
 
-    menuButton.click(function(e) {
-        header.removeClass(ActiveClass);
-    }); 
+    buttonMenu.click(function(e) {
+        header.removeClass(activeClass);
+    });
+}
+
+/*
+function initBurgerSlider() {
+    const left = document.querySelector("#slider__arrow--left");
+    const right = document.querySelector("#slider__arrow--right");
+    const slide__item = document.querySelector(".slide-item");
+    const slider__items = document.querySelector("#slider__items");
+
+    const countSlide = 3; //TODO: посчитать их количество через JS
+    const minRight = 0;
+    let currentRight = 0;
+
+    let step = parseInt(getComputedStyle(slide__item).width);
+
+
+    // const maxRight = (countSlide - 1) * step;
+
+
+    left.addEventListener('click', function(event) {
+        event.preventDefault();
+        let step = parseInt(getComputedStyle(slide__item).width);
+        if (currentRight > minRight) {
+            currentRight -= step;
+
+            if (currentRight < 0) {
+                currentRight = 0
+            };
+
+            slider__items.style.right = currentRight + "px";
+        }
+    });
+
+    right.addEventListener('click', function(event) {
+        event.preventDefault();
+        let step = parseInt(getComputedStyle(slide__item).width);
+
+
+        const maxRight = (countSlide - 1) * step;
+
+        alert(step);
+        if (currentRight < maxRight) {
+            currentRight += step;
+            slider__items.style.right = currentRight + "px";
+        }
+
+    });
+}*/
+
+function initBurgerSlider() {
+    var slideList = document.querySelectorAll('#dark-burger .slider .slide-item');
+    var currentSlide = 0;
+
+    function goToSlide(n) {
+        slideList[currentSlide].className = 
+            slideList[currentSlide].className.replace(" slide-item--active", "");  
+                  
+        currentSlide = (n + slideList.length) % slideList.length;
+        slideList[currentSlide].className += " slide-item--active";      
+    };
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    };
+
+    function previousSlide() {
+        goToSlide(currentSlide - 1);
+    };
+
+    const left = document.querySelector("#dark-burger .slider .slider__arrow--left");
+    const right = document.querySelector("#dark-burger .slider .slider__arrow--right");
+
+    left.addEventListener('click', function(event) {
+        event.preventDefault();
+        previousSlide();
+    });
+
+    right.addEventListener('click', function(event) {
+        event.preventDefault();
+        nextSlide();
+    });
+
 }

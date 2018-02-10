@@ -46,7 +46,7 @@ html {
 .site-section {
     height: 100%;
     background-color: $color-bg-side;
-    max-width: rem(1300px);
+    max-width: rem(1500px);
     margin: 0 auto;
  /*   min-width: $section-min-width;
     min-height: $section-min-height;*/
@@ -67,7 +67,6 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*  border: 1px solid white;  */
 }
 
 h1,
@@ -79,7 +78,6 @@ h6 {
     margin-top: 0;
     font-weight: normal;
 }
-
 
 ul {
     margin: 0;
@@ -167,7 +165,6 @@ footer {
     font-weight: 300;
 }
 
-
 %section-h5-font {
     @extend %section-text-font;
     font-weight: 700;
@@ -207,7 +204,6 @@ footer {
         background-color: transparent;
     }
 }
-
 
 .visuallyhidden {
     position: absolute;

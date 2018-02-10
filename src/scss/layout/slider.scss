@@ -1,14 +1,68 @@
 .slider {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+}
 
-    & .slider__scroll {
-        min-width: 4%;
-        max-width: 4%;
+//Стрелки слайда Вправо/Влево
+.slider__arrow {
+    min-width: 4%;
+    max-width: 4%;   
+    position: relative;
+    cursor: pointer;
+
+    & .slider__arrow--left {
+        @extend .scroll__img;
+        position: absolute;
+        top: 50%;
+        left: 25%;        
+        transform: rotate(90deg) translateX(-25%);
     }
+
+    & .slider__arrow--right {
+        @extend .scroll__img;
+        position: absolute;
+        top: 50%;
+        right: 25%; 
+        transform: rotate(-90deg) translateX(25%);
+    }    
+}
+
+.slider__content {
+  display: flex;
+  width: 92%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;    
+}
+
+.slider__items {
+   display: flex;
+   position: relative;      
+   height: 100%;
+   width: 100%;
+   transition: right 0.3s;    
+}
+
+.slide-item {
+   display: flex; 
+   height: 100%;
+   margin: 0;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   opacity: 0;  
+   z-index: 1;
+   will-change: opacity;   
+}  
+
+.slide-item--active { 
+   opacity: 1;  
+   z-index: 2; 
 }
 
 .scroll__img {
@@ -17,23 +71,3 @@
     height: rem(14px);
 }
 
-//Стрелки слайда Вправо/Влево
-.slider__scroll {
-    position: relative;
-
-    & .scroll__img--toleft {
-        @extend .scroll__img;
-        position: absolute;
-        top: 50%;
-        left: 25%;        
-        transform: rotate(90deg) translateX(-25%);
-    }
-
-    & .scroll__img--toright {
-        @extend .scroll__img;
-        position: absolute;
-        top: 50%;
-        right: 25%; 
-        transform: rotate(-90deg) translateX(25%);
-    }    
-}

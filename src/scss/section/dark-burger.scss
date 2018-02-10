@@ -17,20 +17,20 @@
     }
 }
 
-.dark-burger__content {
+.dark-burger .slider {
     height: 80%;
 
     @include tablets_portrait {
-        height: 90%;
+        height: 90%; // aa
     }
 }
 
 .dark-burger__item {
-    height: 100%;
-    display: flex;
+    display: flex;     
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
+    margin: 0;
 
     @include tablets_portrait {
         flex-direction: column;

@@ -502,7 +502,7 @@ html {
 .site-section {
   height: 100%;
   background-color: #282828;
-  max-width: 1300px;
+  max-width: 93.75rem;
   margin: 0 auto;
   /*   min-width: $section-min-width;
     min-height: $section-min-height;*/ }
@@ -535,8 +535,7 @@ html {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
-  /*  border: 1px solid white;  */ }
+  flex-direction: column; }
 
 h1,
 h2,
@@ -666,6 +665,7 @@ footer {
 
 .slider {
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,31 +679,69 @@ footer {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch; }
-  .slider .slider__scroll {
-    min-width: 4%;
-    max-width: 4%; }
 
-.scroll__img, .slider__scroll .scroll__img--toleft, .slider__scroll .scroll__img--toright {
-  background: url("/src/icons/arrow-scroll.png") no-repeat center;
-  width: 1.8125rem;
-  height: 0.875rem; }
-
-.slider__scroll {
-  position: relative; }
-  .slider__scroll .scroll__img--toleft {
+.slider__arrow {
+  min-width: 4%;
+  max-width: 4%;
+  position: relative;
+  cursor: pointer; }
+  .slider__arrow .slider__arrow--left {
     position: absolute;
     top: 50%;
     left: 25%;
     -webkit-transform: rotate(90deg) translateX(-25%);
     -ms-transform: rotate(90deg) translateX(-25%);
     transform: rotate(90deg) translateX(-25%); }
-  .slider__scroll .scroll__img--toright {
+  .slider__arrow .slider__arrow--right {
     position: absolute;
     top: 50%;
     right: 25%;
     -webkit-transform: rotate(-90deg) translateX(25%);
     -ms-transform: rotate(-90deg) translateX(25%);
     transform: rotate(-90deg) translateX(25%); }
+
+.slider__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 92%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0; }
+
+.slider__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: right 0.3s;
+  -o-transition: right 0.3s;
+  transition: right 0.3s; }
+
+.slide-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  will-change: opacity; }
+
+.slide-item--active {
+  opacity: 1;
+  z-index: 2; }
+
+.scroll__img, .slider__arrow .slider__arrow--left, .slider__arrow .slider__arrow--right {
+  background: url("/src/icons/arrow-scroll.png") no-repeat center;
+  width: 1.8125rem;
+  height: 0.875rem; }
 
 .burger-composition {
   border-radius: 5px;
@@ -1260,14 +1298,13 @@ footer {
         margin-top: 1.25rem;
         margin-bottom: 1.25rem; } }
 
-.dark-burger__content {
+.dark-burger .slider {
   height: 80%; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
-    .dark-burger__content {
+    .dark-burger .slider {
       height: 90%; } }
 
 .dark-burger__item {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1280,7 +1317,8 @@ footer {
   align-items: stretch;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .dark-burger__item {
       -webkit-box-orient: vertical;
