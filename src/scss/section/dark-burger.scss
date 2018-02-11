@@ -62,7 +62,7 @@
         }
 
         @include phones_portrait {
-            left: -5%;
+            left: 0;
         }    
     }
 
@@ -77,7 +77,7 @@
         }
 
          @include phones_portrait {
-            left: 90%;
+            left: 85%;
         }    
     }       
 }

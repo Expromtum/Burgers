@@ -46,7 +46,6 @@ html {
 .site-section {
     height: 100%;
     background-color: $color-bg-side;
-    max-width: rem(1500px);
     margin: 0 auto;
  /*   min-width: $section-min-width;
     min-height: $section-min-height;*/
@@ -61,6 +60,7 @@ html {
 .container {
    /* width: $section-width;*/
     width: 95%;
+    max-width: rem(1500px);   
     height: 100vh;
     margin: 0 auto;
     display: flex;

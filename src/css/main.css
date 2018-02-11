@@ -502,7 +502,6 @@ html {
 .site-section {
   height: 100%;
   background-color: #282828;
-  max-width: 93.75rem;
   margin: 0 auto;
   /*   min-width: $section-min-width;
     min-height: $section-min-height;*/ }
@@ -521,6 +520,7 @@ html {
 .container {
   /* width: $section-width;*/
   width: 95%;
+  max-width: 93.75rem;
   height: 100vh;
   margin: 0 auto;
   display: -webkit-box;
@@ -600,7 +600,7 @@ footer {
   font-weight: 400;
   line-height: 3.98438rem; }
 
-.burger-composition__block .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .template-msg__content .template-msg___title, .member__name, .review__name {
+.burger-composition__btn .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .template-msg__content .template-msg___title, .member__name, .review__name {
   width: 100%;
   color: #ffffff;
   font-family: Gagalin;
@@ -751,18 +751,18 @@ footer {
   height: 5.625rem;
   cursor: pointer; }
 
-.burger-composition__block {
+.burger-composition__btn {
   width: 100%;
   height: 100%;
   position: relative;
   border: 1px solid transparent; }
-  .burger-composition__block .burger-composition__img {
+  .burger-composition__btn .burger-composition__img {
     width: 50%;
     margin: 0.625rem auto 0.3125rem auto;
     display: block; }
-  .burger-composition__block .burger-composition__descr {
+  .burger-composition__btn .burger-composition__descr {
     text-align: center; }
-  .burger-composition__block .burger-composition__popup {
+  .burger-composition__btn .burger-composition__popup {
     display: none;
     position: absolute;
     top: 0;
@@ -816,7 +816,7 @@ footer {
 .burger-component__img {
   width: 44px;
   height: 39px; }
-  .burger-component__img-beef, .burger-component__img-sauce {
+  .burger-component__img-beef, .burger-component__img-sauce, .burger-component__img-chicken {
     fill: #e45028; }
   .burger-component__img-buns, .burger-component__img-cheese {
     fill: #f9b43b; }
@@ -847,10 +847,6 @@ footer {
 
 .kkal-descr {
   line-height: 1.4; }
-
-.mobile-menu {
-  width: 1.5rem;
-  height: 1.375rem; }
 
 .template-msg__overlay {
   position: fixed;
@@ -924,18 +920,6 @@ footer {
   width: 100%; }
   .header .header__item:nth-child(2) {
     margin-left: auto; }
-  .header.phone-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #2d3032;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    padding-top: 5%;
-    padding-bottom: 5%; }
 
 .header__logo {
   margin-right: auto;
@@ -993,7 +977,9 @@ footer {
   color: #e45028; }
 
 .mobile-menu {
-  display: none; }
+  display: none;
+  width: 1.5rem;
+  height: 1.375rem; }
   @media screen and (max-width: 900px) {
     .mobile-menu {
       display: block;
@@ -1003,54 +989,60 @@ footer {
   .mobile-menu .mobile-menu__close {
     display: none; }
 
-.phone-menu-overlay .mobile-menu {
-  display: block; }
-
-.phone-menu-overlay .header__logo {
-  margin-right: 0; }
-
-.phone-menu-overlay .header__btn {
-  display: none; }
-
-.phone-menu-overlay .header__nav {
-  display: block;
-  height: 100%; }
-
-.phone-menu-overlay .main-menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%; }
-
-.phone-menu-overlay .main-menu__item {
-  margin: 0.3125rem 0 0.3125rem 0; }
-
-.phone-menu-overlay .main-menu__item::before {
-  display: block;
-  margin: 0.9375rem auto 1.25rem auto; }
-
-.phone-menu-overlay .main-menu__item:first-child::before {
-  display: none; }
-
-.phone-menu-overlay .main-menu__link {
-  font-size: 1.5rem;
-  line-height: 2.5rem; }
-
-.phone-menu-overlay .mobile-menu__open {
-  display: none; }
-
-.phone-menu-overlay .mobile-menu__close {
-  display: block; }
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2d3032;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  overflow-x: hidden; }
+  .mobile-menu-overlay .mobile-menu {
+    display: block; }
+  .mobile-menu-overlay .header__logo {
+    margin-right: 0; }
+  .mobile-menu-overlay .header__btn {
+    display: none; }
+  .mobile-menu-overlay .header__nav {
+    display: block;
+    height: 100%; }
+  .mobile-menu-overlay .main-menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%; }
+  .mobile-menu-overlay .main-menu__item {
+    margin: 0.3125rem 0 0.3125rem 0; }
+  .mobile-menu-overlay .main-menu__item::before {
+    display: block;
+    margin: 0.9375rem auto 1.25rem auto; }
+  .mobile-menu-overlay .main-menu__item:first-child::before {
+    display: none; }
+  .mobile-menu-overlay .main-menu__link {
+    font-size: 1.5rem;
+    line-height: 2.5rem; }
+  .mobile-menu-overlay .mobile-menu__open {
+    display: none; }
+  .mobile-menu-overlay .mobile-menu__close {
+    display: block;
+    margin-top: 20px;
+    width: 1.875rem;
+    height: 1.875rem; }
 
 .burger__list {
   width: 100%;
@@ -1125,6 +1117,7 @@ footer {
 .burger__descr {
   margin-top: -5rem;
   margin-bottom: 1.25rem;
+  margin-left: 0.9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1361,7 +1354,7 @@ footer {
         left: 7%; } }
     @media screen and (max-width: 480px) and (orientation: portrait) {
       .dark-burger__imgs .burger-composition {
-        left: -5%; } }
+        left: 0; } }
   .dark-burger__imgs .kkal {
     position: absolute;
     left: 2%;
@@ -1372,7 +1365,7 @@ footer {
         top: 3%; } }
     @media screen and (max-width: 480px) and (orientation: portrait) {
       .dark-burger__imgs .kkal {
-        left: 90%; } }
+        left: 85%; } }
 
 .dark-burger__img {
   min-width: 12.5rem;
@@ -1752,7 +1745,8 @@ footer {
   position: relative; }
 
 .reviews__container {
-  width: 100%; }
+  width: 100%;
+  max-width: 100%; }
 
 .review__list {
   list-style: none;
@@ -2031,7 +2025,8 @@ footer {
 .contacts {
   position: relative; }
   .contacts .container {
-    width: 100%; }
+    width: 100%;
+    max-width: 100%; }
 
 #map {
   width: 100%;
