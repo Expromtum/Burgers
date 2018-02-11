@@ -1,7 +1,0 @@
-function initOnePageScroll() {
-
-}
-
-
-
-initOnePageScroll();

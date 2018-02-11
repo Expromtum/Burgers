@@ -825,41 +825,17 @@
             </section>
         </main>
         <!--Панель навигации-->
-        <nav class="navbar">
-            <div class="container-navbar">
-                <div class="navbar__list">
-                    <div class="navbar__item ">
-                        <input type="radio" name="point" id="point1" onclick="document.location='#frontpage';" checked/>
-                        <label for="point1"></label>
-                    </div>
-                    <div class="navbar__item">
-                        <input type="radio" name="point" id="point2" onclick="document.location='#best';" />
-                        <label for="point2"></label>
-                    </div>
-                    <div class="navbar__item">
-                        <input type="radio" name="point" id="point3" onclick="document.location='#dark-burger';" />
-                        <label for="point3"></label>
-                    </div>
-                    <div class="navbar__item">
-                        <input type="radio" name="point" id="point4" onclick="document.location='#team';" />
-                        <label for="point4"></label>
-                    </div>
-                    <div class="navbar__item">
-                        <input type="radio" name="point" id="point5" onclick="document.location='#menu';" />
-                        <label for="point5"></label>
-                    </div>
-                    <div class="navbar__item">
-                        <input type="radio" name="point" id="point6" onclick="document.location='#reviews';" />
-                        <label for="point6"></label>
-                    </div>
-                    <div class="navbar__item">
-                        <input type="radio" name="point" id="point7" onclick="document.location='#order';" />
-                        <label for="point7"></label>
-                    </div>
-                    <div class="navbar__item">
-                        <input type="radio" name="point" id="point8" onclick="document.location='#contacts';" />
-                        <label for="point8"></label>
-                    </div>
+        <nav class="pagination">
+            <div class="container-pagination">
+                <div class="pagination__list">
+                    <div class="pagination__item pagination__item--active" onclick="document.location='#frontpage';"></div>
+                    <div class="pagination__item" onclick="document.location='#best';"></div>
+                    <div class="pagination__item" onclick="document.location='#dark-burger';"></div>
+                    <div class="pagination__item" onclick="document.location='#team';"></div>
+                    <div class="pagination__item" onclick="document.location='#menu';"></div>
+                    <div class="pagination__item" onclick="document.location='#reviews';"></div>
+                    <div class="pagination__item" onclick="document.location='#order';"></div>
+                    <div class="pagination__item" onclick="document.location='#contacts';"></div>
                 </div>
             </div>
         </nav>
@@ -892,13 +868,13 @@
         </div>
     </script>    
     <script data-main="src/js/app" src="src/js/require.js" defer></script>
-    <script src="src/js/one-page-scroll.js" defer></script>      
+    <script src="src/js/jquery.min.js"></script> 
+    <script src="src/js/pagination.js" defer></script>      
     <script src="src/js/slider.js" defer></script>   
     <script src="src/js/message-overlay.js" async defer></script>
     <script src="src/js/map.js" async defer></script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmJCTTL7_ny4EX4bZBmOmypC3RjZa1Wk&callback=initMap " async defer></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmJCTTL7_ny4EX4bZBmOmypC3RjZa1Wk&callback=initMap" async defer></script>
 </body>
 
 </html>

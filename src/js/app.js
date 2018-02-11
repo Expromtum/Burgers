@@ -45,7 +45,6 @@ require(['jquery' /*, 'bootstrap' */ /*, 'animate', 'initGallary'*/ ], function(
     initBurgerPopup();
     initReviewOverlay();
     initMobileMenuOverlay();
-    // initBurgerSlider();
 });
 
 require(['popper'], function(p) {
@@ -100,7 +99,6 @@ function initBurgerPopup() {
             $(this).addClass(activeClass);
         }
     });
-
 }
 
 function initReviewOverlay() {

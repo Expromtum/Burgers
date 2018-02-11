@@ -44,6 +44,7 @@ html {
 }
 
 .site-section {
+    pointer-events: none;  
     height: 100%;
     background-color: $color-bg-side;
     margin: 0 auto;

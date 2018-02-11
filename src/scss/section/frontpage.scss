@@ -279,7 +279,6 @@
 .burger__arrow {
     width: 100%;
     position: relative;
-    cursor: pointer;
     height: 5vh;
 
     & .burger__arrow--bottom {
@@ -287,5 +286,6 @@
         position: absolute;
         top: 0;
         left: 50%;  
+        cursor: pointer;
     }
 }
