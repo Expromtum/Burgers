@@ -55,4 +55,4 @@ function initBurgerSlider() { //TODO: mobile toutch события
 }
 
 
-initBurgerSlider();
+initBurgerSlider(); //TODO: слайдер листается на в разных окнах браузера одновременно

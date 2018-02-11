@@ -1308,10 +1308,12 @@ footer {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0; }
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 0;
+  margin-top: 5vh;
+  height: 100%; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .dark-burger__item {
       -webkit-box-orient: vertical;
