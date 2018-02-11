@@ -15,7 +15,7 @@
     cursor: pointer;
 
     & .slider__arrow--left {
-        @extend .scroll__img;
+        @extend .arrow__img;
         position: absolute;
         top: 50%;
         left: 25%;        
@@ -23,7 +23,7 @@
     }
 
     & .slider__arrow--right {
-        @extend .scroll__img;
+        @extend .arrow__img;
         position: absolute;
         top: 50%;
         right: 25%; 
@@ -65,9 +65,4 @@
    z-index: 2; 
 }
 
-.scroll__img {
-    background: url("/src/icons/arrow-scroll.png") no-repeat center;
-    width: rem(29px);
-    height: rem(14px);
-}
 

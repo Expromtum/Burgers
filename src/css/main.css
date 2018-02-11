@@ -663,6 +663,11 @@ footer {
   background-color: #000000;
   opacity: 0.7; }
 
+.arrow__img, .slider__arrow .slider__arrow--left, .slider__arrow .slider__arrow--right, .burger__arrow .burger__arrow--bottom {
+  background: url("/src/icons/arrow-scroll.png") no-repeat center;
+  width: 1.8125rem;
+  height: 0.875rem; }
+
 .slider {
   height: 100%;
   width: 100%;
@@ -737,11 +742,6 @@ footer {
 .slide-item--active {
   opacity: 1;
   z-index: 2; }
-
-.scroll__img, .slider__arrow .slider__arrow--left, .slider__arrow .slider__arrow--right {
-  background: url("/src/icons/arrow-scroll.png") no-repeat center;
-  width: 1.8125rem;
-  height: 0.875rem; }
 
 .burger-composition {
   border-radius: 5px;
@@ -945,7 +945,8 @@ footer {
   justify-content: flex-end;
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
-  align-items: baseline; }
+  align-items: baseline;
+  /*  overflow: auto; Scrollable Menu*/ }
   @media screen and (max-width: 900px) {
     .main-menu__list {
       display: none; } }
@@ -1156,6 +1157,16 @@ footer {
     @media screen and (max-width: 768px) and (orientation: landscape) {
       .burger__descr .descr-burger {
         line-height: 2.8125rem; } }
+
+.burger__arrow {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  height: 5vh; }
+  .burger__arrow .burger__arrow--bottom {
+    position: absolute;
+    top: 0;
+    left: 50%; }
 
 .best {
   background: url("/src/img/bg/best-bg.png") no-repeat top center;

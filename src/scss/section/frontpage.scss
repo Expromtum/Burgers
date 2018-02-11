@@ -41,6 +41,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
+    /*  overflow: auto; Scrollable Menu*/ 
 
     @include laptop {
         display: none;
@@ -271,5 +272,20 @@
         @include tablets_landscape {
             line-height: rem(45px);
         }
+    }
+}
+
+//Стрелка вниз
+.burger__arrow {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    height: 5vh;
+
+    & .burger__arrow--bottom {
+        @extend .arrow__img;
+        position: absolute;
+        top: 0;
+        left: 50%;  
     }
 }
