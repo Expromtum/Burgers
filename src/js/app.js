@@ -74,7 +74,7 @@ function initTeamAccordion() {
     var itemList = $('.member__item');
 
     item.click(function(e) {
-        e.preventDefault();
+        e.preventDefault();      
 
         if ($(this).hasClass(activeClass)) {
             itemList.removeClass(activeClass);

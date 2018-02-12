@@ -1,7 +1,7 @@
 function initBurgerSlider() { //TODO: mobile toutch события
     const slider = document.querySelector("#dark-burger .slider__content"); // смотровое окно
     var slideList = document.querySelectorAll('#dark-burger .slider .slide-item');
-    var currentSlide = 0;
+    var currentSlide = 0;       
 
     function goToSlide(n) {
         slideList[currentSlide].className =
@@ -28,7 +28,7 @@ function initBurgerSlider() { //TODO: mobile toutch события
     });
 
     right.addEventListener('click', function(event) {
-        event.preventDefault();
+        event.preventDefault(); 
         nextSlide();
     });
 
