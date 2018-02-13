@@ -5,7 +5,6 @@
     width: rem(90px);
     height: rem(90px);
     cursor: pointer;
-  //
 }
 
 .burger-composition__btn {
@@ -13,7 +12,6 @@
     height: 100%;
     position: relative;
     border: 1px solid transparent;
-    // pointer-events: none;   
 
     & .burger-composition__img {
         width: 50%;
@@ -70,7 +68,6 @@
      & .burger-composition__item * {
     	margin: rem(5px) rem(5px) rem(5px) rem(10px);
     }  
-
 }
 
 .burger-component__img {
@@ -89,11 +86,3 @@
         fill: $color-green;
     }  
 }
-
-
-
-
-
-/*
-
-*/

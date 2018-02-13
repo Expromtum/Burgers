@@ -17,9 +17,9 @@
     left: rem(110px);
 
     @include tablets_portrait {
-       top: rem(80px);      
-       left: rem(50px);
-    }   
+        top: rem(80px);
+        left: rem(50px);
+    }
 }
 
 .menu__list {
@@ -43,8 +43,8 @@
     justify-content: flex-start;
     align-items: stretch;
     margin: 0;
-    padding: 0;     
-    cursor: pointer; 
+    padding: 0;
+    cursor: pointer;
 }
 
 .menu__title {
@@ -52,68 +52,93 @@
     width: rem(80px);
     margin: 0;
     padding: 0;
-    vertical-align: bottom;  
+    vertical-align: bottom;
     position: relative;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    cursor: pointer; 
-    
+    cursor: pointer;
+
     @each $name in 'meat' 'veg' 'diet' {
 
         //Картинка для разных типов меню своя
         &--#{$name} {
             background-image: url("/src/img/bg/img-for-#{$name}.png");
-            z-index: 1;      
-            pointer-events: none;   
-        }
-
-        //Затемнение фона    
+            z-index: 1;
+            pointer-events: none;
+        } //Затемнение фона    
         &--#{$name}::after {
-            content: "";   
+            content: "";
             background-color: $color-black-mask;
             opacity: 0.5;
             top: 0;
             left: 0;
             bottom: 0;
-            right: 0;   
-            position: absolute;   
-            z-index: 2;                   
-        }        
+            right: 0;
+            position: absolute;
+            z-index: 2;
+        }
     }
 
     @include phones_portrait {
         width: rem(70px);
-    }   
-
-    //Вертикальная отрисовка типов меню
+    } //Вертикальная отрисовка типов меню
     & .menu__rotation {
-      padding-left: 40px;
-      display: inline-block;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      white-space: nowrap; 
-      transform: rotate(-90deg) translateY(-50%);
-      transform-origin: 0 0;
-      z-index: 3;  
-    }        
+        padding-left: rem(40px);
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        white-space: nowrap;
+        transform: rotate(-90deg) translateY(-50%);
+        transform-origin: 0 0;
+        z-index: 3;
+    }
 }
 
 .menu__descr {
     @extend %section-text-font;
     @extend .mask;
     width: 0;
-    overflow: hidden;   
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
-.menu__item.active  .menu__descr{
+.menu__item.active .menu__descr {
     width: rem(480px);
     overflow: visible;
     padding: rem(30px);
 
     @include phones_portrait {
-        width: rem(200px);
-    }    
+        width: 100%;
+    }
+}
+
+.menu__item.active {
+
+    @include phones_portrait {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        width: 100vw;  
+        border: 1px solid red;
+    }
+
+    & .menu__descr {
+        width: rem(480px);
+        overflow: visible;
+        padding: rem(30px);
+
+        @include phones_portrait {
+            width: 100%;
+        }
+    }
+}
+
+.menu__item:hover .menu__title,
+.menu__item.active .menu__title {
+    color: $color-yellow;
 }

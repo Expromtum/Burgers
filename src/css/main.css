@@ -765,8 +765,7 @@ footer {
   width: 92%;
   height: 100%;
   overflow: hidden;
-  margin: 0;
-  pointer-events: none; }
+  margin: 0; }
 
 .slider__items {
   display: -webkit-box;
@@ -877,9 +876,6 @@ footer {
   .burger-component__img-cucumber, .burger-component__img-salad {
     fill: #8ac03e; }
 
-/*
-
-*/
 .kkal {
   width: 3.75rem;
   height: 5.625rem; }
@@ -1780,7 +1776,7 @@ footer {
     .menu__title {
       width: 4.375rem; } }
   .menu__title .menu__rotation {
-    padding-left: 40px;
+    padding-left: 2.5rem;
     display: inline-block;
     position: absolute;
     top: 100%;
@@ -1806,7 +1802,30 @@ footer {
   padding: 1.875rem; }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .menu__item.active .menu__descr {
-      width: 12.5rem; } }
+      width: 100%; } }
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .menu__item.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    width: 100vw;
+    border: 1px solid red; } }
+
+.menu__item.active .menu__descr {
+  width: 30rem;
+  overflow: visible;
+  padding: 1.875rem; }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .menu__item.active .menu__descr {
+      width: 100%; } }
+
+.menu__item:hover .menu__title,
+.menu__item.active .menu__title {
+  color: #f9b43b; }
 
 .reviews {
   position: relative; }

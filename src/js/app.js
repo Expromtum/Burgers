@@ -60,6 +60,14 @@ function initMenuAccordion() {
         $(this).toggleClass("active")
                .siblings().removeClass("active");   
     });
+
+    item.on('wheel', function(e) {
+        $(this).removeClass("active");  
+    });   
+
+    $(document).on("touchend", ".menu__item", function(e) {
+        $(this).removeClass("active");  
+    });
 }
 
 function initTeamAccordion() {
@@ -107,20 +115,20 @@ function initMobileMenuOverlay() {
     var buttonOpen = $('.mobile-menu__open');
     var buttonClose = $('.mobile-menu__close');
     var buttonMenu = $('.main-menu__item');
-    var activeClass = "mobile-menu-overlay";
+    var overlayClass = "mobile-menu-overlay";
 
     buttonOpen.click(function(e) {
         e.preventDefault();
-        header.addClass(activeClass);
+        header.addClass(overlayClass);
     });
 
     buttonClose.click(function(e) {
         e.preventDefault();
-        header.removeClass(activeClass);
+        header.removeClass(overlayClass);
     });
 
     buttonMenu.click(function(e) {
-        header.removeClass(activeClass);
+        header.removeClass(overlayClass);
     });
 }
 
