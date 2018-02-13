@@ -102,6 +102,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+   // transition: 0.3s; Некрасиво текст перерисовывается
 }
 
 .menu__item.active .menu__descr {
@@ -114,7 +115,19 @@
     }
 }
 
+
+.menu__list.active {
+
+    @include tablets_portrait {
+         width: 100%;    
+    }
+}
+
 .menu__item.active {
+
+    @include tablets_portrait {
+        width: 100%;
+    }
 
     @include phones_portrait {
         position: fixed;
@@ -131,7 +144,7 @@
         overflow: visible;
         padding: rem(30px);
 
-        @include phones_portrait {
+        @include tablets_portrait {
             width: 100%;
         }
     }

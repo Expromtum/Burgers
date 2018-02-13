@@ -57,16 +57,29 @@ function initMenuAccordion() {
     item.click(function(e) {
         e.preventDefault();
 
-        $(this).toggleClass("active")
+        let $this = $(this);
+        let parent = $this.parent('.menu__list');
+
+        $this.toggleClass("active")
                .siblings().removeClass("active");   
+
+        if ($this.hasClass('active')) {              
+            parent.addClass("active");   
+        } else {
+            parent.removeClass("active");   
+        }               
     });
 
     item.on('wheel', function(e) {
-        $(this).removeClass("active");  
+        let $this = $(this);
+        $this.removeClass("active");  
+        $this.parent('.menu__list').removeClass("active");  
     });   
 
     $(document).on("touchend", ".menu__item", function(e) {
-        $(this).removeClass("active");  
+        let $this = $(this);
+        $this.removeClass("active");  
+        $this.parent('.menu__list').removeClass("active");  
     });
 }
 

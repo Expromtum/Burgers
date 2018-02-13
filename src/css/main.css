@@ -1805,6 +1805,14 @@ footer {
     .menu__item.active .menu__descr {
       width: 100%; } }
 
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .menu__list.active {
+    width: 100%; } }
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .menu__item.active {
+    width: 100%; } }
+
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .menu__item.active {
     position: fixed;
@@ -1819,7 +1827,7 @@ footer {
   width: 30rem;
   overflow: visible;
   padding: 1.875rem; }
-  @media screen and (max-width: 480px) and (orientation: portrait) {
+  @media screen and (max-width: 768px) and (orientation: portrait) {
     .menu__item.active .menu__descr {
       width: 100%; } }
 
