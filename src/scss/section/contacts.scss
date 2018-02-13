@@ -48,9 +48,13 @@
 }
 
 .contacts__phone {
-    @extend %section-text-font;
-    color: $color-red;
-    font-weight: 700;
+
+    & .contacts__phone-link {
+       @extend %section-text-font; 
+       color: $color-red;
+       font-weight: 700;   
+       text-decoration: none;    
+    }
 
     @include phones_portrait {
         text-align: center;

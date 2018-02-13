@@ -72,6 +72,7 @@
 
     & .member__item {
         margin-bottom: rem(20px);
+        cursor: pointer;
 
         @include tablets_portrait {
             text-align: center;

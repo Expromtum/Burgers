@@ -608,7 +608,7 @@ footer {
   font-weight: 400;
   line-height: 1.75rem; }
 
-.member-content .member__def h5, .burger-composition__list .burger-composition__item, .template-msg__content .template-msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone {
+.member-content .member__def h5, .burger-composition__list .burger-composition__item, .template-msg__content .template-msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone .contacts__phone-link {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
@@ -1582,7 +1582,8 @@ footer {
       -ms-flex-align: center;
       align-items: center; } }
   .member__list .member__item {
-    margin-bottom: 1.25rem; }
+    margin-bottom: 1.25rem;
+    cursor: pointer; }
     @media screen and (max-width: 768px) and (orientation: portrait) {
       .member__list .member__item {
         text-align: center; } }
@@ -1812,8 +1813,7 @@ footer {
     right: 0;
     bottom: 0;
     z-index: 20;
-    width: 100vw;
-    border: 1px solid red; } }
+    width: 100vw; } }
 
 .menu__item.active .menu__descr {
   width: 30rem;
@@ -2154,19 +2154,22 @@ footer {
   .contacts__adres {
     text-align: center; } }
 
-.contacts__phone {
+.contacts__phone .contacts__phone-link {
   color: #e45028;
-  font-weight: 700; }
-  @media screen and (max-width: 480px) and (orientation: portrait) {
-    .contacts__phone {
-      text-align: center; } }
-  .contacts__phone::before {
-    content: "";
-    display: inline-block;
-    background: url("/src/icons/phone.svg") no-repeat center;
-    height: 0.75rem;
-    width: 0.6875rem;
-    margin-right: 0.3125rem; }
+  font-weight: 700;
+  text-decoration: none; }
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .contacts__phone {
+    text-align: center; } }
+
+.contacts__phone::before {
+  content: "";
+  display: inline-block;
+  background: url("/src/icons/phone.svg") no-repeat center;
+  height: 0.75rem;
+  width: 0.6875rem;
+  margin-right: 0.3125rem; }
 
 .contacts__social {
   display: -webkit-box;
