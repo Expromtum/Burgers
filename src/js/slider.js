@@ -36,16 +36,20 @@ function initBurgerSlider() { //TODO: mobile toutch события
     let point = 0; //положение начала касания
 
     slider.addEventListener('touchstart', function(e) { //начало касания
+        console.log(point);
         let touchobj = e.changedTouches[0]; // первая точка прикосновения
         point = touchobj.clientX; //составляющая по иксу
+
     }, false);
 
     slider.addEventListener('touchend', function(e) { // отпустили экран
+       console.log(touchend);
+
         let touchobj = e.changedTouches[0]; // первая точка отпускания
 
         if (point + 30 < touchobj.clientX) { // более 30 по горизонтали
             e.preventDefault();
-            previousSlide(); //обновление ленты влево
+            previousSlide(); //обновление ленты влево 
         } else if (point - 30 > touchobj.clientX) {
             e.preventDefault();
             nextSlide(); //обновление ленты в право

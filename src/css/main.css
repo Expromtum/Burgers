@@ -663,7 +663,7 @@ footer {
   background-color: #000000;
   opacity: 0.7; }
 
-.arrow__img, .slider__arrow .slider__arrow--left, .slider__arrow .slider__arrow--right, .burger__arrow .burger__arrow--bottom {
+.arrow__img, .slider__arrow .slider__arrow--left, .slider__arrow .slider__arrow--right, .burger__arrow .burger__arrow--down {
   background: url("/src/icons/arrow-scroll.png") no-repeat center;
   width: 1.8125rem;
   height: 0.875rem; }
@@ -712,7 +712,7 @@ footer {
   cursor: pointer; }
 
 .pagination__item:hover,
-.pagination__item--active {
+.pagination__item.active {
   margin: 0.375rem 0;
   width: 0.875rem;
   height: 0.875rem;
@@ -825,7 +825,7 @@ footer {
     border-radius: 3%;
     width: 16.875rem; }
 
-.burger-popup--active .burger-composition__popup {
+.burger-composition__btn.active .burger-composition__popup {
   display: block; }
 
 .burger-composition__list {
@@ -1216,7 +1216,7 @@ footer {
   width: 100%;
   position: relative;
   height: 5vh; }
-  .burger__arrow .burger__arrow--bottom {
+  .burger__arrow .burger__arrow--down {
     position: absolute;
     top: 0;
     left: 50%;
@@ -1649,14 +1649,14 @@ footer {
 /*класс модификатор, который будет навешиваться как дополнительный
 класс на элемент аккордеона и тем самым менять в нем отображение на то, которое
 соответствует активному элементу*/
-.member__item--active .member-content {
+.member__item.active .member-content {
   overflow: visible;
   height: 100%; }
 
-.member__item--active .member__name {
+.member__item.active .member__name {
   color: #f9b43b; }
 
-.member__item--active .member__name::before {
+.member__item.active .member__name::before {
   -webkit-transform: scale(-1);
   -ms-transform: scale(-1);
   transform: scale(-1);
@@ -1800,12 +1800,12 @@ footer {
   margin: 0;
   padding: 0; }
 
-.menu__item--active .menu__descr {
+.menu__item.active .menu__descr {
   width: 30rem;
   overflow: visible;
   padding: 1.875rem; }
   @media screen and (max-width: 480px) and (orientation: portrait) {
-    .menu__item--active .menu__descr {
+    .menu__item.active .menu__descr {
       width: 12.5rem; } }
 
 .reviews {

@@ -53,51 +53,33 @@ require(['popper'], function(p) {
 
 function initMenuAccordion() {
     var item = $('.menu__item');
-    var activeClass = "menu__item--active";
-    var itemList = $('.menu__item');
 
     item.click(function(e) {
         e.preventDefault();
 
-        if ($(this).hasClass(activeClass)) {
-            itemList.removeClass(activeClass);
-        } else {
-            itemList.removeClass(activeClass);
-            $(this).addClass(activeClass);
-        }
+        $(this).toggleClass("active")
+               .siblings().removeClass("active");   
     });
 }
 
 function initTeamAccordion() {
     var item = $('.member__item');
-    var activeClass = "member__item--active";
-    var itemList = $('.member__item');
 
     item.click(function(e) {
-        e.preventDefault();      
+        e.preventDefault(); 
 
-        if ($(this).hasClass(activeClass)) {
-            itemList.removeClass(activeClass);
-        } else {
-            itemList.removeClass(activeClass);
-            $(this).addClass(activeClass);
-        }
+        $(this).toggleClass("active")
+               .siblings().removeClass("active");     
     });
-    /*var activeClass = $(this).parents('.member__item');*/
 }
 
 function initBurgerPopup() {
     var buttonPopup = $('.burger-composition__btn');
-    var activeClass = "burger-popup--active";
 
-    buttonPopup.click(function(e) {
+    buttonPopup.click(function(e) {//Не работает в хроме
         e.preventDefault();
 
-        if ($(this).hasClass(activeClass)) {
-            $(this).removeClass(activeClass);
-        } else {
-            $(this).addClass(activeClass);
-        }
+        $(this).toggleClass("active");
     });
 }
 
@@ -117,8 +99,6 @@ function initReviewOverlay() {
             'невозможно забыть... ' +
             'Никогда не думал, что булочки могут быть такими мягкими, ' +
             'котлетка такой сочной, а сыр таким расплавленным.');
-
-        //document.body.appendChild(overlay);
     });
 }
 

@@ -108,7 +108,7 @@
     padding: 0;
 }
 
-.menu__item--active  .menu__descr{
+.menu__item.active  .menu__descr{
     width: rem(480px);
     overflow: visible;
     padding: rem(30px);

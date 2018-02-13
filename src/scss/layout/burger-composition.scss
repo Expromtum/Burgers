@@ -5,6 +5,7 @@
     width: rem(90px);
     height: rem(90px);
     cursor: pointer;
+  //
 }
 
 .burger-composition__btn {
@@ -12,6 +13,7 @@
     height: 100%;
     position: relative;
     border: 1px solid transparent;
+    // pointer-events: none;   
 
     & .burger-composition__img {
         width: 50%;
@@ -35,7 +37,7 @@
     }
 }
 
-.burger-popup--active .burger-composition__popup {
+.burger-composition__btn.active .burger-composition__popup {
     display: block;
 }
 

@@ -39,7 +39,7 @@
 }
 
 .pagination__item:hover,
-.pagination__item--active {
+.pagination__item.active {
     margin: rem(6px) 0;   
     width: rem(14px);
     height: rem(14px);
