@@ -57,8 +57,8 @@ function initMenuAccordion() {
     item.click(function(e) {
         e.preventDefault();
 
-        let $this = $(this);
-        let parent = $this.parent('.menu__list');
+        var $this = $(this);
+        var parent = $this.parent('.menu__list');
 
         $this.toggleClass("active")
                .siblings().removeClass("active");   
@@ -71,13 +71,13 @@ function initMenuAccordion() {
     });
 
     item.on('wheel', function(e) {
-        let $this = $(this);
+        var $this = $(this);
         $this.removeClass("active");  
         $this.parent('.menu__list').removeClass("active");  
     });   
 
     $(document).on("touchend", ".menu__item", function(e) {
-        let $this = $(this);
+        var $this = $(this);
         $this.removeClass("active");  
         $this.parent('.menu__list').removeClass("active");  
     });

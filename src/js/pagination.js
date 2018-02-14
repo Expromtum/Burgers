@@ -85,7 +85,7 @@ function initPaginationPointForSection() {
 
     for (i = 0; i < sectionList.length - 1; i++) {
         paginationList.append(templatePoint.clone());
-    };
+    }
 
     //При клике на точку пагинатора должна открываться секция
     //с таким же индексом
@@ -112,6 +112,6 @@ function initMenuLinks() {
 
         if (section.length > 0) {
            scrollify.move(section.index());
-    	};
+    	}
    });
 }
