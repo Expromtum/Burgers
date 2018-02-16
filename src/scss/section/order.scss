@@ -154,3 +154,23 @@
         justify-content: center;
     }
 }
+
+.order__error {
+    @extend %section-user-message-font; 
+    color: $color-red;
+    display: none;
+
+    &.active {
+        display: block;    
+    }
+}
+
+.order__success {
+    @extend %section-user-message-font; 
+    color: $color-white;
+    display: none;
+
+    &.active {
+        display: block;    
+    }    
+}

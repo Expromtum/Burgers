@@ -72,7 +72,9 @@ function initOnePageScroll() {
             touchScroll: true,
             before: setActiveMenuPoint,
             //  after: function() {},
-            //  afterResize: function() {},
+           // afterResize: function() {
+             //   scrollify.move(scrollify.currentIndex);
+          //  },
             //  afterRender: function() {}
         });
     });

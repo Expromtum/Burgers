@@ -1,48 +1,67 @@
-.template-msg__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: $color-bg-overlay;
-  opacity: 0.92;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
+.msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-bg-overlay;
+    opacity: 0.96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
 }
 
-.template-msg__container {
-  position: relative;
+.msg__container {
+    position: relative;
 }
 
-.template-msg__content {
-  width: rem(400px);
-  max-width: 80vmin;
-  background: $color-white;
-  border-radius: rem(5px);
-  padding: rem(20px);  
-  margin: 0;
+.msg__content {
+    width: rem(400px);
+    max-width: 80vmin;
+    background: $color-white;
+    border-radius: rem(5px);
+    padding: rem(20px);
+    margin: 0;
 
-  & .template-msg___title {
-    @extend %section-h4-font;
-    color: $color-text-black;   
-  }
+    & .msg___title {
+        @extend %section-h4-font;
+        color: $color-text-black;
+    }
 
-  & .template-msg__message {
-    @extend %section-text-font;
-    color: $color-text-black;   
-    padding-top: rem(20px);
-  }  
+    & .msg__message {
+        @extend %section-text-font;
+        color: $color-text-black;
+        padding-top: rem(20px);
+    }
 }
 
-.template-msg__close {
-  background-image: url("/src/icons/close.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  right: rem(15px);
-  top: rem(10px);
-  width: rem(20px);
-  height: rem(20px);
- }
+.msg-with-title {
+    .msg__close {
+        background-image: url("/src/icons/close.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: rem(15px);
+        top: rem(10px);
+        width: rem(20px);
+        height: rem(20px);
+    }
+}
+
+.msg-with-button {
+    & .msg__title {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    & .msg__message {
+        margin: 0 auto; 
+        text-align: center;
+    }  
+
+    & .msg__close {
+        margin: 0 auto;   
+        display: block;
+    }
+}

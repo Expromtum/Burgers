@@ -584,7 +584,7 @@ footer {
   width: 100%;
   margin: 0; }
 
-.button a, .main-menu__link {
+.button, .button a, .main-menu__link {
   vertical-align: middle;
   color: #ffffff;
   font-family: Ubuntu;
@@ -600,7 +600,7 @@ footer {
   font-weight: 400;
   line-height: 3.98438rem; }
 
-.burger-composition__btn .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .template-msg__content .template-msg___title, .member__name, .review__name {
+.burger-composition__btn .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .msg__content .msg___title, .member__name, .review__name {
   width: 100%;
   color: #ffffff;
   font-family: Gagalin;
@@ -608,7 +608,7 @@ footer {
   font-weight: 400;
   line-height: 1.75rem; }
 
-.member-content .member__def h5, .burger-composition__list .burger-composition__item, .template-msg__content .template-msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone .contacts__phone-link {
+.member-content .member__def h5, .order__error, .order__success, .burger-composition__list .burger-composition__item, .msg__content .msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone .contacts__phone-link {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
@@ -619,16 +619,21 @@ footer {
 .member-content .member__def h5 {
   font-weight: 700; }
 
+.order__error, .order__success {
+  font-weight: 700;
+  font-size: 1.25rem; }
+
 .button {
   border-radius: 0.3125rem;
   text-align: center;
   padding: 0px 0.9375rem;
   vertical-align: middle;
-  display: inline-block;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  pointer-events: initial; }
+  pointer-events: initial;
+  border: 1px solid transparent;
+  cursor: pointer; }
   .button a {
     text-decoration: none; }
   .button__color--red {
@@ -898,14 +903,14 @@ footer {
 .kkal-descr {
   line-height: 1.4; }
 
-.template-msg__overlay {
+.msg {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #2d3032;
-  opacity: 0.92;
+  opacity: 0.96;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -917,23 +922,23 @@ footer {
   align-items: center;
   z-index: 10000; }
 
-.template-msg__container {
+.msg__container {
   position: relative; }
 
-.template-msg__content {
+.msg__content {
   width: 25rem;
   max-width: 80vmin;
   background: #ffffff;
   border-radius: 0.3125rem;
   padding: 1.25rem;
   margin: 0; }
-  .template-msg__content .template-msg___title {
+  .msg__content .msg___title {
     color: #2f3234; }
-  .template-msg__content .template-msg__message {
+  .msg__content .msg__message {
     color: #2f3234;
     padding-top: 1.25rem; }
 
-.template-msg__close {
+.msg-with-title .msg__close {
   background-image: url("/src/icons/close.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -942,6 +947,18 @@ footer {
   top: 0.625rem;
   width: 1.25rem;
   height: 1.25rem; }
+
+.msg-with-button .msg__title {
+  margin: 0 auto;
+  text-align: center; }
+
+.msg-with-button .msg__message {
+  margin: 0 auto;
+  text-align: center; }
+
+.msg-with-button .msg__close {
+  margin: 0 auto;
+  display: block; }
 
 .frontpage {
   background: url("/src/img/bg/texture.png") no-repeat, url("/src/img/bg/video-bg.png") no-repeat;
@@ -1503,7 +1520,8 @@ footer {
     font-size: 1.875rem; }
   .dark-burger__order .button {
     margin-bottom: 0.625rem;
-    margin-left: 1.5625rem; }
+    margin-left: 1.5625rem;
+    display: inline-block; }
 
 .team {
   background: url("/src/img/bg/team.png") no-repeat top center;
@@ -1924,16 +1942,15 @@ footer {
   transform: scale(1);
   z-index: 5; }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
-  .review__name {
-    text-align: center;
-    margin: 0;
-    padding: 0; } }
-
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  .review__name {
-    font-size: 200%;
-    margin-bottom: 2.5rem; } }
+.review__name {
+  margin-bottom: 0.625rem; }
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .review__name {
+      text-align: center; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .review__name {
+      font-size: 200%;
+      margin-bottom: 2.5rem; } }
 
 .review__quote {
   margin-bottom: 0.625rem; }
@@ -2115,6 +2132,18 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; } }
+
+.order__error {
+  color: #e45028;
+  display: none; }
+  .order__error.active {
+    display: block; }
+
+.order__success {
+  color: #ffffff;
+  display: none; }
+  .order__success.active {
+    display: block; }
 
 .contacts {
   position: relative; }

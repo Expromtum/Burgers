@@ -36,7 +36,7 @@
                             </ul>
                         </nav>
                         <div class="header__btn">
-                            <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
+                            <div class="button button__color--red"><a href="#order">ЗАКАЗАТЬ</a></div>
                         </div>
                         <div class="mobile-menu">
                             <div class="mobile-menu__open">
@@ -195,7 +195,7 @@
                                                 <div class="dark-burger__price-number">500</div>
                                                 <div class="dark-burger__price-cur"> рублей</div>
                                                 <div class="dark-burger__button">
-                                                    <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
+                                                    <div class="button button__color--red"><a href="#order">ЗАКАЗАТЬ</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@
                                                 <div class="dark-burger__price-number">400</div>
                                                 <div class="dark-burger__price-cur"> рублей</div>
                                                 <div class="dark-burger__button">
-                                                    <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
+                                                    <div class="button button__color--red"><a href="#order">ЗАКАЗАТЬ</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -354,7 +354,7 @@
                                                 <div class="dark-burger__price-number">499</div>
                                                 <div class="dark-burger__price-cur"> рублей</div>
                                                 <div class="dark-burger__button">
-                                                    <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
+                                                    <div class="button button__color--red"><a href="#order">ЗАКАЗАТЬ</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -433,7 +433,7 @@
                                                 <div class="dark-burger__price-number">399</div>
                                                 <div class="dark-burger__price-cur"> рублей</div>
                                                 <div class="dark-burger__button">
-                                                    <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
+                                                    <div class="button button__color--red"><a href="#order">ЗАКАЗАТЬ</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -512,7 +512,7 @@
                                                 <div class="dark-burger__price-number">559</div>
                                                 <div class="dark-burger__price-cur"> рублей</div>
                                                 <div class="dark-burger__button">
-                                                    <div class="button button__color--red"><a class="order__link" href="#order">ЗАКАЗАТЬ</a></div>
+                                                    <div class="button button__color--red"><a href="#order">ЗАКАЗАТЬ</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -724,41 +724,41 @@
             <section class="site-section order" id="order">
                 <div class="container order__container">
                     <h2 class="section-title">ЗАКАЖИТЕ ДОСТАВКУ</h2>
-                    <form action=" " class="form">
+                    <form action="server.php" class="form" method="post" id="order-form">
                         <div class="order__form-fields">
                             <div class="order__form-col">
                                 <div class="order__form-row">
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Имя</span>
-                                        <input name="order_name" type="text" class="form__input">
+                                        <input name="order__user-name" type="text" class="form__input" required>
                                     </label>
                                     <label class="order__form-block ">
                                         <span class="order__form-block-title ">Телефон</span>
-                                        <input name="order_phone" type="text" class="form__input">
+                                        <input name="order__user-phone" type="text" class="form__input" required>
                                     </label>
                                 </div>
                                 <div class="order__form-row">
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Улица</span>
-                                        <input name="order_street " type="text" class="form__input ">
+                                        <input name="order__user-street" type="text" class="form__input" required>
                                     </label>
                                 </div>
                                 <div class="order__form-row ">
                                     <label class="order__form-block ">
                                         <span class="order__form-block-title ">Дом</span>
-                                        <input name="order_house" type="text" class="form__input">
+                                        <input name="order__user-house" type="text" class="form__input" required>
                                     </label>
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Корпус</span>
-                                        <input name="order_house_block" type="text" class="form__input">
+                                        <input name="order__house-block" type="text" class="form__input">
                                     </label>
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Квартира</span>
-                                        <input name="order_flat" type="number" class="form__input">
+                                        <input name="order__house-flat" type="number" class="form__input">
                                     </label>
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Этаж</span>
-                                        <input name="order_floor" type="number" class="form__input">
+                                        <input name="order__house-floor" type="number" class="form__input">
                                     </label>
                                 </div>
                             </div>
@@ -766,26 +766,28 @@
                                 <div class="order__form-row">
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Комментарий</span>
-                                        <textarea name="order_comment" class="form__textarea" rows="5"></textarea>
+                                        <textarea name="order__user-comment" class="form__textarea" rows="5"></textarea>
                                     </label>
                                 </div>
                                 <div class="order__form-row order__chb2">
                                     <label class="order__form-block order__form-block-title">
-                                        <input type="radio" class="form__checkbox" name="order_money"><span>Потребуется сдача</span>
+                                        <input type="radio" class="form__checkbox" name="order__pay-option" value="cash">
+                                        <span>Потребуется сдача</span>
                                     </label>
                                     <label class="order__form-block order__form-block-title">
-                                        <input type="radio" class="form__checkbox" name="order_money"><span>Оплата по карте</span>
+                                        <input type="radio" class="form__checkbox" name="order__pay-option" value="card">
+                                        <span>Оплата по карте</span>
                                     </label>
                                 </div>
                                 <div class="order__form-row order__chb1">
                                     <label class="order__form-block order__form-block-title">
-                                        <input type="checkbox" class="form__checkbox" name="order_not_phone"><span>Не перезванивать</span>
+                                        <input type="checkbox" class="form__checkbox" name="order__not-callback" value="1"><span>Не перезванивать</span>
                                     </label>
                                 </div>
                                 <div class="order__form-row order__buttons">
-                                    <div class="button button__color--red"><a class="order__link" href="# ">ЗАКАЗАТЬ</a></div>
-                                    <div class="button button__color--transparent"><a class="clear__link" href="#">Очистить</a></div>
-                                </div>
+                                    <button type="submit" class="button button__color--red">ЗАКАЗАТЬ</button>
+                                    <button type="reset" class="button button__color--transparent">Очистить</button>
+                                </div>                            
                             </div>
                         </div>
                     </form>
@@ -853,20 +855,30 @@
             </g>
         </svg>
     </div>
-    <script type="template" id="template-msg-overlay">
-        <div class="template-msg__overlay">
-            <div class="template-msg__container">
-                <div class="template-msg__content">
-                    <div class="template-msg___title"></div>
-                    <div class="template-msg__message"></div>
+    <script type="template" id="template-msg-with-title">
+        <div class="msg msg-with-title">
+            <div class="msg__container">
+                <div class="msg__content">
+                    <div class="msg__title"></div>
+                    <div class="msg__message"></div>
                 </div>
-                <div class="template-msg__close"></div>
+                <div class="msg__close"></div>
             </div>
         </div>
     </script>    
+    <script type="template" id="template-msg-with-button">
+        <div class="msg msg-with-button">
+            <div class="msg__container">
+                <div class="msg__content">
+                    <div class="msg__title"></div>
+                    <div class="msg__message"></div>
+                    <button type="button" class="button msg__close button__color--red">ЗАКРЫТЬ</button>                   
+                </div>
+            </div>
+        </div>
+    </script>      
     <script data-main="src/js/app" src="src/js/require.js" defer></script>
-    <script src="src/js/jquery.min.js"></script><!--TODO: cdnjs подключить с сервера -->
-    <!-- <script src="src/js/jquery.easing.js"></script>       -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="src/js/jquery.scrollify.js"></script> 
 
 <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -876,6 +888,8 @@
     <script src="src/js/pagination.js" defer></script>      
     <script src="src/js/slider.js" defer></script>   
     <script src="src/js/message-overlay.js" async defer></script>
+    <script src="src/js/form.js"></script>        
+    <script src="src/js/order.js"></script>     
     <script src="src/js/map.js" async defer></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmJCTTL7_ny4EX4bZBmOmypC3RjZa1Wk&callback=initMap" async defer></script>

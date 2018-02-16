@@ -9,15 +9,15 @@ function initBurgerSlider() { //TODO: mobile toutch события
 
         currentSlide = (n + slideList.length) % slideList.length;
         slideList[currentSlide].className += " slide-item--active";
-    };
+    }
 
     function nextSlide() {
         goToSlide(currentSlide + 1);
-    };
+    }
 
     function previousSlide() {
         goToSlide(currentSlide - 1);
-    };
+    }
 
     var left = document.querySelector("#dark-burger .slider .slider__arrow--left");
     var right = document.querySelector("#dark-burger .slider .slider__arrow--right");

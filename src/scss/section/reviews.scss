@@ -73,11 +73,10 @@
 
 .review__name {
 	@extend %section-h4-font;	
+    margin-bottom: rem(10px);
 
     @include tablets_portrait {
        text-align: center;
-       margin: 0;
-       padding: 0;         
     }      
 
     @include phones_portrait {

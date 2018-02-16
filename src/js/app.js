@@ -110,7 +110,7 @@ function initReviewOverlay() {
     buttonOpen.click(function(e) {
         e.preventDefault();
 
-        var overlay = openMsgOverlay(460,
+        var overlay = openMsgWithTitle(460,
             'КОНСТАНТИН СПИЛБЕРГ',
             'Мысли все о них и о них, о них и о них.' +
             'Нельзя устоять, невозможно забыть... ' +

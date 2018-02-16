@@ -1,6 +1,10 @@
 .frontpage {
-    background: url("/src/img/bg/texture.png") no-repeat,
-    url("/src/img/bg/video-bg.png") no-repeat;
+    // background: url('../img/bg/texture.png') no-repeat,
+    // url('../img/bg/video-bg.png') no-repeat;
+
+    background: url('/src/img/bg/texture.png') no-repeat,
+    url('/src/img/bg/video-bg.png') no-repeat;
+
     background-position: center center;
     position: relative;
     background-size: cover;

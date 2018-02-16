@@ -1,23 +1,50 @@
 
-function openMsgOverlay(width, title, content) {
+function openMsgWithTitle(width, title, content) {
     var overlayElement = document.createElement("div");
  
-    var templateElement = document.querySelector("#template-msg-overlay"); 
+    var templateElement = document.querySelector("#template-msg-with-title"); 
     overlayElement.innerHTML = templateElement.innerHTML;
 
-    var titleElement = overlayElement.querySelector(".template-msg___title"); 
+    var titleElement = overlayElement.querySelector(".msg__title"); 
     titleElement.innerHTML = title;
 
-    var messageElement = overlayElement.querySelector(".template-msg__message"); 
+    var messageElement = overlayElement.querySelector(".msg__message"); 
     messageElement.innerHTML = content;
 
-    var closeElement = overlayElement.querySelector(".template-msg__close"); 
+    var closeElement = overlayElement.querySelector(".msg__close"); 
+    
     closeElement.addEventListener("click", function(e) {
         e.preventDefault();
         document.body.removeChild(overlayElement);
     });
 
-    var contentElement = overlayElement.querySelector(".template-msg__content"); 
+    var contentElement = overlayElement.querySelector(".msg__content"); 
+    contentElement.style.width = width + 'px'; //TODO: мобильные устройства
+
+    document.body.appendChild(overlayElement);
+    return overlayElement;
+};
+
+function openMsgWithButton(width, title, content) {
+    var overlayElement = document.createElement("div");
+ 
+    var templateElement = document.querySelector("#template-msg-with-button"); 
+    overlayElement.innerHTML = templateElement.innerHTML;
+
+    var titleElement = overlayElement.querySelector(".msg__title"); 
+    titleElement.innerHTML = title;
+
+    var messageElement = overlayElement.querySelector(".msg__message"); 
+    messageElement.innerHTML = content;
+
+    var closeElement = overlayElement.querySelector(".msg__close"); 
+    
+    closeElement.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.body.removeChild(overlayElement);
+    });
+
+    var contentElement = overlayElement.querySelector(".msg__content"); 
     contentElement.style.width = width + 'px'; //TODO: мобильные устройства
 
     document.body.appendChild(overlayElement);

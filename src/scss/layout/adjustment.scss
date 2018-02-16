@@ -170,14 +170,22 @@ footer {
     font-weight: 700;
 }
 
+%section-user-message-font {
+    @extend %section-text-font;
+    font-weight: 700;
+    font-size: rem(20px);
+}
+
 .button {
     border-radius: rem(5px);
     text-align: center;
     padding: 0px rem(15px);
     vertical-align: middle;
-    display: inline-block;
     transition: 0.3s;
     pointer-events: initial;
+    border: 1px solid transparent;
+    @extend %control-elements-font;
+    cursor: pointer;
 
     & a {
         @extend %control-elements-font;
@@ -233,3 +241,4 @@ footer {
     width: rem(29px);
     height: rem(14px);
 }
+
