@@ -74,77 +74,10 @@
     }
 }
 
-/*Выравниваем по центру кнопку и текст*/
-.order input[type="checkbox"],
-.order input[type="radio"] {
-    vertical-align: middle;
-    margin-right: rem(10px);
-}
-
-.order__form-block-title span,
-.form__checkbox {
-    /*TODO Стилизация оранжевым цветом*/
-
-    vertical-align: middle;
-}
-
 .order__form-block-title {
     @extend %section-text-font;
     padding-bottom: rem(3px);
 }
-
-.form__input,
-.form__textarea {
-    border-radius: rem(5px);
-    border: 1px solid transparent;
-    outline: 0;
-    padding: rem(10px);
-    width: 100%;
-    overflow: hidden;
-    
-    &:focus {
-        border-color: $color-yellow;
-    }
-}
-
-//TODO Стилизовать радиобаттоны
-/*
-.order__chb2 {
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-
-        & .order__form-block {
-          flex: 0;
-          min-width: 45%;
-        }   
-
-
-
-    @include phones_portrait { 
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        & .order__form-block {
-          flex: 0;
-          min-width: 45%;
-        }        
-    }
-}
-
-.order__chb1 {
-
-    @include phones_portrait { 
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        & .order__form-block {
-            width: 45%;
-        }
-    }
-}*/
 
 .order__buttons {
 
@@ -154,24 +87,4 @@
         align-items: center;
         justify-content: center;
     }
-}
-
-.order__error {
-    @extend %section-user-message-font; 
-    color: $color-red;
-    display: none;
-
-    &.active {
-        display: block;    
-    }
-}
-
-.order__success {
-    @extend %section-user-message-font; 
-    color: $color-white;
-    display: none;
-
-    &.active {
-        display: block;    
-    }    
 }

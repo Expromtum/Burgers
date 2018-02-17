@@ -65,7 +65,9 @@
             background-image: url("/src/img/bg/img-for-#{$name}.png");
             z-index: 1;
             pointer-events: none;
-        } //Затемнение фона    
+        } 
+
+        //Затемнение фона    
         &--#{$name}::after {
             content: "";
             background-color: $color-black-mask;
@@ -81,7 +83,9 @@
 
     @include phones_portrait {
         width: rem(70px);
-    } //Вертикальная отрисовка типов меню
+    } 
+
+    //Вертикальная отрисовка типов меню
     & .menu__rotation {
         padding-left: rem(40px);
         display: inline-block;
@@ -92,6 +96,10 @@
         transform: rotate(-90deg) translateY(-50%);
         transform-origin: 0 0;
         z-index: 3;
+
+        @include phones_portrait {
+            padding-left: rem(70px);
+        }        
     }
 }
 
@@ -114,7 +122,6 @@
         width: 100%;
     }
 }
-
 
 .menu__list.active {
 

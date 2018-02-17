@@ -176,42 +176,6 @@ footer {
     font-size: rem(20px);
 }
 
-.button {
-    border-radius: rem(5px);
-    text-align: center;
-    padding: 0px rem(15px);
-    vertical-align: middle;
-    transition: 0.3s;
-    pointer-events: initial;
-    border: 1px solid transparent;
-    @extend %control-elements-font;
-    cursor: pointer;
-
-    & a {
-        @extend %control-elements-font;
-        text-decoration: none;
-    }
-
-    &__color--red {
-        background-color: $color-red;
-
-        &:hover {
-            background-color: darken($color-red, 15%);
-        }
-    }
-
-    &__color--gray {
-        background-color: $color-gray;
-
-        &:hover {
-            background-color: lighten($color-gray, 15%);
-        }
-    }
-
-    &__color--transparent {
-        background-color: transparent;
-    }
-}
 
 .visuallyhidden {
     position: absolute;
@@ -241,4 +205,3 @@ footer {
     width: rem(29px);
     height: rem(14px);
 }
-

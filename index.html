@@ -12,7 +12,7 @@
     <!--initial-scale начальный масштаб (в данном случае без масштабирования)-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="src/css/main.css" rel="stylesheet">
-    <link href="src/lib/jquery.pagepiling.css" rel="stylesheet">
+    <link href="src/vendor-css/jquery.pagepiling.css" rel="stylesheet">
     <title>Бургер-shop</title>
 </head>
 
@@ -731,35 +731,35 @@
                                 <div class="order__form-row">
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Имя</span>
-                                        <input name="order__user-name" type="text" class="form__input" required>
+                                        <input name="order__user-name" type="text" required>
                                     </label>
                                     <label class="order__form-block ">
                                         <span class="order__form-block-title ">Телефон</span>
-                                        <input name="order__user-phone" type="text" class="form__input" required>
+                                        <input name="order__user-phone" type="text" required>
                                     </label>
                                 </div>
                                 <div class="order__form-row">
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Улица</span>
-                                        <input name="order__user-street" type="text" class="form__input" required>
+                                        <input name="order__user-street" type="text" required>
                                     </label>
                                 </div>
                                 <div class="order__form-row ">
                                     <label class="order__form-block ">
                                         <span class="order__form-block-title ">Дом</span>
-                                        <input name="order__user-house" type="text" class="form__input" required>
+                                        <input name="order__user-house" type="text" required>
                                     </label>
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Корпус</span>
-                                        <input name="order__house-block" type="text" class="form__input">
+                                        <input name="order__house-block" type="text">
                                     </label>
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Квартира</span>
-                                        <input name="order__house-flat" type="number" class="form__input">
+                                        <input name="order__house-flat" type="number">
                                     </label>
                                     <label class="order__form-block">
                                         <span class="order__form-block-title">Этаж</span>
-                                        <input name="order__house-floor" type="number" class="form__input">
+                                        <input name="order__house-floor" type="number">
                                     </label>
                                 </div>
                             </div>
@@ -771,18 +771,22 @@
                                     </label>
                                 </div>
                                 <div class="order__form-row order__chb2">
-                                    <label class="order__form-block order__form-block-title">
-                                        <input type="radio" class="form__checkbox" name="order__pay-option" value="cash">
+                                    <label class="order__form-block order__form-block-title radio-button">
+                                        <input type="radio" name="order__pay-option" value="cash">
+                                        <span class="radio-custom"></span>
                                         <span>Потребуется сдача</span>
                                     </label>
-                                    <label class="order__form-block order__form-block-title">
-                                        <input type="radio" class="form__checkbox" name="order__pay-option" value="card">
+                                    <label class="order__form-block order__form-block-title radio-button">
+                                        <input type="radio" name="order__pay-option" value="card">
+                                        <span class="radio-custom"></span>
                                         <span>Оплата по карте</span>
                                     </label>
                                 </div>
                                 <div class="order__form-row order__chb1">
-                                    <label class="order__form-block order__form-block-title">
-                                        <input type="checkbox" class="form__checkbox" name="order__not-callback" value="1"><span>Не перезванивать</span>
+                                    <label class="order__form-block order__form-block-title checkbox-button">
+                                        <input type="checkbox" name="order__not-callback" value="1">
+                                        <span class="checkbox-custom"></span>
+                                        <span>Не перезванивать</span>
                                     </label>
                                 </div>
                                 <div class="order__form-row order__buttons">
@@ -803,7 +807,8 @@
                             <div class="contacts__phone">
                                 <a href="tel:+78123771377" class="contacts__phone-link">
                                     +7(812)377-13-77
-                                </a>   </div>
+                                </a>   
+                            </div>
                         </div>
                         <div class="contacts__social">
                             <a href="https://vk.com/">

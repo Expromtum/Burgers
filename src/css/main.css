@@ -608,7 +608,7 @@ footer {
   font-weight: 400;
   line-height: 1.75rem; }
 
-.member-content .member__def h5, .order__error, .order__success, .burger-composition__list .burger-composition__item, .msg__content .msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone .contacts__phone-link {
+.member-content .member__def h5, .burger-composition__list .burger-composition__item, .msg__content .msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone .contacts__phone-link {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
@@ -618,34 +618,6 @@ footer {
 
 .member-content .member__def h5 {
   font-weight: 700; }
-
-.order__error, .order__success {
-  font-weight: 700;
-  font-size: 1.25rem; }
-
-.button {
-  border-radius: 0.3125rem;
-  text-align: center;
-  padding: 0px 0.9375rem;
-  vertical-align: middle;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  pointer-events: initial;
-  border: 1px solid transparent;
-  cursor: pointer; }
-  .button a {
-    text-decoration: none; }
-  .button__color--red {
-    background-color: #e45028; }
-    .button__color--red:hover {
-      background-color: #aa3515; }
-  .button__color--gray {
-    background-color: #1f2122; }
-    .button__color--gray:hover {
-      background-color: #43484a; }
-  .button__color--transparent {
-    background-color: transparent; }
 
 .visuallyhidden {
   position: absolute;
@@ -672,6 +644,103 @@ footer {
   background: url("/src/icons/arrow-scroll.png") no-repeat center;
   width: 1.8125rem;
   height: 0.875rem; }
+
+.radio-button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; }
+  .radio-button input[type="radio"] {
+    display: none; }
+  .radio-button .radio-custom {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background: #ffffff;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.625rem; }
+  .radio-button input[type="radio"]:checked + .radio-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    background: #e45028;
+    border-radius: 50%; }
+  .radio-button .radio-custom,
+  .radio-button input[type="radio"]:checked + .radio-custom::before {
+    border-radius: 50%; }
+  .radio-button span {
+    vertical-align: middle; }
+
+.checkbox-button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; }
+  .checkbox-button input[type="checkbox"] {
+    display: none; }
+  .checkbox-button .checkbox-custom {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background: #ffffff;
+    border-radius: 1px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.625rem; }
+  .checkbox-button input[type="checkbox"]:checked + .checkbox-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("/src/icons/checkmark.png") no-repeat;
+    background-position: center center; }
+  .checkbox-button span {
+    vertical-align: middle; }
+
+.button {
+  border-radius: 0.3125rem;
+  text-align: center;
+  padding: 0px 0.9375rem;
+  vertical-align: middle;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: initial;
+  border: 1px solid transparent;
+  cursor: pointer; }
+  .button a {
+    text-decoration: none; }
+  .button__color--red {
+    background-color: #e45028; }
+    .button__color--red:hover {
+      background-color: #aa3515; }
+  .button__color--gray {
+    background-color: #1f2122; }
+    .button__color--gray:hover {
+      background-color: #43484a; }
+  .button__color--transparent {
+    background-color: transparent; }
+
+input[type="text"],
+input[type="number"],
+textarea {
+  border-radius: 0.3125rem;
+  border: 1px solid transparent;
+  outline: 0;
+  padding: 0.625rem;
+  width: 100%;
+  overflow: hidden; }
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus {
+    border-color: #f9b43b; }
 
 /*Полоса прокрутки*****************************************/
 .pagination {
@@ -1808,6 +1877,9 @@ footer {
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
     z-index: 3; }
+    @media screen and (max-width: 480px) and (orientation: portrait) {
+      .menu__title .menu__rotation {
+        padding-left: 4.375rem; } }
 
 .menu__descr {
   width: 0;
@@ -2055,69 +2127,9 @@ footer {
   .order__form-block:last-child {
     margin-right: 0; }
 
-/*Выравниваем по центру кнопку и текст*/
-.order input[type="checkbox"],
-.order input[type="radio"] {
-  vertical-align: middle;
-  margin-right: 0.625rem; }
-
-.order__form-block-title span,
-.form__checkbox {
-  /*TODO Стилизация оранжевым цветом*/
-  vertical-align: middle; }
-
 .order__form-block-title {
   padding-bottom: 0.1875rem; }
 
-.form__input,
-.form__textarea {
-  border-radius: 0.3125rem;
-  border: 1px solid transparent;
-  outline: 0;
-  padding: 0.625rem;
-  width: 100%;
-  overflow: hidden; }
-  .form__input:focus,
-  .form__textarea:focus {
-    border-color: #f9b43b; }
-
-/*
-.order__chb2 {
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-
-        & .order__form-block {
-          flex: 0;
-          min-width: 45%;
-        }   
-
-
-
-    @include phones_portrait { 
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        & .order__form-block {
-          flex: 0;
-          min-width: 45%;
-        }        
-    }
-}
-
-.order__chb1 {
-
-    @include phones_portrait { 
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        & .order__form-block {
-            width: 45%;
-        }
-    }
-}*/
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .order__buttons {
     display: -webkit-box;
@@ -2133,18 +2145,6 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; } }
-
-.order__error {
-  color: #e45028;
-  display: none; }
-  .order__error.active {
-    display: block; }
-
-.order__success {
-  color: #ffffff;
-  display: none; }
-  .order__success.active {
-    display: block; }
 
 .contacts {
   position: relative; }
