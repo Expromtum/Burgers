@@ -1,5 +1,5 @@
 .order {
-    background: url("/src/img/bg/order-bg.png") no-repeat;
+    background: url("/src/img/bg/order_bg.jpg") no-repeat;
     background-position: center center;
     position: relative;
     background-size: cover;
@@ -96,11 +96,12 @@
 .form__input,
 .form__textarea {
     border-radius: rem(5px);
-    border-color: transparent;
+    border: 1px solid transparent;
     outline: 0;
-    padding: rem(5px);
+    padding: rem(10px);
     width: 100%;
-
+    overflow: hidden;
+    
     &:focus {
         border-color: $color-yellow;
     }

@@ -961,7 +961,7 @@ footer {
   display: block; }
 
 .frontpage {
-  background: url("/src/img/bg/texture.png") no-repeat, url("/src/img/bg/video-bg.png") no-repeat;
+  background: url("/src/img/bg/texture.png") no-repeat, url("/src/img/bg/video-bg.jpg") no-repeat;
   background-position: center center;
   position: relative;
   background-size: cover; }
@@ -1524,7 +1524,7 @@ footer {
     display: inline-block; }
 
 .team {
-  background: url("/src/img/bg/team.png") no-repeat top center;
+  background: url("/src/img/bg/team.jpg") no-repeat top center;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -1971,7 +1971,7 @@ footer {
       display: none; } }
 
 .order {
-  background: url("/src/img/bg/order-bg.png") no-repeat;
+  background: url("/src/img/bg/order_bg.jpg") no-repeat;
   background-position: center center;
   position: relative;
   background-size: cover; }
@@ -2072,10 +2072,11 @@ footer {
 .form__input,
 .form__textarea {
   border-radius: 0.3125rem;
-  border-color: transparent;
+  border: 1px solid transparent;
   outline: 0;
-  padding: 0.3125rem;
-  width: 100%; }
+  padding: 0.625rem;
+  width: 100%;
+  overflow: hidden; }
   .form__input:focus,
   .form__textarea:focus {
     border-color: #f9b43b; }

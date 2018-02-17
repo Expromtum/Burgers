@@ -70,17 +70,17 @@ function initMenuAccordion() {
         }               
     });
 
-    item.on('wheel', function(e) {
-        var $this = $(this);
-        $this.removeClass("active");  
-        $this.parent('.menu__list').removeClass("active");  
-    });   
+    // item.on('wheel', function(e) {
+    //     var $this = $(this);
+    //     $this.removeClass("active");  
+    //     $this.parent('.menu__list').removeClass("active");  
+    // });   
 
-    $(document).on("touchend", ".menu__item", function(e) {
-        var $this = $(this);
-        $this.removeClass("active");  
-        $this.parent('.menu__list').removeClass("active");  
-    });
+    // $(document).on("touchend", ".menu__item", function(e) {
+    //     var $this = $(this);
+    //     $this.removeClass("active");  
+    //     $this.parent('.menu__list').removeClass("active");  
+    // });
 }
 
 function initTeamAccordion() {

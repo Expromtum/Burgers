@@ -12,13 +12,14 @@
     <!--initial-scale начальный масштаб (в данном случае без масштабирования)-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="src/css/main.css" rel="stylesheet">
+    <link href="src/lib/jquery.pagepiling.css" rel="stylesheet">
     <title>Бургер-shop</title>
 </head>
 
 <body>
     <div class="orientation"> </div>
     <div class="wrapper">
-        <main class="maincontent">
+        <main class="maincontent" id="pagepiling">
             <section class="site-section frontpage" id="frontpage">
                 <div class="container frontpage__container">
                     <header class="header">
@@ -877,20 +878,22 @@
             </div>
         </div>
     </script>      
-    <script data-main="src/js/app" src="src/js/require.js" defer></script>
+    <script data-main="src/js/modules/app" src="src/js/require.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="src/js/jquery.scrollify.js"></script> 
+    <!-- <script src="src/js/jquery.scrollify.js"></script>  -->
 
 <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
  -->  
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script> -->
-    <script src="src/js/pagination.js" defer></script>      
-    <script src="src/js/slider.js" defer></script>   
-    <script src="src/js/message-overlay.js" async defer></script>
-    <script src="src/js/form.js"></script>        
-    <script src="src/js/order.js"></script>     
-    <script src="src/js/map.js" async defer></script>
+    <!-- <script src="src/js/modules/pagination-scrollify.js" defer></script>       -->
+    <script src="src/js/jquery.pagepiling.js"></script>
+    <script src="src/js/modules/pagination_pagepiling.js"></script>    
+    <script src="src/js/modules/slider.js" defer></script>   
+    <script src="src/js/modules/message-overlay.js" async defer></script>
+    <script src="src/js/modules/form.js"></script>        
+    <script src="src/js/modules/order.js"></script>     
+    <script src="src/js/modules/google-map.js" async defer></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmJCTTL7_ny4EX4bZBmOmypC3RjZa1Wk&callback=initMap" async defer></script>
 </body>
