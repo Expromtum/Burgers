@@ -1,5 +1,5 @@
 .menu {
-    background: url("/src/img/bg/menu.png") no-repeat top center;
+    background: url("../img/bg/menu.png") no-repeat top center;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
@@ -62,7 +62,7 @@
 
         //Картинка для разных типов меню своя
         &--#{$name} {
-            background-image: url("/src/img/bg/img-for-#{$name}.png");
+            background-image: url("../img/bg/img-for-#{$name}.png");
             z-index: 1;
             pointer-events: none;
         } 

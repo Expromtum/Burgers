@@ -1,0 +1,1 @@
+var ajaxForm=function(a){var r=a.serialize(),t=a.attr("action");return $.ajax({type:"POST",url:t,dataType:"JSON",data:r})};

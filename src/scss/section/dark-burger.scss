@@ -138,7 +138,7 @@
 
     @include tablets_portrait {
         justify-content: center;
-         margin-bottom: rem(15px);   
+        margin-bottom: rem(15px);   
     }
 
     & .dark-burger__price-number {
@@ -150,6 +150,7 @@
         @extend %section-title-font;
         color: $color-red;
         font-size: rem(30px);
+        //border: 1px solid red;
     }
 
     & .button {

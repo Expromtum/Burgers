@@ -1,5 +1,5 @@
 .team {
-    background: url("/src/img/bg/team.jpg") no-repeat top center;
+    background: url("../img/bg/team.jpg") no-repeat top center;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
@@ -154,7 +154,7 @@
     &::before {
         content: "";
         display: inline-block;
-        background: url("/src/icons/arrow.svg") no-repeat center;
+        background: url("../icons/arrow.svg") no-repeat center;
         margin-right: rem(10px);
 
         height: rem(7px);

@@ -32,37 +32,37 @@
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/src/fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/src/fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/src/fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/src/fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("/src/fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gagalin';
-  src: url("/src/fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -641,7 +641,7 @@ footer {
   opacity: 0.7; }
 
 .arrow__img, .slider__arrow .slider__arrow--left, .slider__arrow .slider__arrow--right, .burger__arrow .burger__arrow--down {
-  background: url("/src/icons/arrow-scroll.png") no-repeat center;
+  background: url("../icons/arrow-scroll.png") no-repeat center;
   width: 1.8125rem;
   height: 0.875rem; }
 
@@ -699,7 +699,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url("/src/icons/checkmark.png") no-repeat;
+    background: url("../icons/checkmark.png") no-repeat;
     background-position: center center; }
   .checkbox-button span {
     vertical-align: middle; }
@@ -1008,7 +1008,7 @@ textarea {
     padding-top: 1.25rem; }
 
 .msg-with-title .msg__close {
-  background-image: url("/src/icons/close.svg");
+  background-image: url("../icons/close.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -1030,7 +1030,7 @@ textarea {
   display: block; }
 
 .frontpage {
-  background: url("/src/img/bg/texture.png") no-repeat, url("/src/img/bg/video-bg.jpg") no-repeat;
+  background: url("../img/bg/texture.png") no-repeat, url("../img/bg/video-bg.jpg") no-repeat;
   background-position: center center;
   position: relative;
   background-size: cover; }
@@ -1305,7 +1305,7 @@ textarea {
     cursor: pointer; }
 
 .best {
-  background: url("/src/img/bg/best-bg.png") no-repeat top center;
+  background: url("../img/bg/best-bg.png") no-repeat top center;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -1593,7 +1593,7 @@ textarea {
     display: inline-block; }
 
 .team {
-  background: url("/src/img/bg/team.jpg") no-repeat top center;
+  background: url("../img/bg/team.jpg") no-repeat top center;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -1725,7 +1725,7 @@ textarea {
   .member__name::before {
     content: "";
     display: inline-block;
-    background: url("/src/icons/arrow.svg") no-repeat center;
+    background: url("../icons/arrow.svg") no-repeat center;
     margin-right: 0.625rem;
     height: 0.4375rem;
     width: 0.5625rem; }
@@ -1749,7 +1749,7 @@ textarea {
   transition: 0.2s; }
 
 .menu {
-  background: url("/src/img/bg/menu.png") no-repeat top center;
+  background: url("../img/bg/menu.png") no-repeat top center;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
@@ -1819,7 +1819,7 @@ textarea {
   background-repeat: no-repeat;
   cursor: pointer; }
   .menu__title--meat {
-    background-image: url("/src/img/bg/img-for-meat.png");
+    background-image: url("../img/bg/img-for-meat.png");
     z-index: 1;
     pointer-events: none; }
   .menu__title--meat::after {
@@ -1833,7 +1833,7 @@ textarea {
     position: absolute;
     z-index: 2; }
   .menu__title--veg {
-    background-image: url("/src/img/bg/img-for-veg.png");
+    background-image: url("../img/bg/img-for-veg.png");
     z-index: 1;
     pointer-events: none; }
   .menu__title--veg::after {
@@ -1847,7 +1847,7 @@ textarea {
     position: absolute;
     z-index: 2; }
   .menu__title--diet {
-    background-image: url("/src/img/bg/img-for-diet.png");
+    background-image: url("../img/bg/img-for-diet.png");
     z-index: 1;
     pointer-events: none; }
   .menu__title--diet::after {
@@ -2043,7 +2043,7 @@ textarea {
       display: none; } }
 
 .order {
-  background: url("/src/img/bg/order_bg.jpg") no-repeat;
+  background: url("../img/bg/order_bg.jpg") no-repeat;
   background-position: center center;
   position: relative;
   background-size: cover; }
@@ -2162,7 +2162,7 @@ textarea {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: url("/src/img/bg/contacts.png") no-repeat;
+  background: url("../img/bg/contacts.png") no-repeat;
   background-position: center center;
   background-size: cover;
   display: -webkit-box;
@@ -2204,7 +2204,7 @@ textarea {
 .contacts__phone::before {
   content: "";
   display: inline-block;
-  background: url("/src/icons/phone.svg") no-repeat center;
+  background: url("../icons/phone.svg") no-repeat center;
   height: 0.75rem;
   width: 0.6875rem;
   margin-right: 0.3125rem; }

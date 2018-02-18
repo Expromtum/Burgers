@@ -23,7 +23,7 @@ function initMap() {
         streetViewControlOptions: { position: google.maps.ControlPosition.LEFT_TOP },
     });
 
-    var markerImage = 'src/icons/map-marker.png';
+    var markerImage = 'icons/map-marker.png';
 
     var markers = locations.map(function(location, i) {
         return new google.maps.Marker({

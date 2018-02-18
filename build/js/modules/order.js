@@ -1,0 +1,1 @@
+function submitForm(t){t.preventDefault();var o=$(t.target);o.serialize(),o.attr("action"),o.attr("method");ajaxForm(o).done(function(t){var o=t.mes;t.status;openMsgWithButton(260,o,"")}).fail(function(t,o){openMsgWithButton(260,"Request failed: "+o,"")})}$("#order-form").on("submit",submitForm);
