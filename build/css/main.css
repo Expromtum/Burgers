@@ -1,11 +1,43 @@
 @charset "UTF-8";
 
+/*
 .orientation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    @include laptop  {
+	    width: rem(90px);
+	    height: rem(90px);
+        background-color: blue;	    
+    }  
+	
+     @include tablets_landscape  {
+	    width: rem(80px);
+	    height: rem(60px);
+        background-color: red;	    
+    }  
+
+    @include tablets_portrait {
+	    width: rem(60px);
+	    height: rem(80px);
+	    background-color: pink;
+    }  
+
+     @include phones_landscape  {
+   	    width: rem(70px);
+	    height: rem(50px); 	
+        background-color: green;	    
+    }  
+
+    @include phones_portrait  {
+	    width: rem(50px);
+	    height: rem(70px);
+	    background-color: gray;
+    }    
 }
+*/
 
 @font-face {
   font-family: 'Ubuntu';
@@ -1996,12 +2028,6 @@ textarea:focus {
 }
 
 @media screen and (max-width: 900px) {
-  .orientation {
-    width: 5.625rem;
-    height: 5.625rem;
-    background-color: blue;
-  }
-
   html {
     font-size: 14px;
   }
@@ -2048,13 +2074,26 @@ textarea:focus {
   }
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .orientation {
-    width: 5rem;
-    height: 3.75rem;
-    background-color: red;
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
   }
 
+  .pagination__list {
+    right: 2%;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .team__area {
+    padding-left: 2%;
+    padding-top: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
   .section-title-h1 {
     font-size: 60px;
     line-height: 65px;
@@ -2093,12 +2132,6 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
-  .orientation {
-    width: 3.75rem;
-    height: 5rem;
-    background-color: pink;
-  }
-
   .burger__list {
     flex-direction: column;
   }
@@ -2258,32 +2291,7 @@ textarea:focus {
   }
 }
 
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-
-  .pagination__list {
-    right: 2%;
-  }
-
-  .header__nav {
-    display: none;
-  }
-
-  .team__area {
-    padding-left: 2%;
-    padding-top: 5%;
-  }
-}
-
 @media screen and (max-width: 640px) and (orientation: landscape) {
-  .orientation {
-    width: 4.375rem;
-    height: 3.125rem;
-    background-color: green;
-  }
-
   html {
     font-size: 12px;
   }
@@ -2392,12 +2400,6 @@ textarea:focus {
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
-  .orientation {
-    width: 3.125rem;
-    height: 4.375rem;
-    background-color: gray;
-  }
-
   html {
     font-size: 12px;
   }
