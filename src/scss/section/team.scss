@@ -20,6 +20,7 @@
 
     @include tablets {
         padding-left: 2%;
+        padding-top: 5%;
     }
 
     @include tablets_portrait {
@@ -27,7 +28,7 @@
         padding-left: 0;
     }
 
-    @include phones {
+    @include phones_portrait {
        width: 100%;
        padding: 4% 2% 0% 2%;
     }
@@ -39,7 +40,7 @@
 
 .team .section-title {
     color: $color-yellow;
-    line-height: rem(64px);
+    line-height: 64px;
     margin-bottom: 5vh;
 
     @include tablets_portrait {
@@ -47,12 +48,13 @@
         margin-top: 10vh;
     }
 
-    @include phones {
+    @include phones_portrait {
         text-align: center;
-        margin-top: 5vh;
+        margin-top: 10vh;
     }
 
     @include phones_landscape {
+        text-align: center;        
         margin-top: 0;
     }
 }
@@ -66,7 +68,7 @@
         align-items: center;
     }
 
-    @include phones {
+    @include phones_portrait {
         align-items: center;
     }
 
@@ -78,7 +80,7 @@
             text-align: center;
         }
 
-        @include phones {
+        @include phones_portrait {
             text-align: center;
         }
     }
@@ -107,7 +109,7 @@
             margin-left: 0;
         }
 
-        @include phones {
+        @include phones_portrait {
           height: rem(85px);
           width: rem(85px);          
         }
@@ -116,7 +118,7 @@
     & .member__def {
         display: inline-block;
         width: 50%;
-        @extend %section-text-font;
+        @extend %section-text-font;     
 
         @include tablets_portrait {
             display: block;
@@ -129,7 +131,7 @@
 
             @include tablets_portrait {
                 text-align: center;
-            }
+            }            
  
         }
 
@@ -148,8 +150,15 @@
     text-decoration: none;
 
     @include tablets_portrait {
+        font-size: 24px;
         text-align: center;
+        margin-bottom: rem(30px);
     }
+
+    @include phones_portrait {
+        font-size: 24px;
+        margin-bottom: rem(30px);
+    }       
 
     &::before {
         content: "";

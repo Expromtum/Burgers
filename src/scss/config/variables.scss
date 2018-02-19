@@ -1,6 +1,7 @@
 $laptop: 900px;
 $tablets: 768px;
-$phones: 480px;
+$phones_portrait: 480px;
+$phones_landscape: 640px;
 $min-width: 280px;
 
 $color-bg-side: #282828;
@@ -23,5 +24,9 @@ $color-black-mask: $color-black;
 $color-text-black: #2f3234;
 $color-icons-social: #585858;
 $color-icons-social-hover: #ffffff;
+
+$title-font-size: 72px;
+$title-font-size-tablets: 60px;
+$title-font-size-phone: 50px;
 
 

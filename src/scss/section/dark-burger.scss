@@ -31,13 +31,17 @@
     align-items: stretch;
     justify-content: flex-start;
     margin: 0;
-    margin-top: 5vh;
+    margin-top: 2vh;
     height: 100%;
 
     @include tablets_portrait {
         flex-direction: column;
         align-items: center;
     }
+
+    @include phones_portrait {
+        margin-top: 0;
+    }    
 }
 
 .dark-burger__imgs {
@@ -54,24 +58,21 @@
         justify-content: flex-end;
     }
 
+     @include phones_landscape {
+        max-width: 70vmin;
+        justify-content: center;
+    }   
+
     & .burger-composition {
         position: absolute;
-        left: 2%;
-        top: 3%;
-
-        @include tablets_portrait {
-            left: 7%;
-        }
-
-        @include phones_portrait {
-            left: 0;
-        }    
+        top: 0;
+        left: 0;  
     }
 
     & .kkal {
         position: absolute;
-        left: 2%;
-        bottom: 5%;
+        left: 0;
+        bottom: 0;
 
         @include tablets_portrait {
             left: 80%;
@@ -79,22 +80,31 @@
         }
 
          @include phones_portrait {
-            left: 85%;
+            right: 0;
         }    
     }       
 }
 
 .dark-burger__img {
     min-width: rem(200px); 
-    max-width: 70vmin;
+    max-width: 85vmin;
     width: 100%;
+    margin-right: rem(30px);
 
     @include tablets_portrait {
         width: auto;
+        max-width: 75vmin;
     }
+
+     @include phones_landscape {
+        width: auto;
+        max-width: 65vmin;
+        margin-right: rem(5px);
+    }      
 
      @include phones_portrait {
         width: auto;
+        max-width: 65vmin;
     }   
 }
 
@@ -110,6 +120,10 @@
     @include tablets_portrait {
         width: 100%;
     }
+
+    @include phones_landscape {
+        width: 100%;
+    }    
 }
 
 .dark-burger__def {
@@ -122,6 +136,10 @@
         margin-top: rem(20px);      
     }
 
+    @include phones_landscape {
+        margin-bottom: 0;       
+    }   
+
     @include phones_portrait {
         margin-top: 0;
         margin-bottom: 0;       
@@ -133,7 +151,7 @@
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: rem(25px);
 
     @include tablets_portrait {
@@ -141,21 +159,34 @@
         margin-bottom: rem(15px);   
     }
 
+    @include phones_landscape {
+        justify-content: flex-start; 
+    }    
+
     & .dark-burger__price-number {
         @extend %section-title-font;
         color: $color-red;
+
     }
 
     & .dark-burger__price-cur {
         @extend %section-title-font;
         color: $color-red;
-        font-size: rem(30px);
-        //border: 1px solid red;
+        font-size: $title-font-size/2;
+
+        @include phones_landscape {
+            font-size: $title-font-size-phone/2;
+        }    
+
+        @include phones_portrait {
+            font-size: $title-font-size-phone/2;
+        }          
     }
 
     & .button {
-        margin-bottom: rem(10px);
+        margin-bottom: rem(30px);
         margin-left: rem(25px);
         display: inline-block;
+        align-self: center;
     }
 }

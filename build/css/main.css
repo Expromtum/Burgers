@@ -600,7 +600,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin: 0;
   font-weight: normal;
 }
 
@@ -629,12 +629,23 @@ footer {
   width: 100%;
 }
 
+.section-title-h1 {
+  color: #f9b43b;
+  font-family: Gagalin;
+  font-size: 72px;
+  line-height: 85px;
+  font-weight: 400;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .section-title,
 .dark-burger__order .dark-burger__price-number,
 .dark-burger__order .dark-burger__price-cur {
   color: #ffffff;
   font-family: Gagalin;
-  font-size: 4.5rem;
+  font-size: 72px;
+  line-height: 85px;
   font-weight: 400;
 }
 
@@ -649,8 +660,8 @@ footer {
   vertical-align: middle;
   color: #ffffff;
   font-family: Ubuntu;
-  font-size: 0.8125rem;
-  line-height: 1.875rem;
+  font-size: 13px;
+  line-height: 30px;
   text-decoration: none;
 }
 
@@ -658,9 +669,9 @@ footer {
   text-align: center;
   color: #ffffff;
   font-family: Gagalin;
-  font-size: 2.5rem;
+  font-size: 35px;
   font-weight: 400;
-  line-height: 3.98438rem;
+  line-height: 63.75px;
 }
 
 .burger-composition__btn .burger-composition__descr,
@@ -672,9 +683,9 @@ footer {
   width: 100%;
   color: #ffffff;
   font-family: Gagalin;
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.75rem;
+  line-height: 28px;
 }
 
 .member-content .member__def h5,
@@ -692,8 +703,8 @@ footer {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 14px;
+  line-height: 24px;
   font-weight: 300;
 }
 
@@ -823,6 +834,7 @@ footer {
   transition: 0.3s;
   pointer-events: initial;
   border: 1px solid transparent;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -980,10 +992,10 @@ textarea:focus {
 .burger-composition {
   border-radius: 5px;
   background-color: #e45028;
-  opacity: 0.7;
   width: 5.625rem;
   height: 5.625rem;
   cursor: pointer;
+  opacity: 0.85;
 }
 
 .burger-composition__btn {
@@ -1172,7 +1184,7 @@ textarea:focus {
   z-index: 20;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin: 0;
   padding-left: 5%;
@@ -1186,7 +1198,7 @@ textarea:focus {
 
 .header__logo {
   margin-right: auto;
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 
 .header__nav {
@@ -1229,8 +1241,8 @@ textarea:focus {
 
 .mobile-menu {
   display: none;
-  width: 1.5rem;
-  height: 1.375rem;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .mobile-menu .mobile-menu__open {
@@ -1249,6 +1261,7 @@ textarea:focus {
   bottom: 0;
   background: #2d3032;
   align-items: flex-start;
+  justify-content: space-between;
   padding-top: 5%;
   padding-bottom: 5%;
   overflow-x: hidden;
@@ -1329,9 +1342,9 @@ textarea:focus {
 
 .burger__img img {
   min-width: 12.5rem;
-  max-width: 60vmin;
+  max-width: 70vmin;
   width: 100%;
-  margin-top: -9.375rem;
+  margin-top: -7.5rem;
 }
 
 .burger__descr-font,
@@ -1340,21 +1353,19 @@ textarea:focus {
   color: #ffffff;
   font-family: Lifehack;
   font-weight: 400;
-  font-size: 4.375rem;
+  font-size: 65px;
 }
 
 .burger__descr {
-  margin-top: -5rem;
-  margin-bottom: 1.25rem;
-  margin-left: 0.9375rem;
+  margin-top: -3.125rem;
+  margin-left: 0.625rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-.burger__descr .section-title {
-  color: #f9b43b;
+.burger__descr .section-title-h1 {
   padding-left: 0.625rem;
   margin: 0;
 }
@@ -1394,7 +1405,7 @@ textarea:focus {
   text-align: center;
   width: 100%;
   color: #2f3234;
-  margin-top: 0rem;
+  margin-top: -1.25rem;
   margin-bottom: 0rem;
 }
 
@@ -1409,6 +1420,8 @@ textarea:focus {
 
 .best__list .best__item {
   max-width: 30%;
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
 }
 
 .promo__list {
@@ -1425,24 +1438,24 @@ textarea:focus {
 }
 
 .promo__img {
-  height: 5.5625rem;
-  width: 6.0625rem;
+  height: 89px;
+  width: 97px;
 }
 
 .promo__title {
   color: #2f3234;
   font-family: Lifehack;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 1.75875rem;
-  letter-spacing: -0.0375rem;
-  padding: 2.5rem 0.9375rem 0.9375rem 0.9375rem;
+  line-height: 28.14px;
+  letter-spacing: -0.6px;
+  padding: 1.5625rem 0.9375rem 0.625rem 0.9375rem;
 }
 
 .promo__descr {
   color: #2f3234;
-  padding: 5px;
-  padding-top: 0.625rem;
+  padding: 0.3125rem;
+  padding-top: 0rem;
   text-align: center;
 }
 
@@ -1468,7 +1481,7 @@ textarea:focus {
   align-items: stretch;
   justify-content: flex-start;
   margin: 0;
-  margin-top: 5vh;
+  margin-top: 2vh;
   height: 100%;
 }
 
@@ -1483,20 +1496,21 @@ textarea:focus {
 
 .dark-burger__imgs .burger-composition {
   position: absolute;
-  left: 2%;
-  top: 3%;
+  top: 0;
+  left: 0;
 }
 
 .dark-burger__imgs .kkal {
   position: absolute;
-  left: 2%;
-  bottom: 5%;
+  left: 0;
+  bottom: 0;
 }
 
 .dark-burger__img {
   min-width: 12.5rem;
-  max-width: 70vmin;
+  max-width: 85vmin;
   width: 100%;
+  margin-right: 1.875rem;
 }
 
 .dark-burger__descr {
@@ -1519,7 +1533,7 @@ textarea:focus {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 1.5625rem;
 }
 
@@ -1529,13 +1543,14 @@ textarea:focus {
 
 .dark-burger__order .dark-burger__price-cur {
   color: #e45028;
-  font-size: 1.875rem;
+  font-size: 36px;
 }
 
 .dark-burger__order .button {
-  margin-bottom: 0.625rem;
+  margin-bottom: 1.875rem;
   margin-left: 1.5625rem;
   display: inline-block;
+  align-self: center;
 }
 
 .team {
@@ -1564,7 +1579,7 @@ textarea:focus {
 
 .team .section-title {
   color: #f9b43b;
-  line-height: 4rem;
+  line-height: 64px;
   margin-bottom: 5vh;
 }
 
@@ -1868,7 +1883,6 @@ textarea:focus {
 .order .section-title {
   color: #f9b43b;
   text-align: center;
-  line-height: 4rem;
   margin-top: -0.625rem;
   margin-bottom: 1.5625rem;
 }
@@ -1886,7 +1900,7 @@ textarea:focus {
 }
 
 .order__form-fields .order__form-col {
-  width: 44%;
+  width: 46%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1930,7 +1944,7 @@ textarea:focus {
 }
 
 .footer {
-  height: 10vh;
+  height: 12vh;
   min-height: 3.125rem;
   position: absolute;
   bottom: 0;
@@ -1992,12 +2006,6 @@ textarea:focus {
     font-size: 14px;
   }
 
-  .section-title,
-  .dark-burger__order .dark-burger__price-number,
-  .dark-burger__order .dark-burger__price-cur {
-    font-size: 4.0625rem;
-  }
-
   .main-menu__list {
     display: none;
   }
@@ -2009,16 +2017,16 @@ textarea:focus {
 
   .mobile-menu {
     display: block;
-    margin-left: 30px;
+    margin-left: 2.5rem;
   }
 
   .burger__descr-font,
   .burger__descr .descr-natural,
   .burger__descr .descr-burger {
-    font-size: 3.4375rem;
+    font-size: 55px;
   }
 
-  .burger__descr .section-title {
+  .burger__descr .section-title-h1 {
     padding-left: 10px;
   }
 
@@ -2047,20 +2055,40 @@ textarea:focus {
     background-color: red;
   }
 
+  .section-title-h1 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+
   .section-title,
   .dark-burger__order .dark-burger__price-number,
   .dark-burger__order .dark-burger__price-cur {
-    font-size: 3.4375rem;
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .burger-composition__btn .burger-composition__descr,
+  .kkal-container .kkal-number,
+  .kkal-descr,
+  .msg__content .msg___title,
+  .member__name,
+  .review__name {
+    font-size: 13px;
+    line-height: 18px;
   }
 
   .burger__descr-font,
   .burger__descr .descr-natural,
   .burger__descr .descr-burger {
-    font-size: 3.125rem;
+    font-size: 50px;
   }
 
   .burger__descr .descr-burger {
     line-height: 2.8125rem;
+  }
+
+  .best .section-title {
+    margin-top: 0.625rem;
   }
 }
 
@@ -2069,12 +2097,6 @@ textarea:focus {
     width: 3.75rem;
     height: 5rem;
     background-color: pink;
-  }
-
-  .section-title,
-  .dark-burger__order .dark-burger__price-number,
-  .dark-burger__order .dark-burger__price-cur {
-    font-size: 3.125rem;
   }
 
   .burger__list {
@@ -2100,7 +2122,7 @@ textarea:focus {
     margin-top: 0rem;
   }
 
-  .burger__descr .section-title {
+  .burger__descr .section-title-h1 {
     text-align: center;
   }
 
@@ -2126,10 +2148,6 @@ textarea:focus {
     justify-content: flex-end;
   }
 
-  .dark-burger__imgs .burger-composition {
-    left: 7%;
-  }
-
   .dark-burger__imgs .kkal {
     left: 80%;
     top: 3%;
@@ -2137,6 +2155,7 @@ textarea:focus {
 
   .dark-burger__img {
     width: auto;
+    max-width: 75vmin;
   }
 
   .dark-burger__descr {
@@ -2192,7 +2211,9 @@ textarea:focus {
   }
 
   .member__name {
+    font-size: 24px;
     text-align: center;
+    margin-bottom: 1.875rem;
   }
 
   .menu .section-title {
@@ -2233,7 +2254,7 @@ textarea:focus {
   }
 
   .order__form-fields .order__form-col {
-    width: 60%;
+    width: 85%;
   }
 }
 
@@ -2252,18 +2273,121 @@ textarea:focus {
 
   .team__area {
     padding-left: 2%;
+    padding-top: 5%;
   }
 }
 
-@media screen and (max-width: 480px) and (orientation: landscape) {
+@media screen and (max-width: 640px) and (orientation: landscape) {
   .orientation {
     width: 4.375rem;
     height: 3.125rem;
     background-color: green;
   }
 
+  html {
+    font-size: 12px;
+  }
+
+  .section-title-h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .section-title,
+  .dark-burger__order .dark-burger__price-number,
+  .dark-burger__order .dark-burger__price-cur {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .burger-composition__btn .burger-composition__descr,
+  .kkal-container .kkal-number,
+  .kkal-descr,
+  .msg__content .msg___title,
+  .member__name,
+  .review__name {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .member-content .member__def h5,
+  .burger-composition__list .burger-composition__item,
+  .msg__content .msg__message,
+  .promo__descr,
+  .dark-burger__def,
+  .member-content .member__def,
+  .member-content .member__def p,
+  .menu__descr,
+  .review__quote,
+  .order__form-block-title,
+  .contacts__adres,
+  .contacts__phone .contacts__phone-link {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .button {
+    padding: 0.3125rem 1.25rem;
+  }
+
+  .burger-composition {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mobile-menu-overlay .main-menu__item::before {
+    margin: 0.125rem auto 0.625rem auto;
+  }
+
+  .burger__descr-font,
+  .burger__descr .descr-natural,
+  .burger__descr .descr-burger {
+    font-size: 45px;
+  }
+
+  .best .section-title {
+    margin-top: 0.625rem;
+  }
+
+  .promo__title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .dark-burger__imgs {
+    max-width: 70vmin;
+    justify-content: center;
+  }
+
+  .dark-burger__img {
+    width: auto;
+    max-width: 65vmin;
+    margin-right: 0.3125rem;
+  }
+
+  .dark-burger__descr {
+    width: 100%;
+  }
+
+  .dark-burger__def {
+    margin-bottom: 0;
+  }
+
+  .dark-burger__order {
+    justify-content: flex-start;
+  }
+
+  .dark-burger__order .dark-burger__price-cur {
+    font-size: 25px;
+  }
+
   .team .section-title {
+    text-align: center;
     margin-top: 0;
+  }
+
+  .order__form-fields .order__form-col {
+    width: 48%;
   }
 }
 
@@ -2272,6 +2396,37 @@ textarea:focus {
     width: 3.125rem;
     height: 4.375rem;
     background-color: gray;
+  }
+
+  html {
+    font-size: 12px;
+  }
+
+  .section-title-h1 {
+    font-size: 63px;
+    line-height: 60px;
+  }
+
+  .section-title,
+  .dark-burger__order .dark-burger__price-number,
+  .dark-burger__order .dark-burger__price-cur {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .button {
+    padding: 0.3125rem 1.25rem;
+  }
+
+  .header {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .burger__descr-font,
+  .burger__descr .descr-natural,
+  .burger__descr .descr-burger {
+    font-size: 55px;
   }
 
   .best__list {
@@ -2290,11 +2445,11 @@ textarea:focus {
 
   .promo__list .promo__item {
     text-align: left;
-    margin-right: 1.25rem;
   }
 
   .promo__img {
     width: 25%;
+    margin-right: 1.25rem;
   }
 
   .promo__info {
@@ -2304,6 +2459,7 @@ textarea:focus {
   .promo__title {
     flex-direction: row;
     padding: 0;
+    margin-bottom: 0.625rem;
   }
 
   .promo__descr {
@@ -2312,21 +2468,54 @@ textarea:focus {
     padding-right: 0;
   }
 
-  .dark-burger__imgs .burger-composition {
-    left: 0;
+  .dark-burger__item {
+    margin-top: 0;
   }
 
   .dark-burger__imgs .kkal {
-    left: 85%;
+    right: 0;
   }
 
   .dark-burger__img {
     width: auto;
+    max-width: 65vmin;
   }
 
   .dark-burger__def {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .dark-burger__order .dark-burger__price-cur {
+    font-size: 25px;
+  }
+
+  .team__area {
+    width: 100%;
+    padding: 4% 2% 0% 2%;
+  }
+
+  .team .section-title {
+    text-align: center;
+    margin-top: 10vh;
+  }
+
+  .member__list {
+    align-items: center;
+  }
+
+  .member__list .member__item {
+    text-align: center;
+  }
+
+  .member-content .member__img {
+    height: 5.3125rem;
+    width: 5.3125rem;
+  }
+
+  .member__name {
+    font-size: 24px;
+    margin-bottom: 1.875rem;
   }
 
   .menu__title {
@@ -2373,7 +2562,6 @@ textarea:focus {
   }
 
   .footer {
-    height: 12vh;
     flex-direction: column;
   }
 
@@ -2394,35 +2582,6 @@ textarea:focus {
     justify-content: center;
     margin-left: -1.25rem;
     margin-top: 0.625rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
-
-  .team__area {
-    width: 100%;
-    padding: 4% 2% 0% 2%;
-  }
-
-  .team .section-title {
-    text-align: center;
-    margin-top: 5vh;
-  }
-
-  .member__list {
-    align-items: center;
-  }
-
-  .member__list .member__item {
-    text-align: center;
-  }
-
-  .member-content .member__img {
-    height: 5.3125rem;
-    width: 5.3125rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

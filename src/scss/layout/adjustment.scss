@@ -9,9 +9,13 @@ html {
         font-size: 13px;
     }
 
-    @include phones {
+    @include phones_portrait {
         font-size: 12px;
     }
+
+    @include phones_landscape {
+        font-size: 12px;
+    }    
 }
 
 body,
@@ -76,7 +80,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
+    margin: 0;
     font-weight: normal;
 }
 
@@ -105,23 +109,52 @@ footer {
     width: 100%;
 }
 
+.section-title-h1 {
+    color: $color-yellow;
+    font-family: Gagalin;
+    font-size: 72px;
+    line-height: 85px;
+    font-weight: 400;     
+    width: 100%;
+    margin: 0 auto;
+
+    @include tablets_landscape {
+        font-size: $title-font-size-tablets;
+        line-height: 65px;  
+    }     
+
+    @include phones_landscape {
+       font-size: 50px;
+       line-height: 60px; 
+    }   
+
+    @include phones_portrait {
+       font-size: 63px;
+       line-height: 60px; 
+    }        
+}
+
 %section-title-font {
     color: $color-white;
     font-family: Gagalin;
-    font-size: rem(72px);
+    font-size: $title-font-size;
+    line-height: 85px;    
     font-weight: 400;
-
-    @include laptop {
-       font-size: rem(65px);
-    }   
-
+ 
     @include tablets_landscape {
-        font-size: rem(55px);
-    }          
+        font-size: $title-font-size-tablets;
+        line-height: 70px;  
+    }     
 
-    @include tablets_portrait {
-        font-size: rem(50px);
-    }          
+    @include phones_landscape {
+        font-size: $title-font-size-phone;
+        line-height: 60px;  
+    }     
+
+    @include phones_portrait {
+        font-size: $title-font-size-phone;
+        line-height: 60px;  
+    }              
 }
 
 .section-title {
@@ -134,8 +167,8 @@ footer {
     vertical-align: middle;
     color: $color-white;
     font-family: Ubuntu;
-    font-size: rem(13px);
-    line-height: rem(30px);
+    font-size: 13px;
+    line-height: 30px;
     text-decoration: none;
 }
 
@@ -143,27 +176,42 @@ footer {
     text-align: center;
     color: $color-white;
     font-family: Gagalin;
-    font-size: rem(40px);
+    font-size: 35px;
     font-weight: 400;
-    line-height: rem(63.75px);
+    line-height: 63.75px;
 }
 
 %section-h4-font {
     width: 100%;
     color: $color-white;
     font-family: Gagalin;
-    font-size: rem(14px);
+    font-size: 14px;
     font-weight: 400;
-    line-height: rem(28px);
+    line-height: 28px;
+ 
+    @include tablets_landscape {
+        font-size: 13px;
+        line-height: 18px;
+    }  
+
+    @include phones_landscape {
+        font-size: 12px;
+        line-height: 16px;
+    }      
 }
 
 %section-text-font {
     text-align: left;
     color: $color-white;
     font-family: Ubuntu; //TODO: шрифты продублировать похожими
-    font-size: rem(14px);
-    line-height: rem(24px);
+    font-size: 14px;
+    line-height: 24px;
     font-weight: 300;
+
+    @include phones_landscape {
+        font-size: 12px;
+        line-height: 20px;
+    }       
 }
 
 %section-h5-font {
@@ -174,7 +222,7 @@ footer {
 %section-user-message-font {
     @extend %section-text-font;
     font-weight: 700;
-    font-size: rem(20px);
+    font-size: 20px;
 }
 
 

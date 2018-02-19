@@ -3,19 +3,24 @@
                 url('../img/bg/video-bg.jpg') no-repeat;
     background-position: center center;
     position: relative;
-    background-size: cover;
+    background-size: cover;   
 }
 
 .header {
     z-index: 20;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin: 0;
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
+
+    @include phones_portrait {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
 
     & .header__item:nth-child(2) {
         margin-left: auto;
@@ -24,7 +29,7 @@
 
 .header__logo {
     margin-right: auto;
-    padding-top: 10px;
+    padding-top: rem(10px);
 }
 
 .header__nav {
@@ -87,12 +92,12 @@
 
 .mobile-menu {
     display: none;
-    width: rem(24px);
-    height: rem(22px);   
+    width: rem(30px);
+    height: rem(30px);   
 
     @include laptop {
         display: block;
-        margin-left: (30px);
+        margin-left: rem(40px);
     }
 
     & .mobile-menu__open {
@@ -112,6 +117,8 @@
     bottom: 0;
     background: $color-bg-overlay;
     align-items: flex-start;
+    justify-content: space-between;    
+
     padding-top: 5%;
     padding-bottom: 5%;  
     overflow-x: hidden;
@@ -148,6 +155,10 @@
      & .main-menu__item::before {
         display: block;
         margin: rem(15px) auto rem(20px) auto;
+
+        @include phones_landscape {
+            margin: rem(2px) auto rem(10px) auto;
+        }         
     }    
 
     & .main-menu__item:first-child::before {
@@ -204,9 +215,9 @@
 
 .burger__img img {
     min-width: rem(200px);
-    max-width: 60vmin;
+    max-width: 70vmin;
     width: 100%;
-    margin-top: rem(-150px);
+    margin-top: rem(-120px);
 
     @include tablets_portrait {
         margin-top: rem(0px);
@@ -219,21 +230,28 @@
     color: $color-white;
     font-family: Lifehack;
     font-weight: 400;
-    font-size: rem(70px);
+    font-size: 65px;
 
     @include laptop {
-        font-size: rem(55px);
+        font-size: 55px;
     }
 
     @include tablets_landscape {
-        font-size: rem(50px);
+        font-size: 50px;
     }
+
+    @include phones_landscape {
+        font-size: 45px;
+    }       
+
+    @include phones_portrait {
+        font-size: 55px;
+    }    
 }
 
 .burger__descr {
-    margin-top: rem(-80px);
-    margin-bottom: rem(20px);
-    margin-left: rem(15px);
+    margin-top: rem(-50px);
+    margin-left: rem(10px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -244,8 +262,7 @@
         margin-top: rem(0px);
     }
 
-    & .section-title {
-        color: $color-yellow;
+    & .section-title-h1 {
         padding-left: rem(10px);
         margin: 0;
 

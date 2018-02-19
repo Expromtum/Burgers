@@ -90,10 +90,20 @@ $point-pos: rem(4px);
     pointer-events: initial;
     border: 1px solid transparent;
     @extend %control-elements-font;
+    font-size: 13px;
     cursor: pointer;
 
+    @include phones_portrait {
+        padding: rem(5px) rem(20px);
+    }
+
+    @include phones_landscape {
+        padding: rem(5px) rem(20px);
+    }   
+        
     & a {
         @extend %control-elements-font;
+
         text-decoration: none;
     }
 

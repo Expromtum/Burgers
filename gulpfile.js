@@ -67,7 +67,7 @@ function scripts() {
     return gulp.src(paths.src + 'js/**/*.js')
         .pipe(plumber())
         // .pipe(babel({  
-        //   presets: ['env']
+        //   presets: ['env'] //Дает ошибку при сборке
         // }))
         //.pipe(uglify())   
         // .pipe(concat('script.min.js'))
