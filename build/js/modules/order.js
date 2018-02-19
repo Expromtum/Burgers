@@ -1,1 +1,22 @@
-function submitForm(t){t.preventDefault();var o=$(t.target);o.serialize(),o.attr("action"),o.attr("method");ajaxForm(o).done(function(t){var o=t.mes;t.status;openMsgWithButton(260,o,"")}).fail(function(t,o){openMsgWithButton(260,"Request failed: "+o,"")})}$("#order-form").on("submit",submitForm);
+$('#order-form').on('submit', submitForm);
+
+function submitForm(ev) {
+    ev.preventDefault();
+
+    var form = $(ev.target),
+        data = form.serialize(),
+        url = form.attr('action'),
+        type = form.attr('method');
+        
+    ajaxForm(form).done(function(msg) {
+        var mes = msg.mes,
+            status = msg.status;
+
+        openMsgWithButton(260, mes, '');
+
+    }).fail(function(jqXHR, textStatus) { 
+
+        openMsgWithButton(260, "Request failed: " + textStatus, '');
+
+    });
+}

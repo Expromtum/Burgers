@@ -66,12 +66,13 @@ function vendor_styles() {
 function scripts() {
     return gulp.src(paths.src + 'js/**/*.js')
         .pipe(plumber())
-        // .pipe(babel({   //TODO: Ошибка сборки
+        // .pipe(babel({  
         //   presets: ['env']
         // }))
-        .pipe(uglify())   
+        //.pipe(uglify())   
         // .pipe(concat('script.min.js'))
         .pipe(gulp.dest(paths.build + 'js/'))
+        .pipe(browserSync.stream())
 }
 
 function imgs() {
@@ -100,7 +101,7 @@ function clean() {
 
 function watch() {
     gulp.watch(paths.src + 'scss/**/*.scss', styles);
-    gulp.watch(paths.src + 'vendor-css/**/*.css', styles);
+    gulp.watch(paths.src + 'vendor-css/**/*.css', vendor_styles);
     gulp.watch(paths.src + 'js/**/*.js', scripts);
     gulp.watch(paths.src + '*.html', htmls);
     gulp.watch(paths.src + 'icons/**/*.*', icons);
@@ -112,6 +113,7 @@ function serve() {
     browserSync.init({
         notify: false,
         port: 9000,
+        open: true,
         server: {
             baseDir: paths.build
         }
@@ -134,6 +136,11 @@ gulp.task('build', gulp.series(
 gulp.task('clean', gulp.series(
     clean
 ));
+
+gulp.task('serve', gulp.series(
+    serve
+));
+
 
 gulp.task('default', gulp.series(
     clean,

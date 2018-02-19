@@ -1,1 +1,88 @@
-var sectionList=$(".wrapper section");function initOnePageScroll(){$("#pagepiling").pagepiling({menu:null,direction:"vertical",verticalCentered:!0,sectionsColor:[],anchors:[],scrollingSpeed:100,easing:"swing",loopBottom:!1,loopTop:!1,css3:!0,navigation:!1,normalScrollElements:null,normalScrollElementTouchThreshold:5,touchSensitivity:5,keyboardScrolling:!0,sectionSelector:".site-section",animateAnchor:!1,onLeave:function(n,i,t){setActiveMenuPoint(i-1)},afterLoad:function(n,i){},afterRender:function(){initPaginationPointForSection(),initMenuLinks(),setActiveMenuPoint(0)}})}function setActiveMenuPoint(n){isFinite(n)||(n=0);var i=$(".pagination").find(".pagination__item");i.removeClass("active"),i.eq(n).addClass("active")}function initPaginationPointForSection(){var n=$(".pagination .pagination__list"),t=$(".pagination .pagination__item").first(),e=$.fn.pagepiling;for(i=0;i<sectionList.length-1;i++)n.append(t.clone());$(".pagination .pagination__item").click(function(n){n.preventDefault();var i=$(this).index()+1;e.moveTo(i)})}function initMenuLinks(){var n=$("[data-section-name]"),i=$.fn.pagepiling;n.click(function(n){n.preventDefault();var t=$("#"+$(this).attr("data-section-name"));if(t.length>0){var e=t.index()+1;i.moveTo(e)}})}$(document).ready(function(){initOnePageScroll()});
+var sectionList = $('.wrapper section');
+
+$(document).ready(function() {
+    initOnePageScroll();	
+});
+
+/*TODO: Заблокировать скроллинг, если нажата ctrl (актуально для карты)*/
+function initOnePageScroll() {
+	$('#pagepiling').pagepiling({
+	    menu: null,
+        direction: 'vertical',
+        verticalCentered: true,
+        sectionsColor: [],
+        anchors: [],
+        scrollingSpeed: 100,
+        easing: 'swing',
+        loopBottom: false,
+        loopTop: false,
+        css3: true,
+        navigation: false,
+       	normalScrollElements: null/*'#map'*/,
+        normalScrollElementTouchThreshold: 5,
+        touchSensitivity: 5,
+        keyboardScrolling: true,
+        sectionSelector: '.site-section',
+        animateAnchor: false,
+		//events
+		onLeave: function(index, nextIndex, direction){
+			setActiveMenuPoint(nextIndex-1);		
+		},
+		afterLoad: function(anchorLink, index){},
+		afterRender: function(){
+		    initPaginationPointForSection();
+		    initMenuLinks();  
+		    setActiveMenuPoint(0); 		
+		},
+	});	
+}
+
+function setActiveMenuPoint(index) {
+    if (!isFinite(index)) {
+   		index = 0;
+    };
+
+    var pointList = $('.pagination').find('.pagination__item');
+    pointList.removeClass('active');
+
+    var point = pointList.eq(index);
+    point.addClass('active');
+}
+
+//Каждой секции сопоставляем свою точку пагинатора
+function initPaginationPointForSection() {
+    var paginationList = $(".pagination .pagination__list");
+    var templatePoint = $(".pagination .pagination__item").first();
+    var pagepiling = $.fn.pagepiling;
+
+    for (i = 0; i < sectionList.length - 1; i++) {
+        paginationList.append(templatePoint.clone());
+    }
+
+    //При клике на точку пагинатора должна открываться секция
+    //с таким же индексом
+    var pointList = $(".pagination .pagination__item");
+
+    pointList.click(function(e) {
+        e.preventDefault();
+        var iSection = $(this).index() + 1;
+        pagepiling.moveTo(iSection);
+    });
+}
+
+function initMenuLinks() {
+    var linkList = $('[data-section-name]');
+    var pagepiling = $.fn.pagepiling;
+
+    linkList.click(function(e) {
+        e.preventDefault();
+
+        //Ищем секцию по ID, который должен быть равен атрибуту data-section-name  	
+        var section = $('#' + $(this).attr('data-section-name'));
+
+        if (section.length > 0) {
+           var iSection = section.index() + 1;
+           pagepiling.moveTo(iSection);
+    	}
+   });
+}

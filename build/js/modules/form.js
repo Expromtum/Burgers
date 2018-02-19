@@ -1,1 +1,12 @@
-var ajaxForm=function(a){var r=a.serialize(),t=a.attr("action");return $.ajax({type:"POST",url:t,dataType:"JSON",data:r})};
+// Универсальная функция для работы с формами
+var ajaxForm = function (form) {
+    var data = form.serialize(),
+        url = form.attr('action');
+
+    return $.ajax({
+        type: 'POST',
+        url: url,
+        dataType : 'JSON',
+        data: data
+    });
+};
