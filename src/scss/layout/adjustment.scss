@@ -38,14 +38,14 @@ html {
 .wrapper {
     position: relative;
     width: 100%;
-    min-height: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
+    max-height: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 .maincontent {
     height: 100%;
- /*   min-height: $section-min-height;*/
 }
 
 .site-section {
@@ -192,7 +192,7 @@ footer {
  
     @include tablets_landscape {
         font-size: 13px;
-        line-height: 18px;
+        line-height: 16px;
     }  
 
     @include phones_landscape {

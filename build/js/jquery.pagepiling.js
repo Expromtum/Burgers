@@ -820,8 +820,12 @@
                     } else {
                         if (Math.abs(touchStartY - touchEndY) > (container.height() / 100 * options.touchSensitivity)) {
                             if (touchStartY > touchEndY) {
+                                console.log(container);
+                                console.log(container.height() , touchStartY, touchEndY, 'down');
                                 scrolling('down', scrollable);
                             } else if (touchEndY > touchStartY) {
+                                console.log(container);
+                                console.log(container.height() , touchStartY, touchEndY, 'up');
                                 scrolling('up', scrollable);
                             }
                         }
