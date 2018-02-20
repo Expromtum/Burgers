@@ -28,6 +28,7 @@ const browserSync = require('browser-sync').create(); // Модуль для с�
 //const autoprefixer = require('gulp-autoprefixer'); // Модуль для управления браузерными префиксами 
 //const uncss = require('gulp-uncss');               // Модуль для оптимизации css файлов, на основе использования в html 
 const imagemin = require('gulp-imagemin');           // Модуль для сжатия изображений  
+const ghPages = require('gulp-gh-pages');
 
 const paths = {
     src: './src/', // paths.src
@@ -120,6 +121,18 @@ function serve() {
     });
     browserSync.watch(paths.build + '**/*.*', browserSync.reload);
 }
+
+gulp.task('deploy', function() {
+  // accessToken = '[Bish1Kek97]';
+  // repoName='grawl/[my repo name]';	//git@github.com:Expromtum/Burgers.git
+  return gulp.src(paths.build + '**/*')
+    .pipe(ghPages({
+       remoteUrl: "https://github.com/Expromtum/expromtum.github.io",
+        // remoteUrl: 'https://grawl:' + accessToken + '@github.com/' + repoName + '.git'
+        branch: "gh-pages",
+        force: false
+    }));
+});
 
 // exports.styles = styles;
 // exports.vendor_styles = vendor_styles;
