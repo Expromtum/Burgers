@@ -1,35 +1,42 @@
 @charset "UTF-8";
+/*
 .orientation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50; }
-  @media screen and (max-width: 900px) {
-    .orientation {
-      width: 5.625rem;
-      height: 5.625rem;
-      background-color: blue; } }
-  @media screen and (max-width: 768px) and (orientation: landscape) {
-    .orientation {
-      width: 5rem;
-      height: 3.75rem;
-      background-color: red; } }
-  @media screen and (max-width: 768px) and (orientation: portrait) {
-    .orientation {
-      width: 3.75rem;
-      height: 5rem;
-      background-color: pink; } }
-  @media screen and (max-width: 480px) and (orientation: landscape) {
-    .orientation {
-      width: 4.375rem;
-      height: 3.125rem;
-      background-color: green; } }
-  @media screen and (max-width: 480px) and (orientation: portrait) {
-    .orientation {
-      width: 3.125rem;
-      height: 4.375rem;
-      background-color: gray; } }
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 50;
 
+    @include laptop  {
+	    width: rem(90px);
+	    height: rem(90px);
+        background-color: blue;	    
+    }  
+	
+     @include tablets_landscape  {
+	    width: rem(80px);
+	    height: rem(60px);
+        background-color: red;	    
+    }  
+
+    @include tablets_portrait {
+	    width: rem(60px);
+	    height: rem(80px);
+	    background-color: pink;
+    }  
+
+     @include phones_landscape  {
+   	    width: rem(70px);
+	    height: rem(50px); 	
+        background-color: green;	    
+    }  
+
+    @include phones_portrait  {
+	    width: rem(50px);
+	    height: rem(70px);
+	    background-color: gray;
+    }    
+}
+*/
 @font-face {
   font-family: 'Ubuntu';
   src: url("../fonts/ubuntu/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
@@ -469,7 +476,10 @@ html {
   @media screen and (max-width: 768px) {
     html {
       font-size: 13px; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    html {
+      font-size: 12px; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
     html {
       font-size: 12px; } }
 
@@ -492,17 +502,19 @@ html {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
   overflow: hidden; }
 
 .maincontent {
-  height: 100%;
-  /*   min-height: $section-min-height;*/ }
+  height: 100%; }
 
 .site-section {
   height: 100%;
   background-color: #282828;
   margin: 0 auto;
+  overflow: hidden;
   /*   min-width: $section-min-width;
     min-height: $section-min-height;*/ }
   .site-section_centered {
@@ -543,7 +555,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin: 0;
   font-weight: normal; }
 
 ul {
@@ -565,20 +577,45 @@ footer {
   position: relative;
   width: 100%; }
 
+.section-title-h1 {
+  color: #f9b43b;
+  font-family: Gagalin;
+  font-size: 72px;
+  line-height: 85px;
+  font-weight: 400;
+  width: 100%;
+  margin: 0 auto; }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .section-title-h1 {
+      font-size: 60px;
+      line-height: 65px; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .section-title-h1 {
+      font-size: 50px;
+      line-height: 60px; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .section-title-h1 {
+      font-size: 63px;
+      line-height: 60px; } }
+
 .section-title, .dark-burger__order .dark-burger__price-number, .dark-burger__order .dark-burger__price-cur {
   color: #ffffff;
   font-family: Gagalin;
-  font-size: 4.5rem;
+  font-size: 72px;
+  line-height: 85px;
   font-weight: 400; }
-  @media screen and (max-width: 900px) {
-    .section-title, .dark-burger__order .dark-burger__price-number, .dark-burger__order .dark-burger__price-cur {
-      font-size: 4.0625rem; } }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .section-title, .dark-burger__order .dark-burger__price-number, .dark-burger__order .dark-burger__price-cur {
-      font-size: 3.4375rem; } }
-  @media screen and (max-width: 768px) and (orientation: portrait) {
+      font-size: 60px;
+      line-height: 70px; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
     .section-title, .dark-burger__order .dark-burger__price-number, .dark-burger__order .dark-burger__price-cur {
-      font-size: 3.125rem; } }
+      font-size: 50px;
+      line-height: 60px; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .section-title, .dark-burger__order .dark-burger__price-number, .dark-burger__order .dark-burger__price-cur {
+      font-size: 50px;
+      line-height: 60px; } }
 
 .section-title {
   width: 100%;
@@ -588,33 +625,45 @@ footer {
   vertical-align: middle;
   color: #ffffff;
   font-family: Ubuntu;
-  font-size: 0.8125rem;
-  line-height: 1.875rem;
+  font-size: 13px;
+  line-height: 30px;
   text-decoration: none; }
 
 .menu__title {
   text-align: center;
   color: #ffffff;
   font-family: Gagalin;
-  font-size: 2.5rem;
+  font-size: 35px;
   font-weight: 400;
-  line-height: 3.98438rem; }
+  line-height: 63.75px; }
 
 .burger-composition__btn .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .msg__content .msg___title, .member__name, .review__name {
   width: 100%;
   color: #ffffff;
   font-family: Gagalin;
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.75rem; }
+  line-height: 28px; }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .burger-composition__btn .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .msg__content .msg___title, .member__name, .review__name {
+      font-size: 13px;
+      line-height: 16px; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .burger-composition__btn .burger-composition__descr, .kkal-container .kkal-number, .kkal-descr, .msg__content .msg___title, .member__name, .review__name {
+      font-size: 12px;
+      line-height: 16px; } }
 
 .member-content .member__def h5, .burger-composition__list .burger-composition__item, .msg__content .msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone .contacts__phone-link {
   text-align: left;
   color: #ffffff;
   font-family: Ubuntu;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: 14px;
+  line-height: 24px;
   font-weight: 300; }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .member-content .member__def h5, .burger-composition__list .burger-composition__item, .msg__content .msg__message, .promo__descr, .dark-burger__def, .member-content .member__def, .member-content .member__def p, .menu__descr, .review__quote, .order__form-block-title, .contacts__adres, .contacts__phone .contacts__phone-link {
+      font-size: 12px;
+      line-height: 20px; } }
 
 .member-content .member__def h5 {
   font-weight: 700; }
@@ -714,7 +763,14 @@ footer {
   transition: 0.3s;
   pointer-events: initial;
   border: 1px solid transparent;
+  font-size: 13px;
   cursor: pointer; }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .button {
+      padding: 0.3125rem 1.25rem; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .button {
+      padding: 0.3125rem 1.25rem; } }
   .button a {
     text-decoration: none; }
   .button__color--red {
@@ -873,10 +929,14 @@ textarea {
 .burger-composition {
   border-radius: 5px;
   background-color: #e45028;
-  opacity: 0.7;
   width: 5.625rem;
   height: 5.625rem;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.85; }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .burger-composition {
+      width: 50px;
+      height: 50px; } }
 
 .burger-composition__btn {
   width: 100%;
@@ -1044,9 +1104,9 @@ textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1054,12 +1114,16 @@ textarea {
   padding-left: 5%;
   padding-right: 5%;
   width: 100%; }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .header {
+      padding-left: 1%;
+      padding-right: 1%; } }
   .header .header__item:nth-child(2) {
     margin-left: auto; }
 
 .header__logo {
   margin-right: auto;
-  padding-top: 10px; }
+  padding-top: 0.625rem; }
 
 .header__nav {
   margin-right: 0rem; }
@@ -1115,12 +1179,12 @@ textarea {
 
 .mobile-menu {
   display: none;
-  width: 1.5rem;
-  height: 1.375rem; }
+  width: 1.875rem;
+  height: 1.875rem; }
   @media screen and (max-width: 900px) {
     .mobile-menu {
       display: block;
-      margin-left: 30px; } }
+      margin-left: 2.5rem; } }
   .mobile-menu .mobile-menu__open {
     display: block; }
   .mobile-menu .mobile-menu__close {
@@ -1136,6 +1200,9 @@ textarea {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-top: 5%;
   padding-bottom: 5%;
   overflow-x: hidden; }
@@ -1168,6 +1235,9 @@ textarea {
   .mobile-menu-overlay .main-menu__item::before {
     display: block;
     margin: 0.9375rem auto 1.25rem auto; }
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      .mobile-menu-overlay .main-menu__item::before {
+        margin: 0.125rem auto 0.625rem auto; } }
   .mobile-menu-overlay .main-menu__item:first-child::before {
     display: none; }
   .mobile-menu-overlay .main-menu__link {
@@ -1230,9 +1300,9 @@ textarea {
 
 .burger__img img {
   min-width: 12.5rem;
-  max-width: 60vmin;
+  max-width: 70vmin;
   width: 100%;
-  margin-top: -9.375rem; }
+  margin-top: -7.5rem; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .burger__img img {
       margin-top: 0rem;
@@ -1243,18 +1313,23 @@ textarea {
   color: #ffffff;
   font-family: Lifehack;
   font-weight: 400;
-  font-size: 4.375rem; }
+  font-size: 65px; }
   @media screen and (max-width: 900px) {
     .burger__descr-font, .burger__descr .descr-natural, .burger__descr .descr-burger {
-      font-size: 3.4375rem; } }
+      font-size: 55px; } }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .burger__descr-font, .burger__descr .descr-natural, .burger__descr .descr-burger {
-      font-size: 3.125rem; } }
+      font-size: 50px; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .burger__descr-font, .burger__descr .descr-natural, .burger__descr .descr-burger {
+      font-size: 45px; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .burger__descr-font, .burger__descr .descr-natural, .burger__descr .descr-burger {
+      font-size: 55px; } }
 
 .burger__descr {
-  margin-top: -5rem;
-  margin-bottom: 1.25rem;
-  margin-left: 0.9375rem;
+  margin-top: -3.125rem;
+  margin-left: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1274,15 +1349,14 @@ textarea {
       -ms-flex-align: center;
       align-items: center;
       margin-top: 0rem; } }
-  .burger__descr .section-title {
-    color: #f9b43b;
+  .burger__descr .section-title-h1 {
     padding-left: 0.625rem;
     margin: 0; }
     @media screen and (max-width: 900px) {
-      .burger__descr .section-title {
+      .burger__descr .section-title-h1 {
         padding-left: 10px; } }
     @media screen and (max-width: 768px) and (orientation: portrait) {
-      .burger__descr .section-title {
+      .burger__descr .section-title-h1 {
         text-align: center; } }
   .burger__descr .descr-natural {
     line-height: 4.6875rem;
@@ -1314,8 +1388,14 @@ textarea {
     text-align: center;
     width: 100%;
     color: #2f3234;
-    margin-top: 0rem;
+    margin-top: -1.25rem;
     margin-bottom: 0rem; }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      .best .section-title {
+        margin-top: 0.625rem; } }
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      .best .section-title {
+        margin-top: 0.625rem; } }
 
 .best__list {
   width: 100%;
@@ -1341,7 +1421,9 @@ textarea {
       -ms-flex-direction: column;
       flex-direction: column; } }
   .best__list .best__item {
-    max-width: 30%; }
+    max-width: 30%;
+    margin-left: 0.3125rem;
+    margin-right: 0.3125rem; }
     @media screen and (max-width: 480px) and (orientation: portrait) {
       .best__list .best__item {
         max-width: 100%; } }
@@ -1380,15 +1462,15 @@ textarea {
     text-align: center; }
     @media screen and (max-width: 480px) and (orientation: portrait) {
       .promo__list .promo__item {
-        text-align: left;
-        margin-right: 1.25rem; } }
+        text-align: left; } }
 
 .promo__img {
-  height: 5.5625rem;
-  width: 6.0625rem; }
+  height: 89px;
+  width: 97px; }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .promo__img {
-      width: 25%; } }
+      width: 25%;
+      margin-right: 1.25rem; } }
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
   .promo__info {
@@ -1397,23 +1479,28 @@ textarea {
 .promo__title {
   color: #2f3234;
   font-family: Lifehack;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 1.75875rem;
-  letter-spacing: -0.0375rem;
-  padding: 2.5rem 0.9375rem 0.9375rem 0.9375rem; }
+  line-height: 28.14px;
+  letter-spacing: -0.6px;
+  padding: 1.5625rem 0.9375rem 0.625rem 0.9375rem; }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .promo__title {
+      font-size: 16px;
+      line-height: 22px; } }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .promo__title {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      padding: 0; } }
+      padding: 0;
+      margin-bottom: 0.625rem; } }
 
 .promo__descr {
   color: #2f3234;
-  padding: 5px;
-  padding-top: 0.625rem;
+  padding: 0.3125rem;
+  padding-top: 0rem;
   text-align: center; }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .promo__descr {
@@ -1459,7 +1546,7 @@ textarea {
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin: 0;
-  margin-top: 5vh;
+  margin-top: 2vh;
   height: 100%; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .dark-burger__item {
@@ -1470,6 +1557,9 @@ textarea {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .dark-burger__item {
+      margin-top: 0; } }
 
 .dark-burger__imgs {
   width: 51%;
@@ -1494,38 +1584,46 @@ textarea {
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .dark-burger__imgs {
+      max-width: 70vmin;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   .dark-burger__imgs .burger-composition {
     position: absolute;
-    left: 2%;
-    top: 3%; }
-    @media screen and (max-width: 768px) and (orientation: portrait) {
-      .dark-burger__imgs .burger-composition {
-        left: 7%; } }
-    @media screen and (max-width: 480px) and (orientation: portrait) {
-      .dark-burger__imgs .burger-composition {
-        left: 0; } }
+    top: 0;
+    left: 0; }
   .dark-burger__imgs .kkal {
     position: absolute;
-    left: 2%;
-    bottom: 5%; }
+    left: 0;
+    bottom: 0; }
     @media screen and (max-width: 768px) and (orientation: portrait) {
       .dark-burger__imgs .kkal {
         left: 80%;
         top: 3%; } }
     @media screen and (max-width: 480px) and (orientation: portrait) {
       .dark-burger__imgs .kkal {
-        left: 85%; } }
+        right: 0; } }
 
 .dark-burger__img {
   min-width: 12.5rem;
-  max-width: 70vmin;
-  width: 100%; }
+  max-width: 85vmin;
+  width: 100%;
+  margin-right: 1.875rem; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .dark-burger__img {
-      width: auto; } }
+      width: auto;
+      max-width: 75vmin; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .dark-burger__img {
+      width: auto;
+      max-width: 65vmin;
+      margin-right: 0.3125rem; } }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .dark-burger__img {
-      width: auto; } }
+      width: auto;
+      max-width: 65vmin; } }
 
 .dark-burger__descr {
   width: 49%;
@@ -1547,6 +1645,9 @@ textarea {
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .dark-burger__descr {
       width: 100%; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .dark-burger__descr {
+      width: 100%; } }
 
 .dark-burger__def {
   margin-top: 2.5rem;
@@ -1555,6 +1656,9 @@ textarea {
     .dark-burger__def {
       text-align: center;
       margin-top: 1.25rem; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .dark-burger__def {
+      margin-bottom: 0; } }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .dark-burger__def {
       margin-top: 0;
@@ -1572,9 +1676,9 @@ textarea {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 1.5625rem; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .dark-burger__order {
@@ -1582,15 +1686,28 @@ textarea {
       -ms-flex-pack: center;
       justify-content: center;
       margin-bottom: 0.9375rem; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .dark-burger__order {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
   .dark-burger__order .dark-burger__price-number {
     color: #e45028; }
   .dark-burger__order .dark-burger__price-cur {
     color: #e45028;
-    font-size: 1.875rem; }
+    font-size: 36px; }
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      .dark-burger__order .dark-burger__price-cur {
+        font-size: 25px; } }
+    @media screen and (max-width: 480px) and (orientation: portrait) {
+      .dark-burger__order .dark-burger__price-cur {
+        font-size: 25px; } }
   .dark-burger__order .button {
-    margin-bottom: 0.625rem;
+    margin-bottom: 1.875rem;
     margin-left: 1.5625rem;
-    display: inline-block; }
+    display: inline-block;
+    -ms-flex-item-align: center;
+    align-self: center; }
 
 .team {
   background: url("../img/bg/team.jpg") no-repeat top center;
@@ -1618,12 +1735,13 @@ textarea {
   padding: 10% 2% 0% 9%; }
   @media screen and (max-width: 768px) {
     .team__area {
-      padding-left: 2%; } }
+      padding-left: 2%;
+      padding-top: 5%; } }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .team__area {
       width: 100%;
       padding-left: 0; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
     .team__area {
       width: 100%;
       padding: 4% 2% 0% 2%; } }
@@ -1633,18 +1751,19 @@ textarea {
 
 .team .section-title {
   color: #f9b43b;
-  line-height: 4rem;
+  line-height: 64px;
   margin-bottom: 5vh; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .team .section-title {
       text-align: center;
       margin-top: 10vh; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
     .team .section-title {
       text-align: center;
-      margin-top: 5vh; } }
-  @media screen and (max-width: 480px) and (orientation: landscape) {
+      margin-top: 10vh; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
     .team .section-title {
+      text-align: center;
       margin-top: 0; } }
 
 .member__list {
@@ -1663,7 +1782,7 @@ textarea {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) and (orientation: portrait) {
     .member__list {
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1674,7 +1793,7 @@ textarea {
     @media screen and (max-width: 768px) and (orientation: portrait) {
       .member__list .member__item {
         text-align: center; } }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 480px) and (orientation: portrait) {
       .member__list .member__item {
         text-align: center; } }
 
@@ -1698,7 +1817,7 @@ textarea {
         text-align: center;
         margin-right: 0;
         margin-left: 0; } }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 480px) and (orientation: portrait) {
       .member-content .member__img {
         height: 5.3125rem;
         width: 5.3125rem; } }
@@ -1721,7 +1840,13 @@ textarea {
   text-decoration: none; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .member__name {
-      text-align: center; } }
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 1.875rem; } }
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    .member__name {
+      font-size: 24px;
+      margin-bottom: 1.875rem; } }
   .member__name::before {
     content: "";
     display: inline-block;
@@ -1998,7 +2123,8 @@ textarea {
   align-items: flex-start;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .review__mask {
       text-align: center;
@@ -2050,7 +2176,6 @@ textarea {
   .order .section-title {
     color: #f9b43b;
     text-align: center;
-    line-height: 4rem;
     margin-top: -0.625rem;
     margin-bottom: 1.5625rem; }
     @media screen and (max-width: 900px) {
@@ -2089,7 +2214,7 @@ textarea {
       -ms-flex-align: center;
       align-items: center; } }
   .order__form-fields .order__form-col {
-    width: 44%;
+    width: 46%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2105,7 +2230,10 @@ textarea {
     align-items: center; }
     @media screen and (max-width: 768px) and (orientation: portrait) {
       .order__form-fields .order__form-col {
-        width: 60%; } }
+        width: 85%; } }
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      .order__form-fields .order__form-col {
+        width: 48%; } }
     @media screen and (max-width: 480px) and (orientation: portrait) {
       .order__form-fields .order__form-col {
         width: 95%; } }
@@ -2157,7 +2285,7 @@ textarea {
   height: 100%; }
 
 .footer {
-  height: 10vh;
+  height: 12vh;
   min-height: 3.125rem;
   position: absolute;
   bottom: 0;
@@ -2176,7 +2304,6 @@ textarea {
   justify-content: center; }
   @media screen and (max-width: 480px) and (orientation: portrait) {
     .footer {
-      height: 12vh;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
