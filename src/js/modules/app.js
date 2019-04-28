@@ -60,13 +60,13 @@ function initMenuAccordion() {
         var $this = $(this);
         var parent = $this.parent('.menu__list');
 
-        $this.toggleClass("active")
-               .siblings().removeClass("active");   
+        $this.toggleClass('active')
+               .siblings().removeClass('active');   
 
         if ($this.hasClass('active')) {              
-            parent.addClass("active");   
+            parent.addClass('active');   
         } else {
-            parent.removeClass("active");   
+            parent.removeClass('active');   
         }               
     });
 
@@ -89,8 +89,8 @@ function initTeamAccordion() {
     item.click(function(e) {
         e.preventDefault(); 
 
-        $(this).toggleClass("active")
-               .siblings().removeClass("active");     
+        $(this).toggleClass('active')
+               .siblings().removeClass('active');     
     });
 }
 
@@ -100,7 +100,7 @@ function initBurgerPopup() {
     buttonPopup.click(function(e) {//Не работает в хроме
         e.preventDefault();
 
-        $(this).toggleClass("active");
+        $(this).toggleClass('active');
     });
 }
 
@@ -128,7 +128,7 @@ function initMobileMenuOverlay() {
     var buttonOpen = $('.mobile-menu__open');
     var buttonClose = $('.mobile-menu__close');
     var buttonMenu = $('.main-menu__item');
-    var overlayClass = "mobile-menu-overlay";
+    var overlayClass = 'mobile-menu-overlay';
 
     buttonOpen.click(function(e) {
         e.preventDefault();
